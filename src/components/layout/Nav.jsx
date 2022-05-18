@@ -1,5 +1,4 @@
 /* eslint-disable @next/next/no-img-element */
-import Link from 'next/link';
 import { useState } from 'react';
 import CustomLink from '../CustomLink';
 import Icon, { ArrowRightUpIcon } from '../Icons';
@@ -7,8 +6,8 @@ import Icon, { ArrowRightUpIcon } from '../Icons';
 export default function Nav() {
 	const [isMenuOpen, setIsMenuOpen] = useState(false);
 	return (
-		<div className='inset-x-0 z-50 absolute top-0 px-4 py-6 mx-auto w-full max-w-full bg-transparent  md:px-24 lg:px-8'>
-			<div className='flex items-center max-w-[90%] mx-auto justify-between'>
+		<div className='absolute inset-x-0 z-30 top-0 px-4 py-6 w-full max-w-full bg-transparent md:px-8 lg:px-8 mx-auto'>
+			<div className='flex items-center max-w-[100%] mx-auto justify-between'>
 				<CustomLink href={'/'} className='flex items-center'>
 					<img src='/assets/logo.png' alt='Defi Pronto Logo' className=' w-14' />
 				</CustomLink>
