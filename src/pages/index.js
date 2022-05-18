@@ -1,20 +1,19 @@
-import Head from 'next/head';
-import Image from 'next/image';
-import PageLaout from '../components/layout';
+import Head from "next/head";
+import Image from "next/image";
+import Hero from "../components/Hero";
+import PageLaout from "../components/layout";
 export default function Home() {
-	return (
-		<>
-			<PageLaout />
-			<div className='px-4 py-16 mx-auto sm:max-w-xl md:max-w-full lg:max-w-screen-xl md:px-24 lg:px-8 lg:py-20 home-bg'>
-				<div className='grid gap-10 lg:grid-cols-2'>
-					<div className='lg:pr-10'>
-						<hr className='mb-5 border-gray-300' />
-						<div className='flex items-center space-x-4'></div>
-					</div>
-					<div>{/* eslint-disable-next-line @next/next/no-img-element */}</div>
-				</div>
-			</div>
-			<h1 className='font-monument'>Hello World</h1>
-		</>
-	);
+  return (
+    <>
+      <Hero />
+      <div className="text-black">
+        An unexpected error occurred:EPERM: operation not permitted, unlink
+        C:\\Users\\DELL\\Documents\\Tekel_Project\\defi\\node_modules\\@n
+        ext\\swc-win32-ia32-msvc\\next-swc.win32-ia32-msvc.node. ext\\s info
+        If you think this is a bug, please open a bug report with the
+        information provided in
+        C:\\Users\\DELL\\Documents\\Tekel_Project\\defi\\yarn-error.log
+      </div>
+    </>
+  );
 }

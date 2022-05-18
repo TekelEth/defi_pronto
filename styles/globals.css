@@ -1,27 +1,31 @@
-@import url('https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;700&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;700&display=swap");
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
 @layer base {
-	@font-face {
-		font-display: swap;
-		font-family: 'Monument Extended';
-		font-style: normal;
-		font-weight: 400;
-		src: url('/fonts/MonumentExtended-Regular.otf') format('opentype');
-	}
+  @font-face {
+    font-display: swap;
+    font-family: "Monument Extended";
+    font-style: normal;
+    font-weight: 400;
+    src: url("/fonts/MonumentExtended-Regular.otf") format("opentype");
+  }
 
-	@font-face {
-		font-display: swap;
-		font-family: 'Monument Extended';
-		font-style: normal;
-		font-weight: bold;
-		src: url('/fonts/MonumentExtended-Ultrabold.otf') format('opentype');
-	}
+  @font-face {
+    font-display: swap;
+    font-family: "Monument Extended";
+    font-style: normal;
+    font-weight: bold;
+    src: url("/fonts/MonumentExtended-Ultrabold.otf") format("opentype");
+  }
 
-	.home-bg {
-		background: linear-gradient(181.19deg, rgba(0, 0, 0, 0.3) -26.59%, rgba(0, 0, 0, 0) 98.98%),
-			url('/assets/backgrounds/home-bg.png');
-	}
+  .home-bg {
+    background: linear-gradient(
+        181.19deg,
+        rgba(0, 0, 0, 0.3) -26.59%,
+        rgba(0, 0, 0, 0) 98.98%
+      ),
+      url("/assets/backgrounds/home-bg.png");
+  }
 }
