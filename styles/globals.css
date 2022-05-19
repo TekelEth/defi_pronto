@@ -28,4 +28,50 @@
       ),
       url("/assets/backgrounds/home-bg.png");
   }
+
+  .position > div:nth-child(even) {
+    float: left;
+    clear: right;
+  }
+
+  .position > div:nth-child(even) > span {
+    text-align: right;
+  }
+
+  .position > div:nth-child(even) > div {
+    text-align: right;
+  }
+
+  .position > div:nth-child(odd) {
+    float: right;
+    clear: left;
+  }
+
+  .position::before {
+    content: "";
+    height: 100%;
+    border-left: 4px dashed #383838;
+    position: absolute;
+    left: 50%;
+    /* background-color:gray; */
+  }
+
+  .position > div:after {
+    content: "";
+    width: 18px;
+    height: 4px;
+    background-color: #e74141;
+    position: absolute;
+    top: 0;
+  }
+
+  .position > div:nth-child(even):after {
+    right: 0px;
+    transform: translateX(40px)
+  }
+
+  .position > div:nth-child(odd):after {
+    left: 0px;
+    transform: translateX(-35px)
+  }
 }
