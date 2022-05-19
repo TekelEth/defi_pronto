@@ -1,10 +1,9 @@
-/* eslint-disable @next/next/no-img-element */
-import React from 'react';
-import CustomLink from './CustomLink';
-import Button from './general/Button';
-import Icon from './Icons';
+import CustomLink from 'components/CustomLink';
+import Icon from 'components/Icons';
+import Button from '../Button';
 
-function Hero({}) {
+/* eslint-disable @next/next/no-img-element */
+export default function SectionHeader({ title, subtitle, image, button }) {
 	return (
 		<>
 			<div className='relative'>
@@ -83,9 +82,3 @@ function Hero({}) {
 		</>
 	);
 }
-
-{
-	/* <div className='absolute w-full h-[982px] top-0 left-0 bg-cover bg-no-repeat bg-[url("/assets/backgrounds/bg.png")]' /> */
-}
-
-export default Hero;
