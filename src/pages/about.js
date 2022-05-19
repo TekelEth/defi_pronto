@@ -5,9 +5,9 @@ import React from "react";
 
 export default function About() {
   return (
-    <div className="max-w-[90%] py-24 w-full mx-auto">
-      <div className="w-full text-transparent text-opacity-0 grid  grid-cols-2">
-        <div className="w-full flex flex-col justify-start py-8">
+    <div className="max-w-[90%] px-4 md:px-5  py-24 w-full mx-auto">
+      <div className="w-full  flex items-center text-transparent text-opacity">
+        <div className="w-[50%] flex flex-col col-span-2 justify-start py-8">
           <h1 className="font-monument font-normal text-5xl text-white leading-[73px]">
             Decentralized tokens built on the{" "}
             <span className="text-theme-main">cardano network</span>
@@ -17,24 +17,31 @@ export default function About() {
             imperdiet nibh at et neque. Sed adipiscing risus aenean neque
             imperdiet amet fermentum.
           </p>
-          <div className="mt-6 flex items-center justify-start">
+          <div className="mt-6 flex items-center space-x-10">
             <CustomLink href={"/"}>
-              <Button
-                variant={"contained"}
-                color={"error"}
-                text="Get it Now"
-              ></Button>
+              
+                <Button
+                  title="Buy DFP"
+                  variant={"outlined"}
+                  color="primary"
+                  icon="ri-money-dollar-circle-line"
+                  order
+                />
+             
             </CustomLink>
             <CustomLink href={"/"}>
               <Button
-                variant={"contained"}
-                color={"error"}
-                text="Get it Now"
-              ></Button>
+                variant="outlined"
+                color="plain"
+                title={"White papper"}
+                icon={"ri-file-text-line"}
+                order
+              />
             </CustomLink>
           </div>
         </div>
-        <div className="w-[85%] flex items-center justify-start">
+        <div className="w-[40%] flex items-center justify-start">
+          {/* eslint-disable-next-line @next/next/no-img-element */}
           <img
             src="/assets/backgrounds/Looper-3.png"
             className="w-full bg-cover bg-center"

@@ -4,7 +4,7 @@ import CustomLink from './CustomLink';
 import Button from './general/Button';
 import Icon from './Icons';
 
-function Hero({}) {
+function Hero() {
 	return (
 		<>
 			<div className='relative'>

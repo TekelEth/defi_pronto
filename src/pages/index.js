@@ -6,7 +6,7 @@ export default function Home() {
 	return (
 		<>
 			<Hero />
-			<div className="relative mx-12 my-12 text-white max-w-[90%]">
+			{/* <div className="relative mx-12 my-12 text-white max-w-[90%]">
           <Card
             image="/assets/projects/project1.png"
             heading="Hyper Drive Metaverse"
@@ -22,7 +22,7 @@ export default function Home() {
           />
 		  <Roadmap />
 		  <Chart />
-        </div>
+        </div> */}
 		</>
 	);
 }
