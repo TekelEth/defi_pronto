@@ -1,4 +1,4 @@
-import CustomLink from 'components/CustomLink';
+import CustomLink from 'components/customLink';
 import Button from 'components/general/Button';
 import Icon from 'components/Icons';
 

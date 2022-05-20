@@ -32,6 +32,7 @@
   .position > div:nth-child(even) {
     float: left;
     clear: right;
+    padding-right: 20px;
   }
 
   .position > div:nth-child(even) > span {
@@ -45,6 +46,7 @@
   .position > div:nth-child(odd) {
     float: right;
     clear: left;
+    padding-left: 20px;
   }
 
   .position::before {
@@ -67,11 +69,11 @@
 
   .position > div:nth-child(even):after {
     right: 0px;
-    transform: translateX(40px)
+    transform: translateX(10px);
   }
 
   .position > div:nth-child(odd):after {
     left: 0px;
-    transform: translateX(-35px)
+    transform: translateX(-8px);
   }
 }

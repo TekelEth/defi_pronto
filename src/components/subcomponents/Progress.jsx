@@ -7,7 +7,7 @@ function Progress({ completed, maxCompleted }) {
       completed={completed}
       maxCompleted={maxCompleted}
       width={"100%"}
-      height={"10"}
+      height={10}
       className="w-full mb-8"
       bgColor="#E74141"
       isLabelVisible={false}

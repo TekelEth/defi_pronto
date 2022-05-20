@@ -1,54 +1,16 @@
-import CustomLink from "components/CustomLink";
-import Button from "components/general/Button";
 import DefiPronto from "components/subcomponents/DefiPronto";
+import Hero from "components/about/Hero";
 import React from "react";
+import SectionOne from "components/about/SectionOne";
+import SectionTwo from "components/about/SectionTwo";
 
 export default function About() {
   return (
-    <div className="max-w-[90%] px-4 md:px-5  py-24 w-full mx-auto">
-      <div className="w-full  flex items-center text-transparent text-opacity">
-        <div className="w-[50%] flex flex-col col-span-2 justify-start py-8">
-          <h1 className="font-monument font-normal text-5xl text-white leading-[73px]">
-            Decentralized tokens built on the{" "}
-            <span className="text-theme-main">cardano network</span>
-          </h1>
-          <p className="w-[542px]  mt-3 text-left  text-theme-100 text-base font-DMSans leading-[24px]">
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Odio
-            imperdiet nibh at et neque. Sed adipiscing risus aenean neque
-            imperdiet amet fermentum.
-          </p>
-          <div className="mt-6 flex items-center space-x-10">
-            <CustomLink href={"/"}>
-              
-                <Button
-                  title="Buy DFP"
-                  variant={"outlined"}
-                  color="primary"
-                  icon="ri-money-dollar-circle-line"
-                  order
-                />
-             
-            </CustomLink>
-            <CustomLink href={"/"}>
-              <Button
-                variant="outlined"
-                color="plain"
-                title={"White papper"}
-                icon={"ri-file-text-line"}
-                order
-              />
-            </CustomLink>
-          </div>
-        </div>
-        <div className="w-[40%] flex items-center justify-start">
-          {/* eslint-disable-next-line @next/next/no-img-element */}
-          <img
-            src="/assets/backgrounds/Looper-3.png"
-            className="w-full bg-cover bg-center"
-          />
-        </div>
-      </div>
+    <div className="max-w-[90%] px-4 md:px-5  py-8 w-full mx-auto">
+      <Hero />
       <DefiPronto />
+      <SectionOne />
+      <SectionTwo />
     </div>
   );
 }

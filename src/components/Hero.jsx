@@ -1,6 +1,6 @@
 /* eslint-disable @next/next/no-img-element */
 import React from 'react';
-import CustomLink from './CustomLink';
+import CustomLink from './customLink';
 import Button from './general/Button';
 import Icon from './Icons';
 
