@@ -1,8 +1,8 @@
 /* eslint-disable @next/next/no-img-element */
 import React from 'react';
-import CustomLink from '../CustomLink';
-import Button from '../general/Button';
-import Icon from '../Icons';
+import CustomLink from './customLink';
+import Button from './general/Button';
+import Icon from './Icons';
 
 function Hero() {
 	return (
