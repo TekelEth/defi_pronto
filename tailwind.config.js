@@ -21,6 +21,8 @@ module.exports = {
 				'shadow-dark': '0px 4px 40px rgba(26, 26, 26, 0.4)',
 				'shadow-error': '0px 4px 40px rgba(32, 21, 54, 0.4)',
 				'shadow-success': '0px 4px 40px rgba(32, 21, 54, 0.4)',
+				'shadow-card': '-8px 6px 20px rgba(231, 65, 65, 0.4)',
+				'shadow-icon': '0px 4px 24px rgba(231, 65, 65, 1)',
 			},
 		},
 	},

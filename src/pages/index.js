@@ -1,28 +1,21 @@
-import Card from 'components/subcomponents/Card';
-import Chart from 'components/subcomponents/Chart';
-import Roadmap from 'components/subcomponents/Roadmap';
-import Hero from '../components/Hero';
+import HowItWorks from 'components/home/HowItWorks';
+import MoreProjects from 'components/home/MoreProjects';
+import OurSupporters from 'components/home/OurSupporters';
+import UpcomingProject from 'components/home/UpcomingProjects';
+import WhatWeDo from 'components/home/WhatWeDo';
+import Hero from '../components/home/Hero';
+
 export default function Home() {
 	return (
 		<>
 			<Hero />
-			{/* <div className="relative mx-12 my-12 text-white max-w-[90%]">
-          <Card
-            image="/assets/projects/project1.png"
-            heading="Hyper Drive Metaverse"
-            totalRaised="0.00"
-            desc="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Odio imperdiet nibh at et neque."
-          />
-          <Card
-            image="/assets/projects/project1.png"
-            heading="Hyper Drive Metaverse"
-            totalRaised={1000}
-            targetAmount={2000}
-            desc="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Odio imperdiet nibh at et neque."
-          />
-		  <Roadmap />
-		  <Chart />
-        </div> */}
+			<WhatWeDo />
+			<UpcomingProject />
+			<div className='px-4 py-20 mx-auto sm:max-w-xl md:max-w-full lg:max-w-screen-xl md:px-24 lg:px-8'>
+				<MoreProjects />
+				<HowItWorks />
+			</div>
+			<OurSupporters />
 		</>
 	);
 }

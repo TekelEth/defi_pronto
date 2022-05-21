@@ -1,8 +1,8 @@
 /* eslint-disable @next/next/no-img-element */
 import React from 'react';
-import CustomLink from './CustomLink';
-import Button from './general/Button';
-import Icon from './Icons';
+import CustomLink from '../CustomLink';
+import Button from '../general/Button';
+import Icon from '../Icons';
 
 function Hero() {
 	return (
@@ -20,7 +20,7 @@ function Hero() {
 						alt='home'
 					/>
 				</div>
-				<div className='relative container lg:max-w-[90%] px-7 lg:px-5 py-32 mx-auto'>
+				<div className='relative container lg:max-w-[90%] px-7 lg:px-5 py-40 mx-auto'>
 					<div className='items-center lg:flex'>
 						<div className='w-full h-full lg:w-3/5'>
 							<h1 className='font-monument font-normal text-[31px] lg:text-6xl text-white leading-[38px] lg:leading-[63px] tracking-wide'>
@@ -70,13 +70,13 @@ function Hero() {
 								</div>
 							</div>
 						</div>
-						<div className='flex items-center justify-center w-full mt-6 lg:mt-0 lg:w-2/5'>
+						{/* <div className='flex items-center justify-center w-full mt-6 lg:mt-0 lg:w-2/5'>
 							<img
 								className='w-full h-full lg:max-w-2xl'
 								src='/assets/backgrounds/Looper-3.png'
 								alt='illustration'
 							/>
-						</div>
+						</div> */}
 					</div>
 				</div>
 			</div>

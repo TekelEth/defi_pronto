@@ -1,11 +1,12 @@
-import React from "react";
+import React from 'react';
 
 function DefiPronto() {
-  return (
-    <div className="w-full py-16">
-        <img src="/assets/DefiPronto.png" alt="defi pronto" className="w-full bg-cover bg-center"/>
-    </div>
-  );
+	return (
+		<div className='w-full pt-[16px]'>
+			{/* eslint-disable-next-line @next/next/no-img-element */}
+			<img src='/assets/svgs/DefiPronto.svg' alt='defi pronto' className='w-full bg-cover bg-center' />
+		</div>
+	);
 }
 
 export default DefiPronto;

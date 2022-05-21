@@ -4,7 +4,7 @@ import Icon from 'components/Icons';
 
 export default function Footer() {
 	return (
-		<div className="w-full h-full">
+		<div className='w-full h-full'>
 			<div className='relative w-full h-[314px] bg-theme-main'>
 				<div className='absolute top-[95px] left-[10px] right-[10px] lg:left-[118px] lg:top-[75px] lg:right-[118px]'>
 					{/* eslint-disable-next-line @next/next/no-img-element */}
@@ -133,7 +133,6 @@ export default function Footer() {
 					<span className='text-base font-DMSans text-theme-100 sm:text-center leading-[21px]'>
 						© {new Date().getFullYear()} Defipronto. All rights reserved.
 					</span>
-
 					<div className='flex lg:mt-4 lg:items-center space-x-4'>
 						<CustomLink
 							href={'/'}
