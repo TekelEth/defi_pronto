@@ -3,25 +3,25 @@ import Icon from 'components/Icons';
 export default function Button({ title, icon, variant, color, className, order, ...rest }) {
 	const contained =
 		color === 'primary'
-			? 'bg-theme-main text-white'
+			? 'bg-theme-main text-white hover:shadow-shadow-main'
 			: color === 'secondary'
-			? 'bg-theme-dark text-white'
+			? 'bg-theme-dark text-white hover:shadow-shadow-dark'
 			: color === 'success'
-			? 'bg-theme-success'
+			? 'bg-theme-success hover:shadow-shadow-success'
 			: color === 'error'
-			? 'bg-theme-error'
-			: color === 'plain' && 'bg-theme-light text-theme-main';
+			? 'bg-theme-error hover:shadow-shadow-error'
+			: color === 'plain' && 'bg-theme-light text-theme-main hover:shadow-shadow-main';
 
 	const outlined =
 		color === 'primary'
-			? 'border lg:border-2 border-theme-main text-white'
+			? 'border lg:border-2 border-theme-main text-white hover:shadow-shadow-main'
 			: color === 'secondary'
-			? 'border lg:border-2 border-theme-dark text-white'
+			? 'border lg:border-2 border-theme-dark text-white hover:shadow-shadow-dark'
 			: color === 'success'
-			? 'border lg:border-2 border-theme-success text-white'
+			? 'border lg:border-2 border-theme-success text-white hover:shadow-shadow-success'
 			: color === 'error'
-			? 'border lg:border-2 border-theme-error text-white'
-			: color === 'plain' && 'border-2 border-theme-light text-white';
+			? 'border lg:border-2 border-theme-error text-white hover:shadow-shadow-error'
+			: color === 'plain' && 'border-2 border-theme-light text-white hover:shadow-shadow-main';
 
 	return (
 		<>
@@ -52,15 +52,3 @@ export default function Button({ title, icon, variant, color, className, order, 
 		</>
 	);
 }
-
-// const variants = {
-//     contained: `bg-${colors}`,
-//     outlined: `border border-${colors}`,
-// };
-
-// const colors = {
-// 	primary: 'theme-main',
-// 	secondary: 'theme-dark',
-// 	success: 'theme-success',
-// 	error: 'theme-error',
-// };
