@@ -1,4 +1,4 @@
-import CustomLink from 'components/customLink';
+import CustomLink from 'components/CustomLink';
 import Button from 'components/general/Button';
 import Icon from 'components/Icons';
 
@@ -27,9 +27,10 @@ export default function Footer() {
 					</div>
 				</div>
 			</div>
-			<footer className='w-full container lg:max-w-[90%] px-7 pt-20 lg:px-5 mx-auto'>
-				<div className='flex justify-between'>
-					<div className='order-2 lg:order-1'>
+
+			<footer className='w-full container lg:max-w-[90%] pt-20 px-5 mx-auto'>
+				<div className='md:flex items-center lg:flex-row md:justify-between'>
+					<div className='order-1 md:order-none'>
 						{/* eslint-disable-next-line @next/next/no-img-element */}
 						<img src='/assets/logo-light.svg' alt='logo' className=' w-[100px] h-[82px] mb-2' />
 						<p className='font-DMSans text-base font-normal text-theme-100 leading-[21px] w-[334px] h-[84px]'>
@@ -37,7 +38,7 @@ export default function Footer() {
 							Sed adipiscing risus aenean neque imperdiet amet fermentum.
 						</p>
 					</div>
-					<div className='top-[107px] right-[180px] w-[555px] mt-10 h-[157px] grid grid-cols-2 lg:grid-cols-3 gap-8 lg:order-2'>
+					<div className='md:top-[107px] md:right-[180px] w-full md:w-[555px] mt-10  lg:h-[157px] grid grid-cols-2 lg:grid-cols-3 gap-4 lg:gap-8'>
 						<div>
 							<h4 className='font-monument text-base leading-[19px] text-theme-light mb-2'>Company</h4>
 							<div className='flex flex-col justify-start text-left'>
@@ -129,11 +130,11 @@ export default function Footer() {
 						</div>
 					</div>
 				</div>
-				<div className='sm:flex sm:items-center sm:justify-between py-8'>
+				<div className='md:flex items-center justify-between py-8'>
 					<span className='text-base font-DMSans text-theme-100 sm:text-center leading-[21px]'>
 						© {new Date().getFullYear()} Defipronto. All rights reserved.
 					</span>
-					<div className='flex lg:mt-4 lg:items-center space-x-4'>
+					<div className='flex mt-4 lg:items-center space-x-4'>
 						<CustomLink
 							href={'/'}
 							rel='noreferrer'
