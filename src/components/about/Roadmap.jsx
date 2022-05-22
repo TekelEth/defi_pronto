@@ -2,7 +2,7 @@ import React from "react";
 
 function Roadmap() {
   return (
-    <div className="max-w-[70%] py-12 flex flex-col my-12 items-center justify-center mx-auto">
+    <div className="max-w-[70%] py-12 flex flex-col my-6 items-center justify-center mx-auto">
       <h1 className="text-white font-[400] lg:w-[80%] mx-auto font-monument text-[49px] leading-[58px] mb-8 text-center ">Our Road Map</h1>
       <div className="lg:w-[60%] w-full mx-auto relative position">
         <div className="flex flex-col relative h-[200px] w-[50%] items-start justify-start">

@@ -3,6 +3,7 @@ import Hero from 'components/about/Hero';
 import React from 'react';
 import SectionOne from 'components/about/SectionOne';
 import SectionTwo from 'components/about/SectionTwo';
+import SectionThree from 'components/about/SectionThree';
 
 export default function About() {
 	return (
@@ -11,6 +12,7 @@ export default function About() {
 			<DefiPronto />
 			<SectionOne />
 			<SectionTwo />
+			<SectionThree />
 		</div>
 	);
 }

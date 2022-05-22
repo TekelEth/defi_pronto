@@ -5,6 +5,6 @@ export const ArrowRightUpIcon = (props) => (
 	</svg>
 );
 
-export default function Icon({ icon, className }) {
-	return <i className={`${icon} ${className}`}></i>;
+export default function Icon({ icon, className, Clicked = () => {} }) {
+	return <i className={`${icon} ${className}`} onClick={Clicked}></i>;
 }
