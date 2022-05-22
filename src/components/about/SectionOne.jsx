@@ -25,7 +25,7 @@ const Card = ({ id, icon, header, content, isActive, onClicked }) => {
 function Section1() {
   const [isActive, setIsActive] = useState(1);
   return (
-    <div className="w-full  h-[426px] mb-12 gap-x-4 grid grid-cols-5">
+    <div className="w-full  h-[426px] mb-12 gap-x-4 grid grid-cols-1 lg:grid-cols-5">
       <div className="col-span-2 flex flex-col justify-center items-center w-[90%]">
         <span className="text-[39px] leading-[47px] font-[400] mb-8 font-monument text-white">
           we can help your project succeed
