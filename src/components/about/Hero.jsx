@@ -1,6 +1,6 @@
-import CustomLink from 'components/customLink'
-import Button from 'components/general/Button'
-import React from 'react'
+import CustomLink from 'components/CustomLink';
+import Button from 'components/general/Button';
+import React from 'react';
 
 function Hero() {
   return (
@@ -49,4 +49,4 @@ function Hero() {
   )
 }
 
-export default Hero
+export default Hero;

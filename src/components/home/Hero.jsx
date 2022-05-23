@@ -1,8 +1,8 @@
 /* eslint-disable @next/next/no-img-element */
+import CustomLink from 'components/CustomLink';
+import Button from 'components/general/Button';
+import Icon from 'components/Icons';
 import React from 'react';
-import CustomLink from '../customLink'
-import Button from '../general/Button'
-import Icon from '../Icons'
 
 function Hero() {
 	return (
@@ -47,7 +47,7 @@ function Hero() {
 										href={'/'}
 										rel='noreferrer'
 										target='_blank'
-										className='text-white text-[20px] lg:text-[32px]'
+										className='text-white hover:text-theme-main text-[20px] lg:text-[32px]'
 									>
 										<Icon icon={'ri-telegram-line'} />
 									</CustomLink>
@@ -55,7 +55,7 @@ function Hero() {
 										href={'/'}
 										rel='noreferrer'
 										target='_blank'
-										className='text-white text-[20px] lg:text-[32px]'
+										className='text-white hover:text-theme-main text-[20px] lg:text-[32px]'
 									>
 										<Icon icon={'ri-discord-line'} />
 									</CustomLink>
@@ -63,7 +63,7 @@ function Hero() {
 										href={'/'}
 										rel='noreferrer'
 										target='_blank'
-										className='text-white text-[20px] lg:text-[32px]'
+										className='text-white hover:text-theme-main text-[20px] lg:text-[32px]'
 									>
 										<Icon icon={'ri-twitter-fill'} />
 									</CustomLink>

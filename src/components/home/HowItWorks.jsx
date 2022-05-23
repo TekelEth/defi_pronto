@@ -2,7 +2,7 @@
 /* eslint-disable @next/next/no-img-element */
 export default function HowItWorks() {
 	return (
-		<>
+		<section id='howitworks'>
 			<div className='max-w-xl md:mx-auto sm:text-center lg:max-w-2xl md:mb-12'>
 				<div className='lg:w-[620px] mx-auto my-20'>
 					<h2 className='mb-6 font-monument text-[48.83px] leading-[59px] text-center text-white'>
@@ -147,6 +147,6 @@ export default function HowItWorks() {
 					</div>
 				</div>
 			</div>
-		</>
+		</section>
 	);
 }

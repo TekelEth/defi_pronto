@@ -1,13 +1,14 @@
 /* eslint-disable @next/next/no-img-element */
 import { useState } from 'react';
-import CustomLink from '../customLink';
+import CustomLink from '../CustomLink';
 import Icon, { ArrowRightUpIcon } from '../Icons';
 import { useRouter } from 'next/router';
 
 export default function Nav() {
 	const router = useRouter();
 	const [isMenuOpen, setIsMenuOpen] = useState(false);
-	const position = router.pathname === '/' ? 'absolute bg-transparent' : 'sticky bg-[#241B23]';
+	const path_name = router.pathname;
+	const position = path_name === '/' ? 'absolute bg-transparent' : 'sticky bg-[#241B23]';
 	return (
 		<div className={` ${position} inset-x-0 z-30 top-0 px-4 py-6 w-full max-w-full  md:px-5 lg:px-5 mx-auto`}>
 			<div className='flex items-center max-w-[90%] mx-auto justify-between'>
@@ -17,32 +18,42 @@ export default function Nav() {
 				<div className='hidden md:flex lg:flex items-center gap-7'>
 					<div className='flex flex-row items-start py-2 px-2 gap-8'>
 						<CustomLink
-							href={'/'}
-							className='text-white w-auto h-[21px] font-DMSans font-bold text-base leading-[21px] hover:text-theme-main'
+							href={'/about'}
+							className={`${
+								path_name === '/about' ? 'text-theme-main' : 'text-white'
+							} w-auto h-[21px] font-DMSans font-bold text-base leading-[21px] hover:text-theme-main order-1`}
 						>
 							About
 						</CustomLink>
 						<CustomLink
-							href={'/'}
-							className='text-white w-auto h-[21px] font-DMSans font-bold text-base leading-[21px] hover:text-theme-main order-1'
+							href={'/#features'}
+							className={`${
+								path_name === '/features' ? 'text-theme-main' : 'text-white'
+							} w-auto h-[21px] font-DMSans font-bold text-base leading-[21px] hover:text-theme-main order-2`}
 						>
 							Features
 						</CustomLink>
 						<CustomLink
-							href={'/'}
-							className='text-white w-auto h-[21px] font-DMSans font-bold text-base leading-[21px] hover:text-theme-main order-2'
+							href={'/#howitworks'}
+							className={`${
+								path_name === '/howitworks' ? 'text-theme-main' : 'text-white'
+							} w-auto h-[21px] font-DMSans font-bold text-base leading-[21px] hover:text-theme-main order-3`}
 						>
 							How it works
 						</CustomLink>
 						<CustomLink
-							href={'/'}
-							className='text-white w-auto h-[21px] font-DMSans font-bold text-base leading-[21px] hover:text-theme-main order-3'
+							href={'/projects'}
+							className={`${
+								path_name === '/projects' ? 'text-theme-main' : 'text-white'
+							} w-auto h-[21px] font-DMSans font-bold text-base leading-[21px] hover:text-theme-main order-4`}
 						>
 							Projects
 						</CustomLink>
 						<CustomLink
-							href={'/'}
-							className='text-white w-auto h-[21px] font-DMSans font-bold text-base leading-[21px] hover:text-theme-main order-4'
+							href={'/staking'}
+							className={`${
+								path_name === '/staking' ? 'text-theme-main' : 'text-white'
+							} w-auto h-[21px] font-DMSans font-bold text-base leading-[21px] hover:text-theme-main order-5`}
 						>
 							Staking
 						</CustomLink>
