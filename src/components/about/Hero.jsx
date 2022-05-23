@@ -15,7 +15,7 @@ function Hero() {
         imperdiet nibh at et neque. Sed adipiscing risus aenean neque
         imperdiet amet fermentum.
       </p>
-      <div className="mt-6 flex items-center space-x-10">
+      <div className="mt-6 flex  items-center space-x-5 md:space-x-10">
         <CustomLink href={"/"}>
           
             <Button
@@ -38,7 +38,7 @@ function Hero() {
         </CustomLink>
       </div>
     </div>
-    <div className="w-[40%] flex items-center justify-start">
+    <div className="md:w-[40%] w-full mt-2 md: mt-0 flex items-center justify-start">
       {/* eslint-disable-next-line @next/next/no-img-element */}
       <img
         src="/assets/backgrounds/Looper-3.png"

@@ -29,7 +29,7 @@ const Question = ({ question, description }) => {
     >
       <div className={`flex justify-between ${show && "mt-8"} duration-300 items-center`}>
         <h1
-          className={`font-[400] font-monument text-[19px] ${show && "mb-3"} capitalize ${"text-white"}`}
+          className={`font-[400] font-monument text-[16.3px] ${show && "mb-3"} capitalize ${"text-white"}`}
         >
           {question}
         </h1>
@@ -52,7 +52,7 @@ const Question = ({ question, description }) => {
 
 function FAQ() {
   return (
-    <div className="md:max-w-[65%] max-w-[90%] mx-auto py-10">
+    <div className="md:max-w-[65%] max-w-[100%] mx-auto py-10">
       <div className="max-w-[100%] relative md:mt-16 mx-auto">
         {faqs &&
           faqs.map((x, i) => (

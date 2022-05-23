@@ -32,8 +32,8 @@ export default function Button({ title, icon, variant, color, className, order, 
 						contained || className
 					} flex flex-row justify-center items-center py-[10px] px-[24px] lg:py-[15px] lg:px-[32px] gap-[8px] rounded-[5px]`}
 				>
-					<span className='text-base font-DMSans font-bold leading-[21px]'>{title}</span>
-					{icon && <Icon icon={icon} className='w-[24px] h-[24px] text-white' />}
+					<span className='text-[11px] md:text-base font-DMSans font-bold leading-[21px]'>{title}</span>
+					{icon && <Icon icon={icon} className='w-[12px] md:w-[24px] w-[12px] md:h-[24px] text-white' />}
 				</button>
 			)}
 			{variant === 'outlined' && (
@@ -41,12 +41,12 @@ export default function Button({ title, icon, variant, color, className, order, 
 					{...rest}
 					className={`${
 						outlined || className
-					} flex flex-row justify-center items-center py-[10px] px-[24px] lg:py-[15px] lg:px-[32px] gap-[8px] rounded-[5px]`}
+					} flex flex-row justify-center items-center py-[10px] px-[30px] lg:py-[15px] lg:px-[32px] gap-[8px] rounded-[5px]`}
 				>
-					<span className={`text-base font-DMSans font-bold leading-[21px] ${order && 'order-1'}`}>
+					<span className={`text-[11px] md:text-base font-DMSans font-bold leading-[21px] ${order && 'order-1'}`}>
 						{title}
 					</span>
-					{icon && <Icon icon={icon} className={`w-[24px] h-[24px] ${order && '-ml-2'}`} />}
+					{icon && <Icon icon={icon} className={`w-[12px] md:w-[24px] w-[12px] mr-1 md:h-[24px] ${order && '-ml-2'}`} />}
 				</button>
 			)}
 		</>

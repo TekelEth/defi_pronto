@@ -6,7 +6,7 @@ const TokenDetails = ({ title, amount }) => (
     <span className="text-[#E74141] font-[400] text-[12px] leading-[14.4px] text-center">
       {title}{" "}
     </span>
-    <span className="text-white text-center font-[400] text-[39px] leading-[47px] font-monument ">
+    <span className="text-white text-center font-[400] text-[31.25px] md:text-[39px] leading-[37.5px] md:leading-[47px] font-monument ">
       {amount}
     </span>
   </div>
@@ -19,7 +19,7 @@ function Tokenomics() {
         header="Tokenomics"
         content="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Odio imperdiet nibh at et neque. Sed adipiscing risus aenean neque imperdiet amet fermentum."
       />
-      <div className="w-full my-4 grid grid-cols-3 gap-x-4 gap-y-4">
+      <div className="w-full my-4 grid grid-cols-1 lg:grid-cols-3 gap-x-4 gap-y-4">
         <TokenDetails title="Token Name" amount="Defipronto" />
         <TokenDetails title="Market Cap" amount="$1,000,000" />
         <TokenDetails title="Total Supply" amount="400,000" />
