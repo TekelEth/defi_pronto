@@ -10,7 +10,7 @@ function Hero() {
         Decentralized tokens built on the{" "}
         <span className="text-theme-main">cardano network</span>
       </h1>
-      <p className="lg:w-[542px] w-full  mt-3 text-left  text-theme-100 text-base font-DMSans leading-[24px]">
+      <p className="lg:w-[542px] w-full  mt-3 text-left  text-theme-100 md:text-base text-[12.8px]  font-DMSans leading-[24px]">
         Lorem ipsum dolor sit amet, consectetur adipiscing elit. Odio
         imperdiet nibh at et neque. Sed adipiscing risus aenean neque
         imperdiet amet fermentum.
