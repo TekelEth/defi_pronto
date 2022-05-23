@@ -20,7 +20,7 @@ function Chart({ seed, strategic, pre_sale, liquidity, dao }) {
           endAngle: 360,
           hollow: {
             margin: "0",
-            size: "10%",
+            size: "12%",
             dropShadow: {
               enabled: false,
               top: 3,
@@ -69,7 +69,7 @@ function Chart({ seed, strategic, pre_sale, liquidity, dao }) {
   };
   return (
     <div className="-mt-5">
-      <div className="h-[400px] md:h-[550px]">
+      <div className="h-[380px] md:h-[550px]">
         <Apexchart
           options={customSettings.chartOptions}
           series={[seed, strategic, pre_sale, liquidity, dao]}
