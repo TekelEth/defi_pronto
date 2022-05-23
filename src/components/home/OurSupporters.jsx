@@ -3,7 +3,7 @@ import DefiPronto from 'components/subcomponents/DefiPronto';
 
 export default function OurSupporters() {
 	return (
-		<div className='max-w-[90%] px-4 md:px-5 pt-8 pb-40 w-full mx-auto'>
+		<div className='max-w-[90%] px-4 md:px-5  pb-40 w-full mx-auto'>
 			<DefiPronto />
 			{/* <div className='px-4 py-4 mx-auto sm:max-w-xl md:max-w-full lg:max-w-screen-xl md:px-24 lg:px-8'> */}
 			<div className='w-full lg:max-w-[60%] mx-auto text-center flex flex-col items-center z-50 justify-center'>

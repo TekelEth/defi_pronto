@@ -29,7 +29,7 @@ const Question = ({ question, description }) => {
     >
       <div className={`flex justify-between ${show && "mt-8"} duration-300 items-center`}>
         <h1
-          className={`font-[400] font-monument text-[16.3px] ${show && "mb-3"} capitalize ${"text-white"}`}
+          className={`font-[400] font-monument leading-[22px] text-[15.5px] md:text-[19.3px] ${show && "mb-3"} capitalize ${"text-white"}`}
         >
           {question}
         </h1>
