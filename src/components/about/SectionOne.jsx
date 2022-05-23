@@ -26,7 +26,7 @@ function Section1() {
   const [isActive, setIsActive] = useState(1);
   return (
     <div className="w-full h-full md:h-[426px] mb-12 gap-x-4 grid grid-cols-1 lg:grid-cols-5">
-      <div className="col-span-1 flex flex-col justify-center items-center w-full md:w-[90%]">
+      <div className="col-span-1 md:col-span-2 flex flex-col justify-center items-center w-full md:w-[90%]">
         <span className="text-[25px] md:text-[39px] leading-[30px] md:leading-[47px] font-[400] mb-4 font-monument text-white">
           we can help your project succeed
         </span>
