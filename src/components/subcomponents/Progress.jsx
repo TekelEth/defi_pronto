@@ -1,7 +1,7 @@
 import React from 'react';
 import ProgressBar from '@ramonak/react-progress-bar';
 
-function Progress({ completed, maxCompleted }) {
+function Progress({ completed, base_color, maxCompleted }) {
 	return (
 		<ProgressBar
 			completed={completed}
@@ -11,7 +11,7 @@ function Progress({ completed, maxCompleted }) {
 			className='w-full mb-8'
 			bgColor='#E74141'
 			isLabelVisible={false}
-			baseBgColor='#000000'
+			baseBgColor= {base_color}
 		/>
 	);
 }
