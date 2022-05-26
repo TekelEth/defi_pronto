@@ -76,4 +76,17 @@
     left: 0px;
     transform: translateX(-8px);
   }
+
+  .timeline:after {
+    /* content: "";
+    width: 160px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    bottom: 50%;
+    margin-top: 30%;
+    height: 1px;
+    background: red;
+    right: 0; */
+  }
 }

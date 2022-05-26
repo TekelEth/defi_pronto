@@ -3,14 +3,17 @@ import Hero from 'components/about/Hero';
 import React from 'react';
 import SectionOne from 'components/about/SectionOne';
 import SectionTwo from 'components/about/SectionTwo';
+import SectionThree from 'components/about/SectionThree';
 
 export default function About() {
 	return (
-		<div className='max-w-[90%] px-4 md:px-5  py-8 w-full mx-auto'>
+		<div className='max-w-[90%] px-4 md:px-5 h-full  py-8 w-full mx-auto'>
 			<Hero />
 			<DefiPronto />
 			<SectionOne />
 			<SectionTwo />
+			<SectionThree />
 		</div>
 	);
 }
+       
