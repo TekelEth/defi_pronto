@@ -1,9 +1,8 @@
-import Chart from "components/subcomponents/Chart";
 import DefiPronto from "components/subcomponents/DefiPronto";
 import Header from "components/subcomponents/Header";
 import React from "react";
 import FAQ from "./FAQ";
-// import MyDisclosure from "./Disclosure";
+import Chart  from "./Chart";
 
 function SectionThree() {
   return (
