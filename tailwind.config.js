@@ -14,6 +14,8 @@ module.exports = {
 					light: '#FFFFFF',
 					success: '#5BA422',
 					error: '#A42222',
+					card: '#241B23',
+					border: 'rgba(231, 65, 65, 0.2)',
 				},
 			},
 			boxShadow: {

@@ -70,13 +70,6 @@ function Hero() {
 								</div>
 							</div>
 						</div>
-						{/* <div className='flex items-center justify-center w-full mt-6 lg:mt-0 lg:w-2/5'>
-							<img
-								className='w-full h-full lg:max-w-2xl'
-								src='/assets/backgrounds/Looper-3.png'
-								alt='illustration'
-							/>
-						</div> */}
 					</div>
 				</div>
 			</div>
