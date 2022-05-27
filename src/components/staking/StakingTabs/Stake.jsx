@@ -1,3 +1,4 @@
+import CustomLink from 'components/CustomLink';
 import Button from 'components/general/Button';
 import Icon from 'components/Icons';
 
@@ -46,9 +47,9 @@ export const StakeContent = () => {
 					id='link-checkbox'
 					type='checkbox'
 					value=''
-					className='w-4 h-4 text-blue-600 bg-gray-100 rounded border-gray-300 focus:ring-blue-500 dark:focus:ring-blue-600 dark:ring-offset-gray-800 focus:ring-2 dark:bg-gray-700 dark:border-gray-600'
+					className='w-4 h-4 text-theme-main bg-gray-100 rounded border-gray-300 focus:ring-theme-main dark:focus:ring-theme-main focus:ring-2'
 				/>
-				<label htmlFor='link-checkbox' className='ml-2 text-sm font-medium text-gray-900 dark:text-gray-300'>
+				<label htmlFor='link-checkbox' className='ml-2 text-sm font-medium text-white'>
 					I have read and accept the terms described above.
 				</label>
 			</div>
@@ -84,7 +85,11 @@ export default function Stake() {
 					By using this website to stake tokens on the Cardano blockchain, you accept that you are interacting
 					with a smart contract that this website has no control over. The operators of this website accept no
 					liability whatsoever in relation to your use of these smart contracts. By using this website to
-					stake, you also have read and agree to the Terms and Conditions.
+					stake, you also have read and agree to the{' '}
+					<CustomLink href={'/terms'} className='text-theme-main'>
+						Terms and Conditions
+					</CustomLink>
+					.
 				</p>
 			</div>
 		</div>

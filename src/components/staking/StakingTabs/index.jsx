@@ -1,10 +1,8 @@
-import CustomLink from 'components/CustomLink';
-import Button from 'components/general/Button';
-import Icon from 'components/Icons';
 import { useState } from 'react';
+import Icon from 'components/Icons';
 import Stake, { StakeContent } from './Stake';
-import Tier from './Tier';
 import UnStake, { UnStakeContent } from './UnStake';
+import Tier, { TierContent } from './Tier';
 
 const TabHeader = ({ title, current, clicked }) => {
 	return (
@@ -59,6 +57,7 @@ export default function StakingTabs() {
 				<div className='w-full md:w-1/2 items-center justify-center md:pl-10'>
 					{current === 'stake' && <StakeContent />}
 					{current === 'unstake' && <UnStakeContent />}
+					{current === 'tiers' && <TierContent />}
 
 					{/* <div className='p-5 md:p-10 flex justify-center flex-col border-2 w-full border-theme-main rounded-[18px]'>
 						<h5 className='font-monument text-left text-[25px] leading-[30px] text-white'>Lock Duration</h5>

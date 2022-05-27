@@ -1,84 +1,80 @@
-@import url("https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;700&display=swap");
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;700&display=swap');
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
 @layer base {
-  @font-face {
-    font-display: swap;
-    font-family: "Monument Extended";
-    font-style: normal;
-    font-weight: 400;
-    src: url("/fonts/MonumentExtended-Regular.otf") format("opentype");
-  }
+	@font-face {
+		font-display: swap;
+		font-family: 'Monument Extended';
+		font-style: normal;
+		font-weight: 400;
+		src: url('/fonts/MonumentExtended-Regular.otf') format('opentype');
+	}
 
-  @font-face {
-    font-display: swap;
-    font-family: "Monument Extended";
-    font-style: normal;
-    font-weight: bold;
-    src: url("/fonts/MonumentExtended-Ultrabold.otf") format("opentype");
-  }
+	@font-face {
+		font-display: swap;
+		font-family: 'Monument Extended';
+		font-style: normal;
+		font-weight: bold;
+		src: url('/fonts/MonumentExtended-Ultrabold.otf') format('opentype');
+	}
 
-  .home-bg {
-    background: linear-gradient(
-        181.19deg,
-        rgba(0, 0, 0, 0.3) -26.59%,
-        rgba(0, 0, 0, 0) 98.98%
-      ),
-      url("/assets/backgrounds/home-bg.png");
-  }
+	.home-bg {
+		background: linear-gradient(181.19deg, rgba(0, 0, 0, 0.3) -26.59%, rgba(0, 0, 0, 0) 98.98%),
+			url('/assets/backgrounds/home-bg.png');
+	}
 
-  .position > div:nth-child(even) {
-    float: left;
-    clear: right;
-    padding-right: 20px;
-  }
+	.position > div:nth-child(even) {
+		float: left;
+		clear: right;
+		padding-right: 20px;
+	}
 
-  .position > div:nth-child(even) > span {
-    text-align: right;
-  }
+	.position > div:nth-child(even) > span {
+		text-align: right;
+	}
 
-  .position > div:nth-child(even) > div {
-    text-align: right;
-  }
+	.position > div:nth-child(even) > div {
+		text-align: right;
+	}
 
-  .position > div:nth-child(odd) {
-    float: right;
-    clear: left;
-    padding-left: 20px;
-  }
+	.position > div:nth-child(odd) {
+		float: right;
+		clear: left;
+		padding-left: 20px;
+	}
 
-  .position::before {
-    content: "";
-    height: 100%;
-    border-left: 4px dashed #383838;
-    position: absolute;
-    left: 50%;
-    /* background-color:gray; */
-  }
+	.position::before {
+		content: '';
+		height: 100%;
+		border-left: 4px dashed #383838;
+		position: absolute;
+		left: 50%;
+		/* background-color:gray; */
+	}
 
-  .position > div:after {
-    content: "";
-    width: 18px;
-    height: 4px;
-    background-color: #e74141;
-    position: absolute;
-    top: 0;
-  }
+	.position > div:after {
+		content: '';
+		width: 18px;
+		height: 4px;
+		background-color: #e74141;
+		position: absolute;
+		top: 0;
+	}
 
-  .position > div:nth-child(even):after {
-    right: 0px;
-    transform: translateX(10px);
-  }
+	.position > div:nth-child(even):after {
+		right: 0px;
+		transform: translateX(10px);
+	}
 
-  .position > div:nth-child(odd):after {
-    left: 0px;
-    transform: translateX(-8px);
-  }
+	.position > div:nth-child(odd):after {
+		left: 0px;
+		transform: translateX(-8px);
+	}
 
-  .timeline:after {
-    /* content: "";
+	.timeline:after {
+		/* content: "";
     width: 160px;
     display: flex;
     align-items: center;
@@ -88,5 +84,40 @@
     height: 1px;
     background: red;
     right: 0; */
-  }
+	}
+
+	.polygon {
+		position: absolute;
+		margin: 0 auto;
+		background-color: '#e74141';
+		border-radius: 10px;
+		width: 113px;
+		height: 113px;
+		box-sizing: border-box;
+		transition: all 1s;
+		border: 0.4vh solid transparent;
+	}
+
+	/* Creating pseudo-class */
+	.polygon:before,
+	.polygon:after {
+		content: '';
+		border: inherit;
+		position: absolute;
+		top: -0.5vh;
+		left: -0.5vh;
+		background-color: '#e74141';
+		border-radius: inherit;
+		height: 100%;
+		width: 100%;
+	}
+
+	/* Align them in such a way
+that they form a polygon */
+	.polygon:before {
+		transform: rotate(60deg);
+	}
+	.polygon:after {
+		transform: rotate(-60deg);
+	}
 }
