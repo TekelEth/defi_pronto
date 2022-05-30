@@ -9,7 +9,7 @@
     "lint": "next lint"
   },
   "dependencies": {
-    "@headlessui/react": "^1.6.2",
+    "@headlessui/react": "^1.6.3",
     "@ramonak/react-progress-bar": "^4.4.0",
     "apexcharts": "^3.35.2",
     "next": "12.1.6",
