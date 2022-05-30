@@ -1,5 +1,5 @@
 import React from 'react';
-import Icon from '../Icons';
+import Icon from '../general/Icons';
 import Progress from './Progress';
 
 function Card({ image, heading, totalRaised, targetAmount, desc }) {
@@ -11,10 +11,12 @@ function Card({ image, heading, totalRaised, targetAmount, desc }) {
 			</div>
 			<div className='bg-[#2F282E]  w-full rounded-b-lg overflow-hidden flex px-8 md:px-12 flex-col items-center py-12  text-left'>
 				<div className='mb-12'>
-					<h1 className='font-[400] text-white text-[20px] md:text-[25px] leading-[24px] md:leading-[35px] font-monument  mb-2'>{heading}</h1>
+					<h1 className='font-[400] text-white text-[20px] md:text-[25px] leading-[24px] md:leading-[35px] font-monument  mb-2'>
+						{heading}
+					</h1>
 					<span className='font-[400] text-[12.8px] text-[#A4A4A4] font-DMSans leading-[17px]'>{desc}</span>
 				</div>
-				{targetAmount && <Progress base_color ="#000000" completed={totalRaised} maxCompleted={targetAmount} />}
+				{targetAmount && <Progress base_color='#000000' completed={totalRaised} maxCompleted={targetAmount} />}
 				<div className='flex w-full self-start items-start mb-8 justify-between'>
 					<div className='flex items-start flex-col justify-start'>
 						<span className=' tracking-wide text-[#E74141] font-monument font-[400] text-[10px] md:text-[13px] leading-[12px] md:leading-[15.6px] mb-1'>

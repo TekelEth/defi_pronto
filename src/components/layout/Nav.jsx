@@ -1,7 +1,7 @@
 /* eslint-disable @next/next/no-img-element */
 import { useState } from 'react';
-import CustomLink from '../CustomLink';
-import Icon, { ArrowRightUpIcon } from '../Icons';
+import CustomLink from '../general/CustomLink';
+import Icon, { ArrowRightUpIcon } from '../general/Icons';
 import { useRouter } from 'next/router';
 
 export default function Nav() {

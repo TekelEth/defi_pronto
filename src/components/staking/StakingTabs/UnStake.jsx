@@ -1,8 +1,8 @@
-import CustomLink from 'components/CustomLink';
+import CustomLink from 'components/general/CustomLink';
 import Button from 'components/general/Button';
-import Icon from 'components/Icons';
+import Icon from 'components/general/Icons';
 
-const Info = ({ keys, value, icon }) => (
+const InfoCard = ({ keys, value, icon }) => (
 	<div
 		className={`w-full border-[1px] mb-3 ${
 			icon ? 'border-theme-main' : 'border-[#515050]'
@@ -29,10 +29,10 @@ export const UnStakeContent = () => {
 				<hr className='w-full broder-2 border-[#606060]' />
 			</div>
 
-			<Info keys='APY Rate' value='5%' />
-			<Info keys='Your Staked Amount' value='25,000 DFP' />
-			<Info keys='Pending Withdrawal Amount' value='5,000 DFP' />
-			<Info keys='Balance' value='6,000 DFP' icon='ri-calculator-line' />
+			<InfoCard keys='APY Rate' value='5%' />
+			<InfoCard keys='Your Staked Amount' value='25,000 DFP' />
+			<InfoCard keys='Pending Withdrawal Amount' value='5,000 DFP' />
+			<InfoCard keys='Balance' value='6,000 DFP' icon='ri-calculator-line' />
 
 			<div className='flex items-start justify-start my-6'>
 				<input

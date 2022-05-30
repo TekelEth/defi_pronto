@@ -1,5 +1,6 @@
-import CustomLink from 'components/CustomLink';
+import CustomLink from 'components/general/CustomLink';
 import Button from 'components/general/Button';
+import Modal from 'components/general/Modal';
 
 const TokenDetails = ({ title, amount }) => (
 	<div className='flex flex-col h-[176px] border-theme-border bg-theme-card border-2 py-4 md:py-2 items-center text-center justify-center rounded-[20px]'>
