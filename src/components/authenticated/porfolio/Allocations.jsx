@@ -1,12 +1,13 @@
 import { useState } from "react";
 import Assets from "./Assets";
 import Header from "./Header";
+import Transactions from "./Transactions";
 
 const Tab = ({ text, clicked, current, type }) => {
   return (
     <span
       onClick={clicked}
-      className={`font-monument duration-300 leading-[24px] hover:cursor-pointer text-[20px] mr-8 font-[400] ${
+      className={`font-monument duration-300 leading-[16.8px] md:leading-[24px] hover:cursor-pointer text-[17px] md:text-[20px] mr-8 font-[400] ${
         current === type ? "text-white border-b-[5px] border-b-[#E74141]" : "text-[#898888]"
       } py-2 `}
     >
@@ -37,8 +38,9 @@ function Allocations() {
         </div>
       </div>
       {
-          current === "assets" ? (<Assets />) : (<div>Trnasactions</div>)
+          current === "assets" ? (<Assets />) : <Transactions />
       }
+
     </div>
   );
 }
