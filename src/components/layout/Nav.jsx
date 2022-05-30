@@ -8,10 +8,10 @@ const MobileNav = ({ isMenuOpen, setIsMenuOpen }) => {
   const router = useRouter();
   const path_name = router.pathname;
   const position =
-    path_name === "/" ? "absolute bg-[#241B23]" : "sticky bg-[#241B23]";
+    path_name === "/" ? ""  : "sticky bg-[#241B23] h-screen";
   return (
     <div
-      className={`lg:hidden  bg-[#241B23] duration-300 py-6 px-6 my-4 flex flex-col items-start gap-y-7`}
+      className={`lg:hidden ${position} bg-[#241B23]  duration-300 py-6 px-6 my-4 flex flex-col items-start gap-y-7`}
     >
       <div className="flex flex-col items-start py-2 px-2 gap-8">
         <CustomLink
