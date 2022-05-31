@@ -23,15 +23,21 @@ export default function Modal({ isOpen, closeModal, step, prevStep, children }) 
 						<Dialog.Panel className='relative transform bg-theme-card shadow-xl transition-all border-2 border-theme-main rounded-[10px] p-4'>
 							<div className='flex items-center justify-between p-4'>
 								{/* Start of action button */}
-								{step !== 0 && (
-									<button className='text-[20px] text-theme-main' onClick={prevStep}>
-										<Icon icon={'ri-arrow-left-line'} /> {/* back button */}
+								<div>
+									{step !== 0 && (
+										<button className='text-[20px] text-theme-main' onClick={prevStep}>
+											<Icon icon={'ri-arrow-left-line'} /> {/* back button */}
+										</button>
+									)}
+								</div>
+								<div>
+									<button
+										className='text-[20px] text-white hover:text-theme-100'
+										onClick={closeModal}
+									>
+										<Icon icon={'ri-close-fill'} /> {/* close button */}
 									</button>
-								)}
-
-								<button className='text-[20px] text-white hover:text-theme-100' onClick={closeModal}>
-									<Icon icon={'ri-close-fill'} /> {/* close button */}
-								</button>
+								</div>
 							</div>
 							{/* End of action button */}
 							<div className='p-4'>{children}</div>
