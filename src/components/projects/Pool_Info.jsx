@@ -1,11 +1,11 @@
 import React from "react";
 
 const Info = ({ keys, value }) => (
-  <div className="w-full border-[1px] mb-3 border-[#515050] rounded-[3px] bg-transparent py-3 px-3 flex justify-between items-center ">
-    <span className="text-[#515050] capitalize text-[16px] leading-[20.83px] font-DMSans font-[700]">
+  <div className="w-full border-[1px] mb-4 border-[#515050] rounded-[3px] bg-transparent py-3 px-3 flex justify-between items-center ">
+    <span className="text-[#515050] capitalize  tetx-[14px] md:text-[16px] leading-[18px]  md:leading-[20.83px] font-DMSans font-[700]">
       {keys}
     </span>
-    <span className="text-white text-[16px] font-DMSans leading-[20.83px] text-right font-[700]">
+    <span className="text-white text-[14px] md:text-[16px] font-DMSans leading-[18px] md:leading-[20.83px] text-right font-[700]">
       {value}
     </span>
   </div>
@@ -13,8 +13,8 @@ const Info = ({ keys, value }) => (
 
 function Pool_Info() {
   return (
-    <div className="rounded-[10px] flex flex-col  bg-[#2F282E] py-8 px-12">
-      <span className="text-[#E74141] font-monument font-[400] text-[25px] leading-[30px] mb-5">
+    <div className="rounded-[10px] flex flex-col mb-6 md:mb-0 bg-[#2F282E] py-8 px-6 md:px-12">
+      <span className="text-[#E74141] font-monument font-[400] text-[20px]  md:text-[25px] leaing-[24px] md:leading-[30px] mb-5">
         Pool Information
       </span>
       <Info keys="token distribution" value="Date UTC" />

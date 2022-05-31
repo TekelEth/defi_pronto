@@ -4,13 +4,29 @@
 @tailwind utilities;
 
 @layer base {
-	@font-face {
-		font-display: swap;
-		font-family: 'Monument Extended';
-		font-style: normal;
-		font-weight: 400;
-		src: url('/fonts/MonumentExtended-Regular.otf') format('opentype');
-	}
+  thead > td {
+    @apply text-[#E74141]
+  }
+
+  tr {
+    @apply py-2 border-b-[1px] border-[#353434]
+  }
+
+  td {
+    @apply font-monument font-[400] text-white text-[12px] leading-[14.4px] py-4
+  }
+
+  tr:last-child{
+    @apply border-b-0
+  }
+
+  @font-face {
+    font-display: swap;
+    font-family: "Monument Extended";
+    font-style: normal;
+    font-weight: 400;
+    src: url("/fonts/MonumentExtended-Regular.otf") format("opentype");
+  }
 
 	@font-face {
 		font-display: swap;
@@ -73,8 +89,17 @@
 		transform: translateX(-8px);
 	}
 
+<<<<<<< HEAD
+  .no_bottom > div:nth-child(3) {
+    margin-bottom: 0;
+  }
+
+  .timeline:after {
+    /* content: "";
+=======
 	.timeline:after {
 		/* content: "";
+>>>>>>> e544c2144882be8d3a131e79f97c188cc5655491
     width: 160px;
     display: flex;
     align-items: center;

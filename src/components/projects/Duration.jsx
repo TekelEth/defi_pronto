@@ -1,18 +1,31 @@
 import React from 'react';
 import Progress from 'components/subcomponents/Progress';
-import Button from 'components/general/Button';
 import Icon from 'components/general/Icons';
 
 const Timing = ({ days, hours, minutes, seconds }) => {
 	return (
 		<div className='flex mb-6 w-full items-center justify-between'>
-			<span className='font-monument text-[31px] leading-[37.5px] text-white font-[400]'>{days}</span>
-			<span className='font-monument text-[31px] leading-[37.5px] text-white font-[400]'>:</span>
-			<span className='font-monument text-[31px] leading-[37.5px] text-white font-[400]'>{hours}</span>
-			<span className='font-monument text-[31px] leading-[37.5px] text-white font-[400]'>:</span>
-			<span className='font-monument text-[31px] leading-[37.5px] text-white font-[400]'>{minutes}</span>
-			<span className='font-monument text-[31px] leading-[37.5px] text-white font-[400]'>:</span>
-			<span className='font-monument text-[31px] leading-[37.5px] text-white font-[400]'>{seconds}</span>
+			<span className='font-monument md:text-[31px]  text-[20px] md:leading-[37.5px]  leading-[24px] text-white font-[400]'>
+				{days}
+			</span>
+			<span className='font-monument md:text-[31px]  text-[20px] md:leading-[37.5px]  leading-[24px] text-white font-[400]'>
+				:
+			</span>
+			<span className='font-monument md:text-[31px]  text-[20px] md:leading-[37.5px]  leading-[24px] text-white font-[400]'>
+				{hours}
+			</span>
+			<span className='font-monument md:text-[31px]  text-[20px] md:leading-[37.5px]  leading-[24px] text-white font-[400]'>
+				:
+			</span>
+			<span className='font-monument md:text-[31px]  text-[20px] md:leading-[37.5px]  leading-[24px] text-white font-[400]'>
+				{minutes}
+			</span>
+			<span className='font-monument md:text-[31px]  text-[20px] md:leading-[37.5px]  leading-[24px] text-white font-[400]'>
+				:
+			</span>
+			<span className='font-monument md:text-[31px]  text-[20px] md:leading-[37.5px]  leading-[24px] text-white font-[400]'>
+				{seconds}
+			</span>
 		</div>
 	);
 };
@@ -26,7 +39,7 @@ const Info = ({ keys, value }) => (
 
 function Duration({ total_raised, allocated }) {
 	return (
-		<div className='bg-transparent justify-center px-10 flex border-2 h-[618px] border-[#E74141] bg-[#241B23] rounded-[10px]  flex-col items-center min-h-[618px] box-border'>
+		<div className='bg-transparent justify-center px-6 md:px-10 flex border-2 h-[618px] border-[#E74141] bg-[#241B23] rounded-[10px]  flex-col items-center min-h-[618px] box-border'>
 			<Timing days='24D' hours='12H' minutes='20M' seconds='60S' />
 			<Progress base_color='#2F282E' maxCompleted={allocated} completed={total_raised} />
 			<div className='flex w-full self-start items-start mb-6 justify-between'>

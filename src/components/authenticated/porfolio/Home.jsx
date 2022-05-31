@@ -5,9 +5,16 @@ import Header from './Header';
 
 function Home() {
 	return (
-		<div className='w-full my-12 flex justify-between'>
-			<Header heading='my portfolio' />
-			<div className='flex space-x-4 items-center'>
+		<div className='w-full my-12 flex flex-col md:flex-row justify-between'>
+			<div className='flex items-center mb-12  md:justify-start justify-between'>
+				<Header heading='my portfolio' />
+				<div className='md:hidden flex items-center'>
+					<CustomLink href={'/'}>
+						<Button title='Stake' variant={'contained'} color='primary' icon='ri-arrow-right-up-line' />
+					</CustomLink>
+				</div>
+			</div>
+			<div className='flex md:flex-row space-x-6 items-center'>
 				<CustomLink href={'/'}>
 					<Button title='KYC Verification' variant={'outlined'} color='primary' icon='ri-user-3-line' order />
 				</CustomLink>
@@ -20,9 +27,11 @@ function Home() {
 						order
 					/>
 				</CustomLink>
-				<CustomLink href={'/'}>
-					<Button title='Stake' variant={'contained'} color='primary' icon='ri-arrow-right-up-line' />
-				</CustomLink>
+				<div className='hidden md:block items-center'>
+					<CustomLink href={'/'}>
+						<Button title='Stake' variant={'contained'} color='primary' icon='ri-arrow-right-up-line' />
+					</CustomLink>
+				</div>
 			</div>
 		</div>
 	);

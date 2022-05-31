@@ -1,11 +1,16 @@
 import React from 'react';
 import Icon from '../general/Icons';
 import Progress from './Progress';
+import { useRouter } from 'next/router';
 
-function Card({ image, heading, totalRaised, targetAmount, desc }) {
+function Card({ id, image, heading, totalRaised, targetAmount, desc }) {
+	const router = useRouter();
+	const setProject = () => {
+		router.push(`/projects/${id}`);
+	};
 	return (
 		<div className='rounded-xl w-full shadow-lg hover:shadow-shadow-card duration-[300ms]'>
-			<div className='w-full md:h-[223px] h-[167px] object-fit flex flex-col items-center'>
+			<div className='w-full md:h-[223px] h-[167px] object-fit flex flex-col items-center' onClick={setProject}>
 				{/* eslint-disable-next-line @next/next/no-img-element */}
 				<img src={image} alt={heading} className='w-full h-full rounded-t-lg bg-cover bg-center' />
 			</div>
@@ -16,7 +21,9 @@ function Card({ image, heading, totalRaised, targetAmount, desc }) {
 					</h1>
 					<span className='font-[400] text-[12.8px] text-[#A4A4A4] font-DMSans leading-[17px]'>{desc}</span>
 				</div>
-				{targetAmount && <Progress base_color='#000000' completed={totalRaised} maxCompleted={targetAmount} />}
+				{totalRaised > 0 && (
+					<Progress base_color='#000000' completed={totalRaised} maxCompleted={targetAmount} />
+				)}
 				<div className='flex w-full self-start items-start mb-8 justify-between'>
 					<div className='flex items-start flex-col justify-start'>
 						<span className=' tracking-wide text-[#E74141] font-monument font-[400] text-[10px] md:text-[13px] leading-[12px] md:leading-[15.6px] mb-1'>
