@@ -1,4 +1,4 @@
-import Icon from 'components/Icons';
+import Icon from 'components/general/Icons';
 
 export default function Button({ title, icon, variant, color, className, order, ...rest }) {
 	const contained =
@@ -10,7 +10,9 @@ export default function Button({ title, icon, variant, color, className, order, 
 			? 'bg-theme-success hover:shadow-shadow-success'
 			: color === 'error'
 			? 'bg-theme-error hover:shadow-shadow-error'
-			: color === 'plain' && 'bg-theme-light text-theme-main hover:shadow-shadow-main';
+			: color === 'plain'
+			? 'bg-theme-light text-theme-main hover:shadow-shadow-main'
+			: color === 'disable' && 'bg-theme-100 text-theme-[#CBCBCB]';
 
 	const outlined =
 		color === 'primary'
@@ -21,7 +23,9 @@ export default function Button({ title, icon, variant, color, className, order, 
 			? 'border lg:border-2 border-theme-success text-white hover:shadow-shadow-success'
 			: color === 'error'
 			? 'border lg:border-2 border-theme-error text-white hover:shadow-shadow-error'
-			: color === 'plain' && 'border-2 border-theme-light text-white hover:shadow-shadow-main';
+			: color === 'plain'
+			? 'border-2 border-theme-light text-white hover:shadow-shadow-main'
+			: color === 'disable' && 'border-2 border-[#454545] text-[#454545]';
 
 	return (
 		<>
@@ -33,7 +37,7 @@ export default function Button({ title, icon, variant, color, className, order, 
 					} flex flex-row justify-center items-center py-[10px] px-[24px] lg:py-[15px] lg:px-[32px] gap-[8px] rounded-[5px]`}
 				>
 					<span className='text-[11px] md:text-base font-DMSans font-bold leading-[21px]'>{title}</span>
-					{icon && <Icon icon={icon} className='w-[12px] md:w-[24px] w-[12px] md:h-[24px] text-white' />}
+					{icon && <Icon icon={icon} className='w-[12px] md:w-[24px] md:h-[24px] text-white' />}
 				</button>
 			)}
 			{variant === 'outlined' && (
@@ -43,10 +47,16 @@ export default function Button({ title, icon, variant, color, className, order, 
 						outlined || className
 					} flex flex-row justify-center items-center py-[10px] px-[30px] lg:py-[15px] lg:px-[32px] gap-[8px] rounded-[5px]`}
 				>
-					<span className={`text-[11px] md:text-base font-DMSans font-bold leading-[21px] ${order && 'order-1'}`}>
+					<span
+						className={`text-[11px] md:text-base font-DMSans font-bold leading-[21px] ${
+							order && 'order-1'
+						}`}
+					>
 						{title}
 					</span>
-					{icon && <Icon icon={icon} className={`w-[12px] md:w-[24px] w-[12px] mr-1 md:h-[24px] ${order && '-ml-2'}`} />}
+					{icon && (
+						<Icon icon={icon} className={`w-[12px] md:w-[24px] mr-1 md:h-[24px] ${order && '-ml-2'}`} />
+					)}
 				</button>
 			)}
 		</>

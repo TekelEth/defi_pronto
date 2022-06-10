@@ -1,5 +1,5 @@
-import CustomLink from 'components/CustomLink';
-import Icon from 'components/Icons';
+import CustomLink from 'components/general/CustomLink';
+import Icon from 'components/general/Icons';
 import { useRouter } from 'next/router';
 
 export default function NavLinks() {

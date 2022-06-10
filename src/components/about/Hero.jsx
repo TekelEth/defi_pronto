@@ -1,4 +1,4 @@
-import CustomLink from 'components/CustomLink';
+import CustomLink from 'components/general/CustomLink';
 import Button from 'components/general/Button';
 import React from 'react';
 
@@ -34,9 +34,9 @@ function Hero() {
 					</CustomLink>
 				</div>
 			</div>
-			<div className='md:w-[40%] w-full mt-2 md: mt-0 flex items-center justify-start'>
+			<div className='md:w-[40%] w-full mt-2 md:mt-0 flex items-center justify-start'>
 				{/* eslint-disable-next-line @next/next/no-img-element */}
-				<img src='/assets/backgrounds/Looper-3.png' className='w-full bg-cover bg-center' />
+				<img src='/assets/backgrounds/Looper-3.png' alt='about' className='w-full bg-cover bg-center' />
 			</div>
 		</div>
 	);

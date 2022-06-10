@@ -1,5 +1,5 @@
 /* eslint-disable @next/next/no-img-element */
-const TierListcontent = ({ heading, value }) => {
+const TierInfo = ({ heading, value }) => {
 	return (
 		<div className='flex flex-col items-center'>
 			<span className='text-[8px] md:text-[10px] font-monument leading-[10px]  md:leading-[12px] text-center text-theme-main mb-1'>
@@ -18,9 +18,9 @@ export const TierContent = () => {
 			<div className='flex items-center flex-col md:flex-row justify-center gap-3'>
 				<img src='/assets/tiers/tiers-1.svg' alt='tiers-1' className='w-[100px] h-[100px]' />
 				<div className='flex flex-row items-center justify-center gap-2 md:gap-4'>
-					<TierListcontent heading='DFP Required' value='20,000' />
-					<TierListcontent heading='Pool Weightage' value='2X' />
-					<TierListcontent heading='Time of Stake' value='7 Days' />
+					<TierInfo heading='DFP Required' value='20,000' />
+					<TierInfo heading='Pool Weightage' value='2X' />
+					<TierInfo heading='Time of Stake' value='7 Days' />
 				</div>
 			</div>
 			<div className='w-full text-center my-5 mx-auto'>
@@ -30,9 +30,9 @@ export const TierContent = () => {
 			<div className='flex items-center flex-col md:flex-row justify-center gap-3'>
 				<img src='/assets/tiers/tiers-2.svg' alt='tiers-2' className='w-[100px] h-[100px]' />
 				<div className='flex flex-row items-center justify-center gap-2 md:gap-4'>
-					<TierListcontent heading='DFP Required' value='40,000' />
-					<TierListcontent heading='Pool Weightage' value='10X' />
-					<TierListcontent heading='Time of Stake' value='30 Days' />
+					<TierInfo heading='DFP Required' value='40,000' />
+					<TierInfo heading='Pool Weightage' value='10X' />
+					<TierInfo heading='Time of Stake' value='30 Days' />
 				</div>
 			</div>
 			<div className='w-full text-center my-5 mx-auto'>
@@ -42,9 +42,9 @@ export const TierContent = () => {
 			<div className='flex items-center flex-col md:flex-row justify-center gap-3 my-5'>
 				<img src='/assets/tiers/tiers-3.svg' alt='tiers-3' className='w-[100px] h-[100px]' />
 				<div className='flex flex-row items-center justify-center gap-2 md:gap-4'>
-					<TierListcontent heading='DFP Required' value='60,000' />
-					<TierListcontent heading='Pool Weightage' value='30X' />
-					<TierListcontent heading='Time of Stake' value='180 Days' />
+					<TierInfo heading='DFP Required' value='60,000' />
+					<TierInfo heading='Pool Weightage' value='30X' />
+					<TierInfo heading='Time of Stake' value='180 Days' />
 				</div>
 			</div>
 		</div>
