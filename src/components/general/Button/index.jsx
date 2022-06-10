@@ -10,7 +10,9 @@ export default function Button({ title, icon, variant, color, className, order, 
 			? 'bg-theme-success hover:shadow-shadow-success'
 			: color === 'error'
 			? 'bg-theme-error hover:shadow-shadow-error'
-			: color === 'plain' && 'bg-theme-light text-theme-main hover:shadow-shadow-main';
+			: color === 'plain'
+			? 'bg-theme-light text-theme-main hover:shadow-shadow-main'
+			: color === 'disable' && 'bg-theme-100 text-theme-[#CBCBCB]';
 
 	const outlined =
 		color === 'primary'
@@ -21,7 +23,9 @@ export default function Button({ title, icon, variant, color, className, order, 
 			? 'border lg:border-2 border-theme-success text-white hover:shadow-shadow-success'
 			: color === 'error'
 			? 'border lg:border-2 border-theme-error text-white hover:shadow-shadow-error'
-			: color === 'plain' && 'border-2 border-theme-light text-white hover:shadow-shadow-main';
+			: color === 'plain'
+			? 'border-2 border-theme-light text-white hover:shadow-shadow-main'
+			: color === 'disable' && 'border-2 border-[#454545] text-[#454545]';
 
 	return (
 		<>

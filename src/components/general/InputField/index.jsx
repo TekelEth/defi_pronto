@@ -24,10 +24,10 @@ export default function InputField({ balance, icon, onClickIcon, actionLink, sub
 				)}
 			</div>
 
-			<p className='flex items-center justify-between pt-4'>
-				{actionLink && actionLink}
-				{subBalance && subBalance}
-			</p>
+			<div className='flex items-center justify-between pt-4'>
+				<p>{actionLink && actionLink}</p>
+				<p>{subBalance && subBalance}</p>
+			</div>
 		</div>
 	);
 }

@@ -40,7 +40,7 @@ export default function Modal({ isOpen, closeModal, step, prevStep, children }) 
 								</div>
 							</div>
 							{/* End of action button */}
-							<div className='p-4'>{children}</div>
+							<div className='px-4 py-3'>{children}</div>
 						</Dialog.Panel>
 					</Transition.Child>
 				</div>

@@ -11,11 +11,14 @@ import { getAll, getFunctionById } from '../../../utils/projects';
 function Oneproject(props) {
 	const router = useRouter();
 	return (
-		<div className='md:max-w-[90%] px-4 md:px-5 h-full mb-8 w-full mx-auto' onClick={() => router.back()}>
+		<div className='md:max-w-[90%] px-4 md:px-5 h-full mb-8 w-full mx-auto'>
 			<div className='flex items-center my-8'>
-				<Icon icon='ri-arrow-left-line' className='text-xl text-[#E74141] mr-3' />{' '}
-				<span className='text-white font-monument font-[400] text-[20px] leading-[24px]'>Back</span>
+				<button onClick={() => router.back()}>
+					<Icon icon='ri-arrow-left-line' className='text-xl text-[#E74141] mr-3' />{' '}
+					<span className='text-white font-monument font-[400] text-[20px] leading-[24px]'>Back</span>
+				</button>
 			</div>
+
 			<div className='grid grid-cols-1 md:grid-cols-2 md:gap-x-6 my-12 items-start justify-between'>
 				<Projectcard
 					sub_text='$HDM'

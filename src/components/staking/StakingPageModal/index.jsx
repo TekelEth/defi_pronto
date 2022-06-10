@@ -59,7 +59,7 @@ function modalHandler(step, nextStep) {
 	return handlers[step];
 }
 
-export default function PortfolioStakingModal({ isOpen, openModal, closeModal }) {
+export default function StakingPageModal({ isOpen, openModal, closeModal }) {
 	const [step, setStep] = useState(0);
 
 	// move to the next step

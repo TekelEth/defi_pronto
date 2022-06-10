@@ -1,7 +1,7 @@
 /* eslint-disable @next/next/no-img-element */
 import { useState } from 'react';
-import CustomLink from '../CustomLink';
-import Icon from '../Icons';
+import CustomLink from 'components/general/CustomLink';
+import Icon from 'components/general/Icons';
 import { useRouter } from 'next/router';
 
 const MobileNav = ({ isMenuOpen, setIsMenuOpen }) => {

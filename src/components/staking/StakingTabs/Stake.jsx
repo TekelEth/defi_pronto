@@ -3,7 +3,7 @@ import Button from 'components/general/Button';
 import Modal from 'components/general/Modal';
 import Icon from 'components/general/Icons';
 import { useState } from 'react';
-import PortfolioStakingModal from '../PortfolioStakingModal';
+import StakingPageModal from '../StakingPageModal';
 
 const InfoCard = ({ keys, value, icon }) => (
 	<div
@@ -74,7 +74,7 @@ export const StakingContent = () => {
 				icon={'ri-arrow-right-up-line'}
 				onClick={openModal}
 			/>
-			<PortfolioStakingModal isOpen={isOpen} openModal={openModal} closeModal={closeModal} />
+			<StakingPageModal isOpen={isOpen} openModal={openModal} closeModal={closeModal} />
 		</div>
 	);
 };

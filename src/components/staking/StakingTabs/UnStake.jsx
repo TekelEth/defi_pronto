@@ -1,6 +1,8 @@
 import CustomLink from 'components/general/CustomLink';
 import Button from 'components/general/Button';
 import Icon from 'components/general/Icons';
+import UnStakingPageModal from '../UnStakingPageModal';
+import { useState } from 'react';
 
 const InfoCard = ({ keys, value, icon }) => (
 	<div
@@ -21,6 +23,15 @@ const InfoCard = ({ keys, value, icon }) => (
 );
 
 export const UnStakeContent = () => {
+	let [isOpen, setIsOpen] = useState(false);
+
+	function closeModal() {
+		setIsOpen(false);
+	}
+
+	function openModal() {
+		setIsOpen(true);
+	}
 	return (
 		<div className='p-5 md:p-10 flex justify-center flex-col border-2 w-full border-theme-main rounded-[18px]'>
 			<h5 className='font-monument text-left text-[25px] leading-[30px] text-white'>Unstake</h5>
@@ -29,12 +40,13 @@ export const UnStakeContent = () => {
 				<hr className='w-full broder-2 border-[#606060]' />
 			</div>
 
-			<InfoCard keys='APY Rate' value='5%' />
 			<InfoCard keys='Your Staked Amount' value='25,000 DFP' />
 			<InfoCard keys='Pending Withdrawal Amount' value='5,000 DFP' />
-			<InfoCard keys='Balance' value='6,000 DFP' icon='ri-calculator-line' />
+			<div className='mt-6'>
+				<InfoCard keys='Balance' value='6,000 DFP' icon='ri-calculator-line' />
+			</div>
 
-			<div className='flex items-start justify-start my-6'>
+			<div className='flex items-start justify-start mt-2 mb-8'>
 				<input
 					id='link-checkbox'
 					type='checkbox'
@@ -46,7 +58,14 @@ export const UnStakeContent = () => {
 				</label>
 			</div>
 
-			<Button title={'Aprove'} variant={'contained'} color='primary' icon={'ri-arrow-right-up-line'} />
+			<Button
+				title={'Aprove'}
+				variant={'contained'}
+				color='primary'
+				icon={'ri-arrow-right-up-line'}
+				onClick={openModal}
+			/>
+			<UnStakingPageModal isOpen={isOpen} openModal={openModal} closeModal={closeModal} />
 		</div>
 	);
 };
