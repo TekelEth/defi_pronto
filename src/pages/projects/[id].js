@@ -27,7 +27,7 @@ function Oneproject(props) {
 					img={props.image}
 					img_2='/assets/projects/Ellipse.png'
 				/>
-				<Duration total_raised={props.totalRaised} allocated={props.targetAmount} />
+				<Duration total_raised={props.totalRaised} allocated={props.targetAmount} type = {props.type} />
 			</div>
 			<ProjectInfo />
 			<div className='grid grid-cols-1 md:grid-cols-2 gap-x-6 items-start my-12 justify-between'>

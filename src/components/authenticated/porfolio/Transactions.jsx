@@ -1,12 +1,12 @@
+import Pagination from "components/general/CustomLink/Pagination";
 import React from "react";
 import { transactions } from "../../../../utils/transactions";
 import NoContent from "./NoContent";
 
 const Detail = ({ keys, value, shift }) => (
   <div
-    className={`flex flex-col text-left ${
-      shift && "mr-[18%]"
-    } items-start justify-self-start self-start`}
+    className={`flex flex-col text-left ${shift && "mr-[18%]"
+      } items-start justify-self-start self-start`}
   >
     <span className="text-[#E74141] capitalize font-monument mb-1 text-[12px] leading-[14.4px]">
       {keys}
@@ -80,6 +80,10 @@ function Transactions() {
             />
           ))}
       </div>
+      <div className="mt-12">
+        <Pagination />
+      </div>
+      <div className="w-full py-3  text-center bg-transparent border-[2px] border-[#E74141] font-DMSans font-semibold text-lg mb-12 leading-[13px] text-white text-base rounded-md md:hidden">More Transaction</div>
     </div>
   );
 }

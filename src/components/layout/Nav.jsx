@@ -79,7 +79,7 @@ export default function Nav() {
 				<CustomLink href={'/'} className='flex items-center'>
 					<img src='/assets/logo.svg' alt='Defi Pronto Logo' className=' w-14' />
 				</CustomLink>
-				<div className='hidden md:flex lg:flex items-center gap-7'>
+				<div className='hidden lg:flex lg:flex items-center gap-7'>
 					<div className='flex flex-row items-start py-2 px-2 gap-8'>
 						<CustomLink
 							href={'/about'}

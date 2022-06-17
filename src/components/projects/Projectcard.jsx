@@ -11,7 +11,7 @@ function Projectcard({ img, img_2, sub_text, heading, content }) {
 					alt='Prject Image'
 					className='w-full h-full object-cover object-center rounded-t-[10px]'
 				/>
-				<div className='flex items-center  absolute h-[128px] w-[128px] rounded-full  top-[177px] right-[10%] '>
+				<div className='flex items-center  absolute h-[80px] md:h-[128px] w-[80px] md:w-[128px] rounded-full top-[200px]  md:top-[177px] right-[10%] '>
 					<img
 						src={img_2}
 						alt='Prject Image'
@@ -28,13 +28,13 @@ function Projectcard({ img, img_2, sub_text, heading, content }) {
 					{content}
 				</span>
 				<div className='mt-6 flex items-center w-full md:w-[75%]'>
-					<Icon icon='ri-global-line' className='text-white text-xl mr-4' />
-					<Icon icon='ri-telegram-fill' className='text-white text-xl mr-4' />
-					<Icon icon='ri-discord-line' className='text-white text-xl mr-4' />
-					<Icon icon='ri-twitter-fill' className='text-white text-xl mr-4' />
+					<Icon icon='ri-global-line' className='text-white text-2xl mr-2 md:mr-4' />
+					<Icon icon='ri-telegram-fill' className='text-white text-2xl mr-2 md:mr-4' />
+					<Icon icon='ri-discord-line' className='text-white text-2xl mr-2 md:mr-4' />
+					<Icon icon='ri-twitter-fill' className='text-white text-2xl mr-2 md:mr-4' />
 					<div className='ml-4 flex items-center'>
-						<Icon icon='ri-file-text-line' className='text-[#E74141] mr-2 text-base' />
-						<span className='text-[#E74141]  text-base capitalize'>white paper</span>
+						<Icon icon='ri-file-text-line' className='text-[#E74141] mr-2 text-xl' />
+						<span className='text-[#E74141]  text-lg capitalize'>white paper</span>
 					</div>
 				</div>
 			</div>

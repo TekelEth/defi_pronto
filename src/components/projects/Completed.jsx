@@ -13,7 +13,7 @@ function Completed() {
   return (
     <div className="my-20">
       <ProjectHeading heading="completed projects" />
-      <div className="relative grid grid-cols-1 lg:grid-cols-3 gap-x-6 gap-y-6 w-full">
+      <div className="relative grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-x-6 gap-y-6 w-full">
         {projects && projects.length > 0  && projects.map((x, i) => (
           <div key={i}>
             <Card

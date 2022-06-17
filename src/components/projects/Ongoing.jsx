@@ -13,7 +13,7 @@ function Ongoing() {
   return (
     <div className="my-20">
       <ProjectHeading heading="Ongoing projects" />
-      <div className="relative grid grid-cols-1 lg:grid-cols-3 gap-x-6 gap-y-6 w-full">
+      <div className="relative grid md:grid-cols-2 grid-cols-1 lg:grid-cols-3 gap-x-6 gap-y-6 w-full">
         {projects &&
           projects.length > 0 &&
           projects.map((x, i) => (
