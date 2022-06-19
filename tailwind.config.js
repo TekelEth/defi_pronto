@@ -4,7 +4,7 @@ module.exports = {
 		extend: {
 			fontFamily: {
 				DMSans: ['DM Sans', 'sans-serif'],
-				monument: ['Monument Extended', 'cursive'],
+				orbitron: ['Orbitron', 'sans-serif'],
 			},
 			colors: {
 				theme: {

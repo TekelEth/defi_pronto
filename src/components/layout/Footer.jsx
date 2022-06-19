@@ -16,7 +16,7 @@ export default function Footer() {
 				</div>
 				<div className='relative container top-[70px] px-10 lg:px-40 mx-auto'>
 					<div className='items-center'>
-						<h2 className='font-monument font-normal text-[25px] lg:text-5xl text-white text-center leading-[30px] lg:leading-[59px] tracking-wide'>
+						<h2 className='font-orbitron font-normal text-[25px] lg:text-5xl text-white text-center leading-[30px] lg:leading-[59px] tracking-wide'>
 							Want to launch your project on DefiPronto?
 						</h2>
 						<div className='flex items-center justify-center  mt-12 lg:mt-3'>
@@ -40,7 +40,7 @@ export default function Footer() {
 					</div>
 					<div className='md:top-[107px] md:right-[180px] w-full md:w-[555px] mt-10  lg:h-[157px] grid grid-cols-2 lg:grid-cols-3 gap-4 lg:gap-8'>
 						<div>
-							<h4 className='font-monument text-base leading-[19px] text-theme-light mb-2'>Company</h4>
+							<h4 className='font-orbitron text-base leading-[19px] text-theme-light mb-2'>Company</h4>
 							<div className='flex flex-col justify-start text-left'>
 								<CustomLink
 									href={'/'}
@@ -69,7 +69,7 @@ export default function Footer() {
 							</div>
 						</div>
 						<div>
-							<h4 className='font-monument text-base leading-[19px] text-theme-light mb-2'>Support</h4>
+							<h4 className='font-orbitron text-base leading-[19px] text-theme-light mb-2'>Support</h4>
 							<div className='flex flex-col justify-start text-left'>
 								<CustomLink
 									href={'/'}
@@ -98,7 +98,7 @@ export default function Footer() {
 							</div>
 						</div>
 						<div>
-							<h4 className='font-monument text-base leading-[19px] text-theme-light mb-2'>
+							<h4 className='font-orbitron text-base leading-[19px] text-theme-light mb-2'>
 								Social Media
 							</h4>
 							<div className='flex flex-col justify-start text-left'>

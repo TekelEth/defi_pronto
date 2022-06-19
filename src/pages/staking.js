@@ -1,9 +1,9 @@
-import Content from 'components/staking/content';
-import StakingTabs from 'components/staking/StakingTabs';
+import Content from 'sections/staking/content';
+import StakingTabs from 'sections/staking/StakingTabs';
 
 export default function Staking() {
 	return (
-		<div className='max-w-[90%] px-4 md:px-5 h-full  py-8 w-full mx-auto'>
+		<div className='container relative px-4 h-full py-20 w-full mx-auto md:bg-[url("/assets/backgrounds/staking-section.svg")] md:bg-no-repeat md:bg-cover md:bg-center'>
 			<Content />
 			<StakingTabs />
 		</div>

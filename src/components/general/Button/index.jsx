@@ -34,9 +34,9 @@ export default function Button({ title, icon, variant, color, className, order, 
 					{...rest}
 					className={`${
 						contained || className
-					} flex flex-row justify-center items-center py-[10px] px-[24px] lg:py-[15px] lg:px-[32px] gap-[8px] rounded-[5px]`}
+					} w-full flex flex-row justify-center items-center py-[10px] px-[24px] lg:py-[15px] lg:px-[32px] gap-[8px] rounded-[5px]`}
 				>
-					<span className='text-[11px] md:text-base font-DMSans font-bold leading-[21px]'>{title}</span>
+					<span className='text-[11px] md:text-base font-orbitron font-bold leading-[21px]'>{title}</span>
 					{icon && <Icon icon={icon} className='w-[12px] md:w-[24px] md:h-[24px] text-white' />}
 				</button>
 			)}
@@ -45,10 +45,10 @@ export default function Button({ title, icon, variant, color, className, order, 
 					{...rest}
 					className={`${
 						outlined || className
-					} flex flex-row justify-center items-center py-[10px] px-[30px] lg:py-[15px] lg:px-[32px] gap-[8px] rounded-[5px]`}
+					} w-full flex flex-row justify-center items-center py-[10px] px-[30px] lg:py-[15px] lg:px-[32px] gap-[8px] rounded-[5px]`}
 				>
 					<span
-						className={`text-[11px] md:text-base font-DMSans font-bold leading-[21px] ${
+						className={`text-[11px] md:text-base font-orbitron font-bold leading-[21px] ${
 							order && 'order-1'
 						}`}
 					>

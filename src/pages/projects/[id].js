@@ -1,9 +1,9 @@
 import Icon from 'components/general/Icons';
-import Duration from 'components/projects/Duration';
-import Pool_Info from 'components/projects/Pool_Info';
-import Projectcard from 'components/projects/Projectcard';
-import ProjectInfo from 'components/projects/ProjectInfo';
-import Token_Info from 'components/projects/Token_Info';
+import Duration from 'sections/projects/Duration';
+import Pool_Info from 'sections/projects/Pool_Info';
+import Projectcard from 'sections/projects/Projectcard';
+import ProjectInfo from 'sections/projects/ProjectInfo';
+import Token_Info from 'sections/projects/Token_Info';
 import React from 'react';
 import { useRouter } from 'next/router';
 import { getAll, getFunctionById } from '../../../utils/projects';
@@ -15,7 +15,7 @@ function Oneproject(props) {
 			<div className='flex items-center my-8'>
 				<button onClick={() => router.back()}>
 					<Icon icon='ri-arrow-left-line' className='text-xl text-[#E74141] mr-3' />{' '}
-					<span className='text-white font-monument font-[400] text-[20px] leading-[24px]'>Back</span>
+					<span className='text-white font-orbitron font-[400] text-[20px] leading-[24px]'>Back</span>
 				</button>
 			</div>
 

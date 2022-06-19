@@ -1,16 +1,16 @@
-import Completed from "components/projects/Completed";
-import Hero from "components/projects/Hero";
-import Ongoing from "components/projects/Ongoing";
-import Upcoming from "components/projects/Upcoming";
-import React from "react";
+import Completed from 'sections/projects/Completed';
+import Hero from 'sections/projects/Hero';
+import Ongoing from 'sections/projects/Ongoing';
+import Upcoming from 'sections/projects/Upcoming';
+import React from 'react';
 
 export default function Projects() {
-  return (
-    <div className="md:max-w-[90%] px-4 md:px-5 h-full  w-full mx-auto">
-      <Hero />
-      <Upcoming />
-      <Ongoing />
-      <Completed />
-    </div>
-  );
+	return (
+		<div className='container w-full px-4 mx-auto'>
+			<Hero />
+			<Upcoming />
+			<Ongoing />
+			<Completed />
+		</div>
+	);
 }

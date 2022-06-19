@@ -16,7 +16,7 @@ function Card({ id, image, heading, totalRaised, targetAmount, desc }) {
 			</div>
 			<div className='bg-[#2F282E]  w-full rounded-b-lg overflow-hidden flex px-8 md:px-12 flex-col items-center py-12  text-left'>
 				<div className='mb-12'>
-					<h1 className='font-[400] text-white text-[20px] md:text-[25px] leading-[24px] md:leading-[35px] font-monument  mb-2'>
+					<h1 className='font-[400] text-white text-[20px] md:text-[25px] leading-[24px] md:leading-[35px] font-orbitron  mb-2'>
 						{heading}
 					</h1>
 					<span className='font-[400] text-[12.8px] text-[#A4A4A4] font-DMSans leading-[17px]'>{desc}</span>
@@ -26,18 +26,18 @@ function Card({ id, image, heading, totalRaised, targetAmount, desc }) {
 				)}
 				<div className='flex w-full self-start items-start mb-8 justify-between'>
 					<div className='flex items-start flex-col justify-start'>
-						<span className=' tracking-wide text-[#E74141] font-monument font-[400] text-[10px] md:text-[13px] leading-[12px] md:leading-[15.6px] mb-1'>
+						<span className=' tracking-wide text-[#E74141] font-orbitron font-[400] text-[10px] md:text-[13px] leading-[12px] md:leading-[15.6px] mb-1'>
 							Target Amount
 						</span>
-						<span className='font-monument font-[400] text-[14px] md:text-[19px] leading-[17px] md:leading-[22px] text-white'>
+						<span className='font-orbitron font-[400] text-[14px] md:text-[19px] leading-[17px] md:leading-[22px] text-white'>
 							{targetAmount ? targetAmount : 'TBA'}
 						</span>
 					</div>
 					<div className='flex items-start flex-col justify-start'>
-						<span className='text-[#E74141]  mb-1 tracking-wide font-monument font-[400] text-[10px] md:text-[13px] leading-[12px] md:leading-[15.6px]'>
+						<span className='text-[#E74141]  mb-1 tracking-wide font-orbitron font-[400] text-[10px] md:text-[13px] leading-[12px] md:leading-[15.6px]'>
 							Total Raised
 						</span>
-						<span className='font-monument font-[400] text-[14px] md:text-[19px] leading-[17px] md:leading-[22px] text-white'>
+						<span className='font-orbitron font-[400] text-[14px] md:text-[19px] leading-[17px] md:leading-[22px] text-white'>
 							{totalRaised}
 						</span>
 					</div>

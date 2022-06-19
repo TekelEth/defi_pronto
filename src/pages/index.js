@@ -1,9 +1,9 @@
-import HowItWorks from 'components/home/HowItWorks';
-import MoreProjects from 'components/home/MoreProjects';
-import OurSupporters from 'components/home/OurSupporters';
-import UpcomingProject from 'components/home/UpcomingProjects';
-import WhatWeDo from 'components/home/WhatWeDo';
-import Hero from '../components/home/Hero';
+import HowItWorks from 'sections/home/HowItWorks';
+import MoreProjects from 'sections/home/MoreProjects';
+import OurSupporters from 'sections/home/OurSupporters';
+import UpcomingProject from 'sections/home/UpcomingProjects';
+import WhatWeDo from 'sections/home/WhatWeDo';
+import Hero from '../sections/home/Hero';
 
 export default function Home() {
 	return (
@@ -11,7 +11,7 @@ export default function Home() {
 			<Hero />
 			<WhatWeDo />
 			<UpcomingProject />
-			<div className='px-4 py-20 mx-auto sm:max-w-xl md:max-w-full lg:max-w-screen-xl md:px-24 lg:px-8'>
+			<div className='relative container px-4 lg:px-6 py-10 lg:py-24 mx-auto md:bg-[url("/assets/backgrounds/details-section.svg")] md:bg-no-repeat md:bg-cover md:bg-center'>
 				<MoreProjects />
 				<HowItWorks />
 			</div>
