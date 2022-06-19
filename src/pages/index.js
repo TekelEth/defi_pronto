@@ -1,3 +1,4 @@
+import Head from 'next/head';
 import HowItWorks from 'sections/home/HowItWorks';
 import MoreProjects from 'sections/home/MoreProjects';
 import OurSupporters from 'sections/home/OurSupporters';
@@ -8,6 +9,9 @@ import Hero from '../sections/home/Hero';
 export default function Home() {
 	return (
 		<>
+			<Head>
+				<title>DefiPronto | Home</title>
+			</Head>
 			<Hero />
 			<WhatWeDo />
 			<UpcomingProject />
