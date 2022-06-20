@@ -224,8 +224,7 @@ export default function Nav() {
 				</div>
 			)}
 
-			{/* <WalletConnect close={closeWallet} showWallet={showWallet} /> */}
-			{/* <WalletConnect close={()=> setShowWallet(false)}/> */}
+			<WalletConnect close={closeWallet} showWallet={showWallet} />
 		</div>
 	);
 }
