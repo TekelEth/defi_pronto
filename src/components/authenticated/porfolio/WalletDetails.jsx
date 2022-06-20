@@ -4,7 +4,7 @@ import React from 'react';
 const WalletCard = ({ title, amount }) => (
 	<div className='flex flex-col h-[155px] border-[#E74141] border-2 py-4 py-2 items-center text-center justify-center rounded-[20px] bg-transparent hover:shadow-shadow-card'>
 		<span className='text-[#E74141] mb-2 font-[400] text-[12px] leading-[14.4px] text-center'>{title} </span>
-		<span className='text-white text-center font-[400] text-[31.25px] md:text-[39px] leading-[37.5px] md:leading-[47px] font-monument '>
+		<span className='text-white text-center font-[400] text-[31.25px] md:text-[39px] leading-[37.5px] md:leading-[47px] font-orbitron '>
 			{amount}
 		</span>
 	</div>
@@ -16,7 +16,7 @@ function WalletDetails() {
 			<div className='w-full md:w-[45%]'>
 				<div className='w-full flex flex-col'>
 					<div className=' mb-4 px-6 md:px-8 py-6 md:px-8  bg-[#E74141] w-full rounded-[10px]'>
-						<span className='font-[400] block  font-monument  text-[20px] leading-[24px] text-white'>
+						<span className='font-[400] block  font-orbitron  text-[20px] leading-[24px] text-white'>
 							Wallet Address
 						</span>
 
@@ -29,10 +29,10 @@ function WalletDetails() {
 						</div>
 					</div>
 					<div className='bg-[#2F282E] px-8 h-[120px] flex items-center justify-between rounded-[10px]'>
-						<span className='capitalize text-white font-[400] text-[20px] leading-[24px] font-monument'>
+						<span className='capitalize text-white font-[400] text-[20px] leading-[24px] font-orbitron'>
 							current tier
 						</span>
-						<span className='capitalize text-white font-[400] text-[20px] leading-[24px] font-monument'>
+						<span className='capitalize text-white font-[400] text-[20px] leading-[24px] font-orbitron'>
 							-
 						</span>
 					</div>

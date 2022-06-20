@@ -12,25 +12,25 @@ const Detail = ({ keys, value, shift }) => (
       {keys}
     </span>
 
-    <span className="text-white  text-[14px] md:text-[20px] leading-[16px] md:leading-[24px] font-monument">
-      {value}
-    </span>
-  </div>
+		<span className='text-white  text-[14px] md:text-[20px] leading-[16px] md:leading-[24px] font-orbitron'>
+			{value}
+		</span>
+	</div>
 );
 
 const Transaction = ({ amount, address, type, status }) => {
-  return (
-    <div className=" border-b-[1px] md:hidden flex flex-col  border-[#353434] py-6 px-2">
-      <div className="flex  mb-6 justify-between">
-        <Detail keys="Amount" value={amount} />
-        <Detail keys="Address" value={address} />
-      </div>
-      <div className="flex  text-left justify-between">
-        <Detail keys="Type" value={type} />
-        <Detail keys="Status" shift value={status} />
-      </div>
-    </div>
-  );
+	return (
+		<div className=' border-b-[1px] md:hidden flex flex-col  border-[#353434] py-6 px-2'>
+			<div className='flex  mb-6 justify-between'>
+				<Detail keys='Amount' value={amount} />
+				<Detail keys='Address' value={address} />
+			</div>
+			<div className='flex  text-left justify-between'>
+				<Detail keys='Type' value={type} />
+				<Detail keys='Status' shift value={status} />
+			</div>
+		</div>
+	);
 };
 
 function Transactions() {

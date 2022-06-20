@@ -1,5 +1,5 @@
 /* eslint-disable @next/next/no-img-element */
-import { useState } from 'react';
+import { useContext, useState } from 'react';
 import CustomLink from 'components/general/CustomLink';
 import Icon from 'components/general/Icons';
 import { useRouter } from 'next/router';
@@ -9,63 +9,118 @@ const MobileNav = ({ isMenuOpen, setIsMenuOpen, walletDisplay }) => {
 	const router = useRouter();
 	const path_name = router.pathname;
 	const position = path_name === '/' ? '' : 'sticky bg-[#241B23] h-screen';
+
+	// return (
+	// 	<div>
+	// 		<div
+	// 			className={`lg:hidden ${position} bg-[#241B23]  duration-300 py-6 px-6 my-4 flex flex-col items-start gap-y-7`}
+	// 		>
+	// 			<div className='flex flex-col items-start py-2 px-2 gap-8'>
+	// 				<CustomLink
+	// 					onClick={() => setIsMenuOpen(false)}
+	// 					href={'/about'}
+	// 					className={`${path_name === '/about' ? 'text-theme-main' : 'text-white'
+	// 						} w-auto h-[21px] font-DMSans font-bold text-base leading-[21px] hover:text-theme-main order-1`}
+	// 				>
+	// 					About
+	// 				</CustomLink>
+	// 				<CustomLink
+	// 					onClick={() => setIsMenuOpen(false)}
+	// 					href={'/#features'}
+	// 					className={`${path_name === '/features' ? 'text-theme-main' : 'text-white'
+	// 						} w-auto h-[21px] font-DMSans font-bold text-base leading-[21px] hover:text-theme-main order-2`}
+	// 				>
+	// 					Features
+	// 				</CustomLink>
+	// 				<CustomLink
+	// 					onClick={() => setIsMenuOpen(false)}
+	// 					href={'/#howitworks'}
+	// 					className={`${path_name === '/howitworks' ? 'text-theme-main' : 'text-white'
+	// 						} w-auto h-[21px] font-DMSans font-bold text-base leading-[21px] hover:text-theme-main order-3`}
+	// 				>
+	// 					How it works
+	// 				</CustomLink>
+	// 				<CustomLink
+	// 					onClick={() => setIsMenuOpen(false)}
+	// 					href={'/projects'}
+	// 					className={`${path_name === '/projects' ? 'text-theme-main' : 'text-white'
+	// 						} w-auto h-[21px] font-DMSans font-bold text-base leading-[21px] hover:text-theme-main order-4`}
+	// 				>
+	// 					Projects
+	// 				</CustomLink>
+	// 				<CustomLink
+	// 					onClick={() => setIsMenuOpen(false)}
+	// 					href={'/staking'}
+	// 					className={`${path_name === '/staking' ? 'text-theme-main' : 'text-white'
+	// 						} w-auto h-[21px] font-DMSans font-bold text-base leading-[21px] hover:text-theme-main order-5`}
+	// 				>
+	// 					Staking
+	// 				</CustomLink>
+	// 			</div>
+	// 			<button className='flex flex-row justify-center items-center py-[15px] px-[32px] gap-2 text-white bg-theme-main rounded-[5px]' onClick={walletDisplays}>
+	// 				<span className='text-base font-DMSans font-bold leading-[21px]'>Connect Wallet</span>
+	// 				{/* <ArrowRightUpIcon className='w-[24px] h-[24px] text-white' /> */}
+	// 				<Icon icon={'ri-arrow-right-up-line'} className='w-[24px] h-[24px] text-white' />
+	// 			</button>
+	// 		</div>
+
+	// // const { connected, connect } = useContext(AuthContext);
 	const walletDisplays = () => {
 		setIsMenuOpen(false)
 		walletDisplay()
 	}
 	return (
-		<div>
-			<div
-				className={`lg:hidden ${position} bg-[#241B23]  duration-300 py-6 px-6 my-4 flex flex-col items-start gap-y-7`}
-			>
-				<div className='flex flex-col items-start py-2 px-2 gap-8'>
-					<CustomLink
-						onClick={() => setIsMenuOpen(false)}
-						href={'/about'}
-						className={`${path_name === '/about' ? 'text-theme-main' : 'text-white'
-							} w-auto h-[21px] font-DMSans font-bold text-base leading-[21px] hover:text-theme-main order-1`}
-					>
-						About
-					</CustomLink>
-					<CustomLink
-						onClick={() => setIsMenuOpen(false)}
-						href={'/#features'}
-						className={`${path_name === '/features' ? 'text-theme-main' : 'text-white'
-							} w-auto h-[21px] font-DMSans font-bold text-base leading-[21px] hover:text-theme-main order-2`}
-					>
-						Features
-					</CustomLink>
-					<CustomLink
-						onClick={() => setIsMenuOpen(false)}
-						href={'/#howitworks'}
-						className={`${path_name === '/howitworks' ? 'text-theme-main' : 'text-white'
-							} w-auto h-[21px] font-DMSans font-bold text-base leading-[21px] hover:text-theme-main order-3`}
-					>
-						How it works
-					</CustomLink>
-					<CustomLink
-						onClick={() => setIsMenuOpen(false)}
-						href={'/projects'}
-						className={`${path_name === '/projects' ? 'text-theme-main' : 'text-white'
-							} w-auto h-[21px] font-DMSans font-bold text-base leading-[21px] hover:text-theme-main order-4`}
-					>
-						Projects
-					</CustomLink>
-					<CustomLink
-						onClick={() => setIsMenuOpen(false)}
-						href={'/staking'}
-						className={`${path_name === '/staking' ? 'text-theme-main' : 'text-white'
-							} w-auto h-[21px] font-DMSans font-bold text-base leading-[21px] hover:text-theme-main order-5`}
-					>
-						Staking
-					</CustomLink>
-				</div>
-				<button className='flex flex-row justify-center items-center py-[15px] px-[32px] gap-2 text-white bg-theme-main rounded-[5px]' onClick={walletDisplays}>
-					<span className='text-base font-DMSans font-bold leading-[21px]'>Connect Wallet</span>
-					{/* <ArrowRightUpIcon className='w-[24px] h-[24px] text-white' /> */}
-					<Icon icon={'ri-arrow-right-up-line'} className='w-[24px] h-[24px] text-white' />
-				</button>
+		<div
+			className={`lg:hidden ${position} bg-[#241B23]  duration-300 py-6 px-6 my-4 flex flex-col items-start gap-y-7`}
+		>
+			<div className='flex flex-col items-start py-2 px-2 gap-8'>
+				<CustomLink
+					onClick={() => setIsMenuOpen(false)}
+					href={'/about'}
+					className={`${path_name === '/about' ? 'text-theme-main' : 'text-white'
+						} w-auto h-[21px] font-orbitron font-bold text-base leading-[21px] hover:text-theme-main order-1`}
+				>
+					About
+				</CustomLink>
+				<CustomLink
+					onClick={() => setIsMenuOpen(false)}
+					href={'/#features'}
+					className={`${path_name === '/features' ? 'text-theme-main' : 'text-white'
+						} w-auto h-[21px] font-orbitron font-bold text-base leading-[21px] hover:text-theme-main order-2`}
+				>
+					Features
+				</CustomLink>
+				<CustomLink
+					onClick={() => setIsMenuOpen(false)}
+					href={'/#howitworks'}
+					className={`${path_name === '/howitworks' ? 'text-theme-main' : 'text-white'
+						} w-auto h-[21px] font-orbitron font-bold text-base leading-[21px] hover:text-theme-main order-3`}
+				>
+					How it works
+				</CustomLink>
+
+				<CustomLink
+					onClick={() => setIsMenuOpen(false)}
+					href={'/projects'}
+					className={`${path_name === '/projects' ? 'text-theme-main' : 'text-white'
+						} w-auto h-[21px] font-orbitron font-bold text-base leading-[21px] hover:text-theme-main order-4`}
+				>
+					Projects
+				</CustomLink>
+				<CustomLink
+					onClick={() => setIsMenuOpen(false)}
+					href={'/staking'}
+					className={`${path_name === '/staking' ? 'text-theme-main' : 'text-white'
+						} w-auto h-[21px] font-orbitron font-bold text-base leading-[21px] hover:text-theme-main order-5`}
+				>
+					Staking
+				</CustomLink>
 			</div>
+			<button className='flex flex-row justify-center items-center py-[15px] px-[32px] gap-2 text-white bg-theme-main rounded-[5px]' onClick={walletDisplays}>
+				<span className='text-base font-orbitron font-bold leading-[21px]'>Connect Wallet</span>
+				{/* <ArrowRightUpIcon className='w-[24px] h-[24px] text-white' /> */}
+				<Icon icon={'ri-arrow-right-up-line'} className='w-[24px] h-[24px] text-white' />
+			</button>
 		</div>
 	);
 };
@@ -81,8 +136,8 @@ export default function Nav() {
 		setIsMenuOpen(false)
 	}
 	return (
-		<div className={` ${position} inset-x-0 z-30 top-0 px-4 py-6 w-full max-w-full  md:px-5 lg:px-5 mx-auto`}>
-			<div className='flex items-center max-w-[90%] mx-auto justify-between'>
+		<div className={`${position} inset-x-0 z-30 top-0 px-4 md:px-12 py-6 w-full max-w-full mx-auto`}>
+			<div className='flex items-center mx-auto justify-between'>
 				<CustomLink href={'/'} className='flex items-center'>
 					<img src='/assets/logo.svg' alt='Defi Pronto Logo' className=' w-14' />
 				</CustomLink>
@@ -91,41 +146,42 @@ export default function Nav() {
 						<CustomLink
 							href={'/about'}
 							className={`${path_name === '/about' ? 'text-theme-main' : 'text-white'
-								} w-auto h-[21px] font-DMSans font-bold text-base leading-[21px] hover:text-theme-main order-1`}
+								} w-auto h-[21px] font-orbitron font-bold text-base leading-[21px] hover:text-theme-main order-1`}
 						>
 							About
 						</CustomLink>
 						<CustomLink
 							href={'/#features'}
 							className={`${path_name === '/features' ? 'text-theme-main' : 'text-white'
-								} w-auto h-[21px] font-DMSans font-bold text-base leading-[21px] hover:text-theme-main order-2`}
+								} w-auto h-[21px] font-orbitron font-bold text-base leading-[21px] hover:text-theme-main order-2`}
 						>
 							Features
 						</CustomLink>
 						<CustomLink
 							href={'/#howitworks'}
 							className={`${path_name === '/howitworks' ? 'text-theme-main' : 'text-white'
-								} w-auto h-[21px] font-DMSans font-bold text-base leading-[21px] hover:text-theme-main order-3`}
+								} w-auto h-[21px] font-orbitron font-bold text-base leading-[21px] hover:text-theme-main order-3`}
 						>
 							How it works
 						</CustomLink>
+
 						<CustomLink
 							href={'/projects'}
 							className={`${path_name === '/projects' ? 'text-theme-main' : 'text-white'
-								} w-auto h-[21px] font-DMSans font-bold text-base leading-[21px] hover:text-theme-main order-4`}
+								} w-auto h-[21px] font-orbitron font-bold text-base leading-[21px] hover:text-theme-main order-4`}
 						>
 							Projects
 						</CustomLink>
 						<CustomLink
 							href={'/staking'}
 							className={`${path_name === '/staking' ? 'text-theme-main' : 'text-white'
-								} w-auto h-[21px] font-DMSans font-bold text-base leading-[21px] hover:text-theme-main order-5`}
+								} w-auto h-[21px] font-orbitron font-bold text-base leading-[21px] hover:text-theme-main order-5`}
 						>
 							Staking
 						</CustomLink>
 					</div>
 					<button className='flex flex-row justify-center items-center py-[15px] px-[32px] gap-2 text-white bg-theme-main rounded-[5px]' onClick={() => setShowWallet(true)}>
-						<span className='text-base font-DMSans font-bold leading-[21px]'>Connect Wallet</span>
+						<span className='text-base font-orbitron font-bold leading-[21px]'>Connect Wallet</span>
 						{/* <ArrowRightUpIcon className='w-[24px] h-[24px] text-white' /> */}
 						<Icon icon={'ri-arrow-right-up-line'} className='w-[24px] h-[24px] text-white' />
 					</button>
@@ -148,10 +204,10 @@ export default function Nav() {
 				</div>
 			)}
 			{
-				  <WalletConnect close={closeWallet} showWallet= {showWallet} /> 
+				<WalletConnect close={closeWallet} showWallet={showWallet} />
 				// <WalletConnect close={()=> setShowWallet(false)}/>
 			}
-		
+
 		</div>
 	);
 }

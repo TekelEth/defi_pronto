@@ -3,6 +3,15 @@ import Button from 'components/general/Button';
 import Icon from 'components/general/Icons';
 
 export default function Footer() {
+	const FooterLink = ({ path, title, ...rest }) => (
+		<CustomLink
+			href={path}
+			{...rest}
+			className='font-DMSans font-normal text-base capitalize text-theme-100 hover:text-theme-main duration-300 mb-2'
+		>
+			{title}
+		</CustomLink>
+	);
 	return (
 		<div className='w-full h-full'>
 			<div className='relative w-full h-[314px] bg-theme-main'>
@@ -16,7 +25,7 @@ export default function Footer() {
 				</div>
 				<div className='relative container top-[70px] px-10 lg:px-40 mx-auto'>
 					<div className='items-center'>
-						<h2 className='font-monument font-normal text-[25px] lg:text-5xl text-white text-center leading-[30px] lg:leading-[59px] tracking-wide'>
+						<h2 className='font-orbitron font-normal text-[25px] lg:text-5xl text-white text-center leading-[30px] lg:leading-[59px] tracking-wide'>
 							Want to launch your project on DefiPronto?
 						</h2>
 						<div className='flex items-center justify-center  mt-12 lg:mt-3'>
@@ -28,134 +37,86 @@ export default function Footer() {
 				</div>
 			</div>
 
-			<footer className='w-full container lg:max-w-[90%] pt-20 px-5 mx-auto'>
+			<footer className='w-full container pt-20 px-4 mx-auto'>
 				<div className='md:flex items-center lg:flex-row md:justify-between'>
 					<div className='order-1 md:order-none'>
 						{/* eslint-disable-next-line @next/next/no-img-element */}
 						<img src='/assets/logo-light.svg' alt='logo' className=' w-[100px] h-[82px] mb-2' />
 						<p className='font-DMSans text-base font-normal text-theme-100 leading-[21px] w-[334px] h-[84px]'>
-							Lorem ipsum dolor sit amet, consectetur adipiscing elit. Odio imperdiet nibh at et neque.
-							Sed adipiscing risus aenean neque imperdiet amet fermentum.
+							Decentralized Incubation and launchpad for cardano.
 						</p>
 					</div>
 					<div className='md:top-[107px] md:right-[180px] w-full md:w-[555px] mt-10  lg:h-[157px] grid grid-cols-2 lg:grid-cols-3 gap-4 lg:gap-8'>
 						<div>
-							<h4 className='font-monument text-base leading-[19px] text-theme-light mb-2'>Company</h4>
-							<div className='flex flex-col justify-start text-left'>
-								<CustomLink
-									href={'/'}
-									className='font-DMSans font-normal text-base text-theme-100 leading-[21px] hover:text-theme-main mb-2'
-								>
-									About
-								</CustomLink>
-								<CustomLink
-									href={'/'}
-									className='font-DMSans font-normal text-base text-theme-100 leading-[21px] hover:text-theme-main mb-2'
-								>
-									How it works
-								</CustomLink>
-								<CustomLink
-									href={'/'}
-									className='font-DMSans font-normal text-base text-theme-100 leading-[21px] hover:text-theme-main mb-2'
-								>
-									Projects
-								</CustomLink>
-								<CustomLink
-									href={'/'}
-									className='font-DMSans font-normal text-base text-theme-100 leading-[21px] hover:text-theme-main mb-2'
-								>
-									Staking
-								</CustomLink>
-							</div>
-						</div>
-						<div>
-							<h4 className='font-monument text-base leading-[19px] text-theme-light mb-2'>Support</h4>
-							<div className='flex flex-col justify-start text-left'>
-								<CustomLink
-									href={'/'}
-									className='font-DMSans font-normal text-base text-theme-100 leading-[21px] hover:text-theme-main mb-2'
-								>
-									Documentation
-								</CustomLink>
-								<CustomLink
-									href={'/'}
-									className='font-DMSans font-normal text-base text-theme-100 leading-[21px] hover:text-theme-main mb-2'
-								>
-									Tutorials & Guide
-								</CustomLink>
-								<CustomLink
-									href={'/'}
-									className='font-DMSans font-normal text-base text-theme-100 leading-[21px] hover:text-theme-main mb-2'
-								>
-									FAQ
-								</CustomLink>
-								<CustomLink
-									href={'/'}
-									className='font-DMSans font-normal text-base text-theme-100 leading-[21px] hover:text-theme-main mb-2'
-								>
-									Apply
-								</CustomLink>
-							</div>
-						</div>
-						<div>
-							<h4 className='font-monument text-base leading-[19px] text-theme-light mb-2'>
-								Social Media
+							<h4 className='font-orbitron text-base font-medium leading-[32px] text-theme-light mb-2'>
+								Company
 							</h4>
 							<div className='flex flex-col justify-start text-left'>
-								<CustomLink
-									href={'/'}
-									className='font-DMSans font-normal text-base text-theme-100 leading-[21px] hover:text-theme-main mb-2'
-								>
-									Telegram
-								</CustomLink>
-								<CustomLink
-									href={'/'}
-									className='font-DMSans font-normal text-base text-theme-100 leading-[21px] hover:text-theme-main mb-2'
-								>
-									Discord
-								</CustomLink>
-								<CustomLink
-									href={'/'}
-									className='font-DMSans font-normal text-base text-theme-100 leading-[21px] hover:text-theme-main mb-2'
-								>
-									Twitter
-								</CustomLink>
-								<CustomLink
-									href={'/'}
-									className='font-DMSans font-normal text-base text-theme-100 leading-[21px] hover:text-theme-main mb-2'
-								>
-									GitHub
-								</CustomLink>
+								<FooterLink path='/about' title='about' />
+								<FooterLink path='/how-it-work' title='How it works' />
+								<FooterLink path='/projects' title='Projects' />
+								<FooterLink path='/staking' title='Staking' />
+							</div>
+						</div>
+						<div>
+							<h4 className='font-orbitron font-medium text-base leading-[32px] text-theme-light mb-2'>
+								Support
+							</h4>
+							<div className='flex flex-col justify-start text-left'>
+								<FooterLink path='https://docs.defipronto.com/' title='Documentation' target='_blank' />
+								<FooterLink
+									path='https://docs.defipronto.com/tutorial/overview'
+									title='Tutorials & Guide'
+									target='_blank'
+								/>
+								<FooterLink
+									path='https://docs.defipronto.com/tutorial/faq'
+									title='FAQ'
+									target='_blank'
+								/>
+								<FooterLink path='/' title='Apply' target='_blank' />
+							</div>
+						</div>
+						<div>
+							<h4 className='font-orbitron font-medium  text-base leading-[32px] text-theme-light mb-2'>
+								Social Media
+							</h4>
+
+							<div className='flex flex-col justify-start text-left'>
+								<FooterLink path='https://t.me/defipronto' title='Telegram' target='_blank' />
+								<FooterLink path='https://medium.com/@defipronto' title='Medium' target='_blank' />
+								<FooterLink path='https://twitter.com/defipronto' title='Twitter' target='_blank' />
+								<FooterLink path='https://github.com/Defipronto-Labs' title='Github' target='_blank' />
 							</div>
 						</div>
 					</div>
 				</div>
-				<div className='md:flex items-center justify-between py-8'>
+				<div className='md:flex container w-full items-center justify-between py-8 mx-auto'>
 					<span className='text-base font-DMSans text-theme-100 sm:text-center leading-[21px]'>
 						© {new Date().getFullYear()} Defipronto. All rights reserved.
 					</span>
-					<div className='flex mt-4 lg:items-center space-x-4'>
+					<div className='flex mt-4 pr-10 lg:items-center space-x-4'>
 						<CustomLink
-							href={'/'}
+							href='https://t.me/defipronto'
 							rel='noreferrer'
 							target='_blank'
-							className='text-theme-main hover:text-theme-light text-[20px] lg:text-[32px]'
+							className='text-theme-main hover:text-theme-light text-[32px] duration-300'
 						>
-							<Icon icon={'ri-telegram-line'} />
+							<Icon icon={'ri-telegram-fill'} />
 						</CustomLink>
 						<CustomLink
-							href={'/'}
+							href='https://medium.com/@defipronto'
 							rel='noreferrer'
 							target='_blank'
-							className='text-theme-main hover:text-theme-light text-[20px] lg:text-[32px]'
+							className='text-theme-main hover:text-theme-light text-[32px] duration-300'
 						>
-							<Icon icon={'ri-discord-line'} />
+							<Icon icon={'ri-medium-fill'} />
 						</CustomLink>
 						<CustomLink
-							href={'/'}
+							href='https://twitter.com/defipronto'
 							rel='noreferrer'
 							target='_blank'
-							className='text-theme-main hover:text-theme-light text-[20px] lg:text-[32px]'
+							className='text-theme-main hover:text-theme-light text-[32px] duration-300'
 						>
 							<Icon icon={'ri-twitter-fill'} />
 						</CustomLink>

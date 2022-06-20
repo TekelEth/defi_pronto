@@ -1,39 +1,23 @@
-@import url('https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;700&family=Orbitron:wght@400;500;600;700;800;900&display=swap');
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
 @layer base {
-  thead > td {
-    @apply text-[#E74141]
-  }
+	thead > td {
+		@apply text-[#E74141];
+	}
 
-  tr {
-    @apply py-2 border-b-[1px] border-[#353434]
-  }
+	tr {
+		@apply py-2 border-b-[1px] border-[#353434];
+	}
 
-  td {
-    @apply font-monument font-[400] text-white text-[12px] leading-[14.4px] py-4
-  }
+	td {
+		@apply font-orbitron font-[400] text-white text-[12px] leading-[14.4px] py-4;
+	}
 
-  tr:last-child{
-    @apply border-b-0
-  }
-
-  @font-face {
-    font-display: swap;
-    font-family: "Monument Extended";
-    font-style: normal;
-    font-weight: 400;
-    src: url("/fonts/MonumentExtended-Regular.otf") format("opentype");
-  }
-
-	@font-face {
-		font-display: swap;
-		font-family: 'Monument Extended';
-		font-style: normal;
-		font-weight: bold;
-		src: url('/fonts/MonumentExtended-Ultrabold.otf') format('opentype');
+	tr:last-child {
+		@apply border-b-0;
 	}
 
 	.home-bg {
@@ -89,17 +73,8 @@
 		transform: translateX(-8px);
 	}
 
-<<<<<<< HEAD
-  .no_bottom > div:nth-child(3) {
-    margin-bottom: 0;
-  }
-
-  .timeline:after {
-    /* content: "";
-=======
 	.timeline:after {
 		/* content: "";
->>>>>>> e544c2144882be8d3a131e79f97c188cc5655491
     width: 160px;
     display: flex;
     align-items: center;
@@ -111,38 +86,20 @@
     right: 0; */
 	}
 
-	.polygon {
+	.image-wrap {
 		position: absolute;
-		margin: 0 auto;
-		background-color: '#e74141';
-		border-radius: 10px;
-		width: 113px;
-		height: 113px;
-		box-sizing: border-box;
-		transition: all 1s;
-		border: 0.4vh solid transparent;
-	}
-
-	/* Creating pseudo-class */
-	.polygon:before,
-	.polygon:after {
-		content: '';
-		border: inherit;
-		position: absolute;
-		top: -0.5vh;
-		left: -0.5vh;
-		background-color: '#e74141';
-		border-radius: inherit;
-		height: 100%;
+		top: -100px;
+		left: 0px;
+		right: 0px;
 		width: 100%;
-	}
-
-	/* Align them in such a way
-that they form a polygon */
-	.polygon:before {
-		transform: rotate(60deg);
-	}
-	.polygon:after {
-		transform: rotate(-60deg);
+		max-width: 1550px;
+		margin: 0px auto;
+		height: calc(100% + 100px);
+		z-index: -1;
+		background-image: url(/assets/backgrounds/hero-section.svg);
+		background-repeat: no-repeat;
+		background-size: cover;
+		background-position: center bottom;
+		max-height: 69rem;
 	}
 }
