@@ -1,3 +1,5 @@
+import Home from 'pages';
+
 export const projects = [
 	{
 		id: 1,
@@ -55,49 +57,49 @@ export const projects = [
 	},
 	{
 		id: 7,
-		image: '/assets/projects/project1.png',
-		heading: 'Hyper Drive Metaverse',
+		image: 'assets/projects/project-3.png',
+		heading: 'DefiPronto',
 		totalRaised: 0,
 		targetAmount: 1000,
-		desc: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Odio imperdiet nibh at et neque.',
+		desc: 'Launchpad & Accelerator to launch the most promising projects on the Cardano blockchain.',
 		type: 'upcoming',
 	},
 	{
 		id: 8,
-		image: '/assets/projects/project1.png',
-		heading: 'Hyper Drive Metaverse',
+		image: 'assets/projects/project-4.png',
+		heading: 'Solar Nodes',
 		totalRaised: 0,
 		targetAmount: 1000,
-		desc: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Odio imperdiet nibh at et neque.',
+		desc: 'Decentralizing Electricity through solar meshes that will also act as nodes that can generate and validate blocks on an 3rd generation POS blockchain.		',
 		type: 'upcoming',
 	},
 	{
 		id: 9,
-		image: '/assets/projects/project1.png',
-		heading: 'Hyper Drive Metaverse',
+		image: 'assets/projects/project-5.png',
+		heading: 'Cryptogenie',
 		totalRaised: 0,
 		targetAmount: 1000,
-		desc: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Odio imperdiet nibh at et neque.',
+		desc: 'Programatically Smart NFTs that you can breed and mutate into new and smart genie NFTs',
 		type: 'upcoming',
 	},
-	{
-		id: 10,
-		image: '/assets/projects/project1.png',
-		heading: 'Hyper Drive Metaverse',
-		totalRaised: 0,
-		targetAmount: 1000,
-		desc: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Odio imperdiet nibh at et neque.',
-		type: 'upcoming',
-	},
-	{
-		id: 11,
-		image: '/assets/projects/project1.png',
-		heading: 'Hyper Drive Metaverse',
-		totalRaised: 0,
-		targetAmount: 1000,
-		desc: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Odio imperdiet nibh at et neque.',
-		type: 'upcoming',
-	},
+	// {
+	// 	id: 10,
+	// 	image: '/assets/projects/project1.png',
+	// 	heading: 'Hyper Drive Metaverse',
+	// 	totalRaised: 0,
+	// 	targetAmount: 1000,
+	// 	desc: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Odio imperdiet nibh at et neque.',
+	// 	type: 'upcoming',
+	// },
+	// {
+	// 	id: 11,
+	// 	image: '/assets/projects/project1.png',
+	// 	heading: 'Hyper Drive Metaverse',
+	// 	totalRaised: 0,
+	// 	targetAmount: 1000,
+	// 	desc: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Odio imperdiet nibh at et neque.',
+	// 	type: 'upcoming',
+	// },
 ];
 
 export const getFunctionByType = (type) => {

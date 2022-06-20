@@ -9,34 +9,38 @@ function Roadmap() {
 			<div className='lg:w-[60%] w-full mx-auto relative position'>
 				<div className='flex flex-col relative h-[200px] w-[50%] items-start justify-start'>
 					<span className='font-[400] mb-2  text-[14px] md:text-[20px] leading-[16.8px] md:leading-[24px] font-orbitron text-white'>
-						Q1 - Launch Platform
+						Phase 1 - Launch Platform
 					</span>
-					<div className='font-[400] w-full md:w-[80%] text-[13px] leading-[17px] font-DMSans text-[#636262]'>
-						Lorem ipsum dolor sit amet, consectetur adipiscing elit. Odio imperdiet nibh at et neque.
+					<div className='font-[400] w-full md:w-[80%] text-[14px] leading-[17px] font-DMSans text-theme-100'>
+						DeFi Pronto Initial Announcement Defipronto Launchpad UI/UX Wireframing Website Release Onepager
+						Release Partnerships & Integrations Private Seed Sale Community Building
 					</div>
 				</div>
 				<div className='flex flex-col relative h-[200px] w-[50%] items-end justify-start'>
 					<span className='font-[400] mb-2  text-[14px] md:text-[20px] leading-[16.8px] md:leading-[24px] font-orbitron text-white'>
-						Q2 - Launch Token
+						Phase 2 - Launch Token
 					</span>
-					<div className='font-[400] w-full md:w-[80%]  text-[13px] leading-[17px] font-DMSans text-[#636262]'>
-						Lorem ipsum dolor sit amet, consectetur adipiscing elit. Odio imperdiet nibh at et neque.
+					<div className='font-[400] w-full md:w-[80%]  text-[14px] leading-[17px] font-DMSans text-theme-100'>
+						Defipronto Accelerator Program Initial Projects Selection Tokenomics & Information About
+						Selected Projects To be Launched DFP Token Pre-Sale Exchange Listing CMC/Coin Gecko Listing
+						Initial Defipronto IDO Registration
 					</div>
 				</div>
 				<div className='flex flex-col relative h-[200px] w-[50%] items-start justify-start'>
 					<span className='font-[400] mb-2  text-[14px] md:text-[20px] leading-[16.8px] md:leading-[24px] font-orbitron text-white'>
-						Q3 - Staking Begins
+						Phase 3 - Staking Begins
 					</span>
-					<div className='font-[400] w-full md:w-[80%]  text-[13px] leading-[17px] font-DMSans text-[#636262]'>
-						Lorem ipsum dolor sit amet, consectetur adipiscing elit. Odio imperdiet nibh at et neque.
+					<div className='font-[400] w-full md:w-[80%]  text-[14px] leading-[17px] font-DMSans text-theme-100'>
+						Project Team Token Lock As A Service Project Team Token Staking As A Service NFT Launchpad
+						Defipronto NFT Launchpad
 					</div>
 				</div>
 				<div className='flex flex-col relative h-[200px] w-[50%] items-end justify-start'>
 					<span className='font-[400] text-[14px] md:text-[20px] leading-[16.8px] md:leading-[24px] mb-2 font-orbitron text-white'>
-						Q4 - Onboard Projects
+						Phase 4 - Onboard Projects
 					</span>
-					<div className='font-[400] w-full md:w-[80%]  text-[13px] leading-[17px] font-DMSans text-[#636262]'>
-						Lorem ipsum dolor sit amet, consectetur adipiscing elit. Odio imperdiet nibh at et neque.
+					<div className='font-[400] w-full md:w-[80%]  text-[14px] leading-[17px] font-DMSans text-theme-100'>
+						Further Partnerships Defipronto Launchpad As A Service
 					</div>
 				</div>
 			</div>

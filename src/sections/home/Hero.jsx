@@ -2,7 +2,17 @@
 import CustomLink from 'components/general/CustomLink';
 import Button from 'components/general/Button';
 import Icon from 'components/general/Icons';
-// import Toast, { ToastInfo, ToggleToast } from 'components/general/Toast';
+
+const SocialLink = ({ linkRef, socialIcon }) => (
+	<CustomLink
+		href={linkRef}
+		rel='noreferrer'
+		target='_blank'
+		className='text-white hover:text-theme-main text-[25px] lg:text-[32px] duration-300'
+	>
+		<Icon icon={socialIcon} />
+	</CustomLink>
+);
 
 function Hero() {
 	return (
@@ -32,10 +42,8 @@ function Hero() {
 							Decentralized Incubation and launchpad for <span className='text-theme-main'>cardano</span>
 						</h1>
 						<p className='mt-8 lg:mt-2 w-auto h-[105px] lg:w-[500px] lg:h-[105px] text-left text-theme-100 text-base font-DMSans leading-[17px] lg:leading-[21px] tracking-wide'>
-							Lorem ipsum dolor sit amet, consectetur adipiscing elit. Odio imperdiet nibh at et neque.
-							Sed adipiscing risus aenean neque imperdiet amet fermentum. Nulla ut sagittis dignissim
-							quisque scelerisque vitae tempor ante. Elementum, augue iaculis condimentum quis. Quis
-							tortor ultricies placerat nam urna.
+							Get early access to the most promising Cardano projects with Highly-vetted ideas and teams
+							you can trust.
 						</p>
 						<div className='mt-8 flex items-center space-x-10'>
 							<CustomLink href={'/'}>
@@ -51,30 +59,9 @@ function Hero() {
 									<ToggleToast />
 								</Toast> */}
 							<div className='flex items-center space-x-4'>
-								<CustomLink
-									href={'/'}
-									rel='noreferrer'
-									target='_blank'
-									className='text-white hover:text-theme-main text-[25px] lg:text-[32px] duration-300'
-								>
-									<Icon icon={'ri-telegram-line'} />
-								</CustomLink>
-								<CustomLink
-									href={'/'}
-									rel='noreferrer'
-									target='_blank'
-									className='text-white hover:text-theme-main text-[25px] lg:text-[32px] duration-300'
-								>
-									<Icon icon={'ri-discord-line'} />
-								</CustomLink>
-								<CustomLink
-									href={'/'}
-									rel='noreferrer'
-									target='_blank'
-									className='text-white hover:text-theme-main text-[25px] lg:text-[32px] duration-300'
-								>
-									<Icon icon={'ri-twitter-fill'} />
-								</CustomLink>
+								<SocialLink linkRef='https://t.me/defipronto' socialIcon='ri-telegram-fill' />
+								<SocialLink linkRef='https://medium.com/@defipronto' socialIcon='ri-medium-fill' />
+								<SocialLink linkRef='https://twitter.com/defipronto' socialIcon='ri-twitter-fill' />
 							</div>
 						</div>
 					</div>

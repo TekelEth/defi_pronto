@@ -1,30 +1,44 @@
 import Icon from 'components/general/Icons';
+import CustomLink from '../CustomLink';
+
+export const ButtonWithText = ({ text, link, linkTitle }) => {
+	return (
+		<span className='text-[10px] leading-[13px] text-theme-100 font-DMSans md:text-sm md:leading-[18px]'>
+			{text && link ? `${text}, ` : text}
+			{link && (
+				<CustomLink href={link} className='text-theme-main underline'>
+					{linkTitle}
+				</CustomLink>
+			)}
+		</span>
+	);
+};
 
 export default function Button({ title, icon, variant, color, className, order, ...rest }) {
 	const contained =
 		color === 'primary'
-			? 'bg-theme-main text-white hover:shadow-shadow-main'
+			? 'bg-theme-main text-white duration-300 hover:shadow-shadow-main'
 			: color === 'secondary'
-			? 'bg-theme-dark text-white hover:shadow-shadow-dark'
+			? 'bg-theme-dark text-white duration-300 hover:shadow-shadow-dark'
 			: color === 'success'
-			? 'bg-theme-success hover:shadow-shadow-success'
+			? 'bg-theme-success duration-300 hover:shadow-shadow-success'
 			: color === 'error'
-			? 'bg-theme-error hover:shadow-shadow-error'
+			? 'bg-theme-error duration-300 hover:shadow-shadow-error'
 			: color === 'plain'
-			? 'bg-theme-light text-theme-main hover:shadow-shadow-main'
+			? 'bg-theme-light text-theme-main duration-300 hover:shadow-shadow-main'
 			: color === 'disable' && 'bg-theme-100 text-theme-[#CBCBCB]';
 
 	const outlined =
 		color === 'primary'
-			? 'border lg:border-2 border-theme-main text-white hover:shadow-shadow-main'
+			? 'border lg:border-2 border-theme-main text-white hover:text-theme-main duration-300 hover:shadow-shadow-main'
 			: color === 'secondary'
-			? 'border lg:border-2 border-theme-dark text-white hover:shadow-shadow-dark'
+			? 'border lg:border-2 border-theme-dark text-white hover:text-theme-main duration-300 hover:shadow-shadow-dark'
 			: color === 'success'
-			? 'border lg:border-2 border-theme-success text-white hover:shadow-shadow-success'
+			? 'border lg:border-2 border-theme-success text-white hover:text-theme-main duration-300 hover:shadow-shadow-success'
 			: color === 'error'
-			? 'border lg:border-2 border-theme-error text-white hover:shadow-shadow-error'
+			? 'border lg:border-2 border-theme-error text-white hover:text-theme-main duration-300 hover:shadow-shadow-error'
 			: color === 'plain'
-			? 'border-2 border-theme-light text-white hover:shadow-shadow-main'
+			? 'border-2 border-theme-light text-white hover:text-theme-main duration-300 hover:shadow-shadow-main'
 			: color === 'disable' && 'border-2 border-[#454545] text-[#454545]';
 
 	return (
@@ -37,7 +51,7 @@ export default function Button({ title, icon, variant, color, className, order, 
 					} w-full flex flex-row justify-center items-center py-[10px] px-[24px] lg:py-[15px] lg:px-[32px] gap-[8px] rounded-[5px]`}
 				>
 					<span className='text-[11px] md:text-base font-orbitron font-bold leading-[21px]'>{title}</span>
-					{icon && <Icon icon={icon} className='w-[12px] md:w-[24px] md:h-[24px] text-white' />}
+					{icon && <Icon icon={icon} className='text-[25px] text-white' />}
 				</button>
 			)}
 			{variant === 'outlined' && (
@@ -54,9 +68,7 @@ export default function Button({ title, icon, variant, color, className, order, 
 					>
 						{title}
 					</span>
-					{icon && (
-						<Icon icon={icon} className={`w-[12px] md:w-[24px] mr-1 md:h-[24px] ${order && '-ml-2'}`} />
-					)}
+					{icon && <Icon icon={icon} className={`text-[25px] mr-1  ${order && '-ml-2'}`} />}
 				</button>
 			)}
 		</>

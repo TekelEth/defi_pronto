@@ -1,4 +1,4 @@
-import Button from 'components/general/Button';
+import Button, { ButtonWithText } from 'components/general/Button';
 import CustomLink from 'components/general/CustomLink';
 import Icon from 'components/general/Icons';
 import InputField from 'components/general/InputField';
@@ -82,7 +82,16 @@ function TermsAndConditions({ nextStep }) {
 }
 
 function LockDuration({ nextStep }) {
-	const InfoCard = ({ keys, value, icon }) => (
+	let [isOpen, setIsOpen] = useState(false);
+
+	function closeModal() {
+		setIsOpen(false);
+	}
+
+	function openModal() {
+		setIsOpen(true);
+	}
+	const InfoCard = ({ keys, value, icon, ...rest }) => (
 		<div
 			className={`w-full border-2 mb-3 ${
 				icon ? 'border-theme-main' : 'border-[#515050]'
@@ -96,9 +105,12 @@ function LockDuration({ nextStep }) {
 					{value}
 				</span>
 				{icon && (
-					<span className='text-theme-main text-[16px] font-DMSans leading-[20.83px] text-right font-bold'>
+					<button
+						{...rest}
+						className='text-theme-main hover:text-white text-[16px] font-DMSans leading-[20.83px] text-right font-bold'
+					>
 						<Icon icon={icon} />
-					</span>
+					</button>
 				)}
 			</div>
 		</div>
@@ -120,7 +132,7 @@ function LockDuration({ nextStep }) {
 			<InfoCard keys='APY Rate' value='5%' />
 			<InfoCard keys='Your Staked Amount' value='25,000 DFP' />
 			<InfoCard keys='Pending Withdrawal Amount' value='5,000 DFP' />
-			<InfoCard keys='Balance' value='6,000 DFP' icon='ri-calculator-line' />
+			<InfoCard keys='Balance' value='6,000 DFP' icon='ri-calculator-line' onClick={openModal} />
 
 			<div className='flex items-start justify-start my-6'>
 				<input
@@ -142,6 +154,9 @@ function LockDuration({ nextStep }) {
 					onClick={nextStep}
 				/>
 			</div>
+			<Modal isOpen={isOpen} openModal={openModal} closeModal={closeModal}>
+				<StakeCalculator />
+			</Modal>
 		</div>
 	);
 }
@@ -158,16 +173,11 @@ function EnterAmount({ nextStep }) {
 					name={'amount'}
 					placeholder={'Enter amount'}
 					balance='6,000 DFP'
-					actionLink={
-						<span className='text-sm text-theme-100 font-DMSans leading-[18px]'>
-							Need more DFP,{' '}
-							<CustomLink href='/' className='text-theme-main underline'>
-								Buy more
-							</CustomLink>
-						</span>
-					}
+					actionLink={<ButtonWithText text='Need more DFP' link={'/'} linkTitle='Buy more' />}
 					subBalance={
-						<span className='text-sm text-theme-100 font-DMSans leading-[18px]'>Balance: 250,000 DFP</span>
+						<span className='text-[10px] leading-[13px] text-theme-100 font-DMSans md:text-sm md:leading-[18px]'>
+							Balance: 250,000 DFP
+						</span>
 					}
 				/>
 			</div>
@@ -197,16 +207,11 @@ function ConfirmAmount({ nextStep }) {
 					name={'amount'}
 					placeholder={'Enter amount'}
 					balance='6,000 DFP'
-					actionLink={
-						<span className='text-sm text-theme-100 font-DMSans leading-[18px]'>
-							Need more DFP,{' '}
-							<CustomLink href='/' className='text-theme-main underline'>
-								Buy more
-							</CustomLink>
-						</span>
-					}
+					actionLink={<ButtonWithText text='Need more DFP' link={'/'} linkTitle='Buy more' />}
 					subBalance={
-						<span className='text-sm text-theme-100 font-DMSans leading-[18px]'>Balance: 250,000 DFP</span>
+						<span className='text-[10px] leading-[13px] text-theme-100 font-DMSans text-sm md:leading-[18px]'>
+							Balance: 250,000 DFP
+						</span>
 					}
 				/>
 			</div>
@@ -237,9 +242,10 @@ function CompletedStake() {
 					placeholder={'0x7bfgh5236457tyu689573542tg4624347c677'}
 					icon={'ri-file-copy-line'}
 					actionLink={
-						<CustomLink href='/' className='text-sm font-DMSans leading-[18px] text-theme-main underline'>
-							View on Cardano Testnet Explorer
-						</CustomLink>
+						<ButtonWithText link={'/'} linkTitle='View on Cardano Testnet Explorer' />
+						// <CustomLink href='/' className='text-sm font-DMSans leading-[18px] text-theme-main underline'>
+						// 	View on Cardano Testnet Explorer
+						// </CustomLink>
 					}
 				/>
 			</div>
@@ -252,6 +258,55 @@ function CompletedStake() {
 					icon={'ri-arrow-right-up-line'}
 					// onClick={nextStep}
 				/>
+			</div>
+		</div>
+	);
+}
+
+function StakeCalculator({}) {
+	const [value, setValue] = useState();
+	return (
+		<div>
+			<h5 className='font-orbitron text-[20px] leading-[30px] text-white'>Stake Calculator</h5>
+			<p className='font-DmSams text-[12px] leading-[17px] text-theme-100 mt-1'>
+				Calculate the amount of DFP you will earn
+			</p>
+
+			<div className='my-8'>
+				<InputField
+					name={'amount'}
+					placeholder={'Enter amount'}
+					balance='10,000 DFP'
+					onChange={(e) => setValue(e.target.value)}
+				/>
+			</div>
+			<hr className='w-full broder-2 border-[#606060]  mt-10 mx-auto' />
+
+			<div className='w-full mt-6 flex-col flex md:flex-row items-center gap-6'>
+				<div className='w-full md:w-2/5'>
+					<div className='first-letter:w-full border-2 mb-3  border-[#515050] rounded-[5px] py-2 px-3 flex justify-between items-center'>
+						<span className='text-[#515050] capitalize text-[10.24px] md:text-base leading-[13px] mc:leading-[20.83px] font-DMSans font-bold'>
+							APY Rate
+						</span>
+						<div className='items-center justify-center space-x-4'>
+							<span className='text-white text-sm md:text-base font-DMSans leading-[18px] md:leading-[20.83px] text-right font-bold'>
+								5%
+							</span>
+						</div>
+					</div>
+				</div>
+				<div className='w-full md:w-3/5'>
+					<div className='first-letter:w-full border-2 mb-3  border-[#515050] rounded-[5px] py-2 px-3 flex justify-between items-center'>
+						<span className='text-[#515050] capitalize text-[10.24px] md:text-base leading-[13px] mc:leading-[20.83px] font-DMSans font-bold'>
+							Earnings
+						</span>
+						<div className='items-center justify-center space-x-4'>
+							<span className='text-white text-sm md:text-base font-DMSans leading-[18px] md:leading-[20.83px] text-right font-bold'>
+								{value * 2} DFP
+							</span>
+						</div>
+					</div>
+				</div>
 			</div>
 		</div>
 	);

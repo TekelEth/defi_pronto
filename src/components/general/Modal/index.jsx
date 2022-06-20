@@ -7,7 +7,7 @@ export default function Modal({ isOpen, closeModal, step, prevStep, children }) 
 		<Transition appear show={isOpen} as={Fragment}>
 			<Dialog
 				as='div'
-				className='overflow-y-auto overflow-x-hidden fixed top-0 right-0 left-0 z-50 w-full md:inset-0 md:h-full flex justify-center items-center'
+				className='overflow-auto fixed top-0 right-0 left-0 z-50 w-full md:inset-0 md:h-full flex justify-center items-center'
 				onClose={closeModal}
 			>
 				<div className='relative p-4 w-full max-w-2xl h-full md:h-auto'>
@@ -21,7 +21,7 @@ export default function Modal({ isOpen, closeModal, step, prevStep, children }) 
 						leaveTo='opacity-0 scale-95'
 					>
 						<Dialog.Panel className='relative transform bg-theme-card shadow-xl transition-all border-2 border-theme-main rounded-[10px] p-4'>
-							<div className='flex items-center justify-between p-4'>
+							<div className='flex items-center justify-between px-4 py-1 md:p-4'>
 								{/* Start of action button */}
 								<div>
 									{step !== 0 && (
@@ -40,7 +40,7 @@ export default function Modal({ isOpen, closeModal, step, prevStep, children }) 
 								</div>
 							</div>
 							{/* End of action button */}
-							<div className='px-4 py-3'>{children}</div>
+							<div className='px-4 py-1 md:py-3'>{children}</div>
 						</Dialog.Panel>
 					</Transition.Child>
 				</div>

@@ -14,14 +14,12 @@ export default function WhatWeDo() {
 					/>
 				</div>
 				<div className='w-full h-full lg:w-1/2 lg:order-2'>
-					<h3 className='font-orbitron font-normal text-white text-[25px] lg:text-[39.0px] leading-[30px] lg:leading-[47px] tracking-wide'>
+					<h3 className='font-orbitron font-medium text-white text-[32px] lg:text-[42px] leading-[52px] tracking-wide'>
 						What we do at DefiPronto
 					</h3>
-					<p className='mt-4 w-auto h-[105px] lg:w-[500px] lg:h-[105px] text-left text-theme-100 text-xs lg:text-sm font-DMSans leading-[17px] lg:leading-[21px] tracking-wide'>
-						Lorem ipsum dolor sit amet, consectetur adipiscing elit. Odio imperdiet nibh at et neque. Sed
-						adipiscing risus aenean neque imperdiet amet fermentum. Nulla ut sagittis dignissim quisque
-						scelerisque vitae tempor ante. Elementum, augue iaculis condimentum quis. Quis tortor ultricies
-						placerat nam urna.
+					<p className='mt-4 w-auto h-[105px] lg:w-[500px] lg:h-[105px] text-left text-theme-100 text-base font-DMSans leading-[32px]'>
+						We propel and accelerate the best projects, launching only high-quality projects on the Cardano
+						blockchain. Stake $DFP tokens to get early-access to the most promising projects.
 					</p>
 				</div>
 			</div>

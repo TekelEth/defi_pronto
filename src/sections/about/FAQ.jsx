@@ -4,20 +4,20 @@ import React, { useState } from 'react';
 const faqs = [
 	{
 		question: 'Governance',
-		desc: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pretium diam dui ut tellus tortor tristique tellus egestas. Nullam nullam ullamcorper tortor mus. Donec quis vulputate congue malesuada urna arcu quis. Mauris elit leo quis rhoncus in vestibulum maecenas.',
+		desc: '$DFP token holders can create and vote on proposals',
 	},
 	{
 		question: 'Staking',
-		desc: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pretium diam dui ut tellus tortor tristique tellus egestas. Nullam nullam ullamcorper tortor mus. Donec quis vulputate congue malesuada urna arcu quis. Mauris elit leo quis rhoncus in vestibulum maecenas.',
+		desc: 'Token holders can stake their tokens to get priority access to IDOs on Defipronto launchpad and also earn rewards in more $DFP tokens',
 	},
-	{
-		question: 'Deflationary Mechanics',
-		desc: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pretium diam dui ut tellus tortor tristique tellus egestas. Nullam nullam ullamcorper tortor mus. Donec quis vulputate congue malesuada urna arcu quis. Mauris elit leo quis rhoncus in vestibulum maecenas.',
-	},
-	{
-		question: 'Liquidity Farming',
-		desc: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pretium diam dui ut tellus tortor tristique tellus egestas. Nullam nullam ullamcorper tortor mus. Donec quis vulputate congue malesuada urna arcu quis. Mauris elit leo quis rhoncus in vestibulum maecenas.',
-	},
+	// {
+	// 	question: 'Deflationary Mechanics',
+	// 	desc: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pretium diam dui ut tellus tortor tristique tellus egestas. Nullam nullam ullamcorper tortor mus. Donec quis vulputate congue malesuada urna arcu quis. Mauris elit leo quis rhoncus in vestibulum maecenas.',
+	// },
+	// {
+	// 	question: 'Liquidity Farming',
+	// 	desc: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pretium diam dui ut tellus tortor tristique tellus egestas. Nullam nullam ullamcorper tortor mus. Donec quis vulputate congue malesuada urna arcu quis. Mauris elit leo quis rhoncus in vestibulum maecenas.',
+	// },
 ];
 
 const Question = ({ question, description }) => {
