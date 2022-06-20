@@ -203,10 +203,11 @@ export default function Nav() {
 					<MobileNav isMenuOpen={isMenuOpen} setIsMenuOpen={setIsMenuOpen} walletDisplay={() => setShowWallet(true)} />
 				</div>
 			)}
-			{
+		{
 				<WalletConnect close={closeWallet} showWallet={showWallet} />
 				// <WalletConnect close={()=> setShowWallet(false)}/>
-			}
+			
+		}
 
 		</div>
 	);

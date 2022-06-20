@@ -33,7 +33,7 @@ function Card({ id, image, heading, totalRaised, targetAmount, desc }) {
 					</h1>
 					<span className='font-[400] text-base text-theme-100 font-DMSans leading-[24px]'>{desc}</span>
 				</div>
-				{totalRaised > 0 && (
+				{(totalRaised > 0 ) && (
 					<Progress base_color='#000000' completed={totalRaised} maxCompleted={targetAmount} />
 				)}
 				<div className='flex w-full self-start items-start mb-8 justify-between'>
