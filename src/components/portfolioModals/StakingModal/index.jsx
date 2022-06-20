@@ -264,7 +264,7 @@ function CompletedStake() {
 }
 
 function StakeCalculator({}) {
-	const [value, setValue] = useState();
+	const [value, setValue] = useState(0);
 	return (
 		<div>
 			<h5 className='font-orbitron text-[20px] leading-[30px] text-white'>Stake Calculator</h5>

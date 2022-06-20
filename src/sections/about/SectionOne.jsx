@@ -5,7 +5,7 @@ const Card = ({ id, icon, header, content, isActive, onClicked }) => {
 	return (
 		<div
 			onClick={onClicked}
-			className={`md:h-full h-[393px] my-3 px-4 md:my-0 w-[223px] mx-auto  md:w-full col-span-1 flex flex-col items-center hover:bg-theme-main duration-700 justify-center text-center cursor-pointer ${
+			className={`md:h-full h-[393px] my-3 px-4 md:my-0 w-[223px] mx-auto  md:w-full col-span-1 flex flex-col items-center hover:bg-theme-main duration-700 justify-center text-center cursor-default ${
 				isActive === id ? 'bg-[#E74141]' : 'bg-[#2F282E]'
 			} rounded-[10px]`}
 		>

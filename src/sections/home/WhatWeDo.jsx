@@ -3,7 +3,7 @@ import DefiPronto from 'components/subcomponents/DefiPronto';
 
 export default function WhatWeDo() {
 	return (
-		<div className='container px-4 py-10 md:pt-40 w-full mx-auto'>
+		<div className='container px-4 py-5 md:pt-40 w-full mx-auto'>
 			<DefiPronto />
 			<div className='flex lg:items-center flex-col mt-4 lg:mt-0 lg:flex-row lg:space-x-10'>
 				<div className='w-full mt-10 lg:mt-0 lg:w-1/2 order-2 md:order-1'>

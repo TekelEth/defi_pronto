@@ -17,11 +17,15 @@ const SocialLink = ({ linkRef, socialIcon }) => (
 
 function Card({ id, image, heading, totalRaised, targetAmount, desc }) {
 	const router = useRouter();
+
 	const setProject = () => {
 		router.push(`/projects/${id}`);
 	};
 	return (
-		<div className='rounded-xl w-full shadow-lg hover:shadow-shadow-card duration-[300ms]'>
+		<div
+			className='rounded-xl w-full shadow-lg hover:shadow-shadow-card duration-[300ms] cursor-pointer'
+			onClick={setProject}
+		>
 			{/* <div className='w-full md:h-[223px] h-[37.7%] object-fit flex flex-col items-center' onClick={setProject}> */}
 			{/* eslint-disable-next-line @next/next/no-img-element */}
 			<img src={image} alt={heading} className='w-full h-[37.7%] object-cover rounded-t-[10px] bg-cover' />

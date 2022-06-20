@@ -4,7 +4,7 @@ import Button from 'components/general/Button';
 import CustomLink from 'components/general/CustomLink';
 
 const FuturePlans = ({ imageIcon, title, subText }) => (
-	<div className='text-center'>
+	<div className='text-center my-10'>
 		<img
 			src={imageIcon}
 			alt={title}
