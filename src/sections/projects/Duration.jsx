@@ -39,7 +39,7 @@ const Info = ({ keys, value, type }) => (
 	</div>
 );
 
-function Duration({ total_raised, allocated }) {
+function Duration({ total_raised, allocated, type }) {
 	let [isOpen, setIsOpen] = useState(false);
 
 	function closeModal() {
