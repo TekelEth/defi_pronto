@@ -16,7 +16,7 @@ function WalletConnect({ close, showWallet }) {
     return (
         <div className={`${showWallet ? "w-full h-screen fixed  bg-[rgba(0,0,0,0.3)]" : "fixed"
             } duration-500 md:block`} onClick={() => close()}>
-            <div className={` h-full flex flex-col items-center px-6 md:px-4 mx-auto justify-center duration-500  ${showWallet ? "translate-x-0 " : "-translate-x-[100%]"} transition-all`}>
+            <div className={` mt-12 flex flex-col items-center px-6 md:px-4 mx-auto justify-center duration-500  ${showWallet ? "translate-x-0 " : "-translate-x-[100%]"} transition-all`}>
                 <div className={`bg-[#241B23] rounded-[10px] shadow-lg z-50 md:w-[35%]  mx-auto   flex flex-col items-start justify-start py-8 duration-500 px-4 md:px-12 ${showWallet ? "block" : "hidden"}`}>
                     <div className="flex items-center w-full justify-between">
                         <h1 className="font-orbitron font-[400] text-[20px] md:text-[29.25px] leading-[37.5px] text-white">Connect Wallet</h1>
