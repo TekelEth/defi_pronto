@@ -54,7 +54,7 @@ export default function StakingTabs() {
 					{current === 'unstake' && <UnStake />}
 					{current === 'tiers' && <Tier />}
 				</div>
-				<div className='w-full md:w-1/2 items-center justify-center md:pl-10'>
+				<div className='w-full md:w-1/2 items-center justify-center py-5 md:pl-10'>
 					{current === 'stake' && <StakingContent />}
 					{current === 'unstake' && <UnStakeContent />}
 					{current === 'tiers' && <TierContent />}

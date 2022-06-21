@@ -3,6 +3,7 @@ import Progress from 'components/subcomponents/Progress';
 import Icon from 'components/general/Icons';
 import Button from 'components/general/Button';
 import StakingModal from 'components/portfolioModals/StakingModal';
+import UnStakingModal from 'components/portfolioModals/UnStakingModal';
 
 const Timing = ({ days, hours, minutes, seconds }) => {
 	return (
@@ -41,6 +42,7 @@ const Info = ({ keys, value, type }) => (
 
 function Duration({ total_raised, allocated, type }) {
 	let [isOpen, setIsOpen] = useState(false);
+	let [isShow, setIsShow] = useState(false);
 
 	function closeModal() {
 		setIsOpen(false);
@@ -49,11 +51,26 @@ function Duration({ total_raised, allocated, type }) {
 	function openModal() {
 		setIsOpen(true);
 	}
+
+	const showModal = () => {
+		setIsShow(true);
+	};
+	const closeShowModal = () => {
+		setIsShow(false);
+	};
 	return (
-		<div className={`bg-transparent justify-center px-6 md:px-10 flex border-2 ${type === "completed" ? "h-[395px]" : "h-[613px]"} border-[#E74141] bg-[#241B23] rounded-[10px]  flex-col items-center  box-border`}>
-			{type === "completed" ? <div className='font-monument md:text-[28px] mb-4 w-full flex items-start justify-start text-[20px] md:leading-[37.5px]  leading-[24px] text-white font-[400]'>
-				ICO CLOSED
-			</div> : <Timing days='24D' hours='12H' minutes='20M' seconds='60S' />}
+		<div
+			className={`bg-transparent justify-center px-6 md:px-10 flex border-2 ${
+				type === 'completed' ? 'h-[395px]' : 'h-[613px]'
+			} border-[#E74141] bg-[#241B23] rounded-[10px]  flex-col items-center  box-border`}
+		>
+			{type === 'completed' ? (
+				<div className='font-monument md:text-[28px] mb-4 w-full flex items-start justify-start text-[20px] md:leading-[37.5px]  leading-[24px] text-white font-[400]'>
+					ICO CLOSED
+				</div>
+			) : (
+				<Timing days='24D' hours='12H' minutes='20M' seconds='60S' />
+			)}
 			<Progress base_color='#2F282E' maxCompleted={allocated} completed={total_raised} />
 			<div className='flex w-full self-start items-start mb-6 justify-between'>
 				<div className='flex items-start flex-col justify-start'>
@@ -76,8 +93,8 @@ function Duration({ total_raised, allocated, type }) {
 			<Info keys='Max. Allocation' value='2,000 ADA' />
 			<Info keys='Price Per Token' value='0.00005 ADA' />
 
-			{
-				type !== "completed" && <div className='mt-6 w-full flex-col'>
+			{type !== 'completed' && (
+				<div className='mt-6 w-full flex-col'>
 					<button
 						className='flex bg-[#E74141] border-0 items-center mb-4 rounded-[5px] justify-center text-center w-full py-[10px] text-white font-DmSans text-[16px] font-bold '
 						onClick={openModal}
@@ -86,13 +103,14 @@ function Duration({ total_raised, allocated, type }) {
 							Participate <Icon icon='ri-arrow-right-up-line' className='text-white ml-3 text-[16px]' />{' '}
 						</span>
 					</button>
-					<button className='flex items-center bg-transparent border-[2px] border-[#E74141] mb-2 rounded-[5px] font-DMSans justify-center w-full py-[10px] text-white font-DmSans text-[16px] font-bold '>
+					<button
+						className='flex items-center bg-transparent border-[2px] border-[#E74141] mb-2 rounded-[5px] font-DMSans justify-center w-full py-[10px] text-white font-DmSans text-[16px] font-bold '
+						onClick={showModal}
+					>
 						<span className='flex items-center'>
 							{' '}
-							Join Whitelist <Icon
-								icon='ri-arrow-right-up-line ml-3'
-								className='text-white text-[16px]'
-							/>{' '}
+							Join Whitelist{' '}
+							<Icon icon='ri-arrow-right-up-line ml-3' className='text-white text-[16px]' />{' '}
 						</span>{' '}
 					</button>
 					<span className='text-[16px] flex w-full items-center justify-center mt-8 leading-[20.83px] text-white font-DMSans'>
@@ -100,8 +118,9 @@ function Duration({ total_raised, allocated, type }) {
 						<Icon icon='ri-question-line' className='tezt-white text-[16px] mr-3' /> How to join whitelist{' '}
 					</span>
 					<StakingModal isOpen={isOpen} openModal={openModal} closeModal={closeModal} />
+					<UnStakingModal isOpen={isShow} openModal={showModal} closeModal={closeShowModal} />
 				</div>
-			}
+			)}
 		</div>
 	);
 }

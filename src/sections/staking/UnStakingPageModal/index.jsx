@@ -105,7 +105,7 @@ function ConfirmUnStakeAmount({ nextStep }) {
 
 function UnStakeCompletedd() {
 	return (
-		<div>
+		<div className='h-full px-1 pr-2 md:px-0 max-h-[550px] md:h-full md:max-h-[520px] overflow-y-scroll md:overflow-hidden'>
 			<h5 className='font-orbitron text-[20px] leading-[30px] text-white'>Unstake Completed</h5>
 			<p className='font-DmSams text-base leading-[21px] text-theme-100 mt-1'>
 				You have successfully staked <span className='text-white'>6,000 DFP</span>
@@ -122,11 +122,9 @@ function UnStakeCompletedd() {
 					}
 				/>
 			</div>
-
 			<div className='w-full text-center my-10 mx-auto'>
 				<hr className='w-full broder-2 border-[#606060]' />
 			</div>
-
 			<div className='w-full border-2 mb-3 border-theme-100 rounded-[5px] py-3 px-3 flex justify-between items-center text-theme-100 capitalize text-[12px] md:text-base leading-[17px] md:leading-[21px] font-DMSans font-bold'>
 				<span>Pending Withdrawal Amount</span>
 				<span>6,000 DFP</span>

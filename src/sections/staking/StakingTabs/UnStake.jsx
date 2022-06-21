@@ -3,20 +3,29 @@ import Button from 'components/general/Button';
 import Icon from 'components/general/Icons';
 import UnStakingPageModal from '../UnStakingPageModal';
 import { useState } from 'react';
+import StakingCalculator from './StakingCalculator';
+import Modal from 'components/general/Modal';
 
-const InfoCard = ({ keys, value, icon }) => (
+const InfoCard = ({ keys, value, icon, ...rest }) => (
 	<div
-		className={`w-full border-[1px] mb-3 ${
+		className={`w-full border-2 mb-3 ${
 			icon ? 'border-theme-main' : 'border-[#515050]'
-		} rounded-[3px] py-3 px-3 flex justify-between items-center`}
+		} rounded-[5px] py-2 px-3 flex justify-between items-center`}
 	>
-		<span className='text-[#515050] capitalize text-[16px] leading-[20.83px] font-DMSans font-[700]'>{keys}</span>
-		<div className=' items-center justify-center space-x-4'>
-			<span className='text-white text-[16px] font-DMSans leading-[20.83px] text-right font-[700]'>{value}</span>
+		<span className='text-[#515050] capitalize text-[10.24px] md:text-base leading-[13px] mc:leading-[20.83px] font-DMSans font-bold'>
+			{keys}
+		</span>
+		<div className='items-center justify-center space-x-4'>
+			<span className='text-white text-sm md:text-base font-DMSans leading-[18px] md:leading-[20.83px] text-right font-bold'>
+				{value}
+			</span>
 			{icon && (
-				<span className='text-theme-main text-[16px] font-DMSans leading-[20.83px] text-right font-[700]'>
+				<button
+					{...rest}
+					className='text-theme-main hover:text-white text-[16px] font-DMSans leading-[20.83px] text-right font-bold'
+				>
 					<Icon icon={icon} />
-				</span>
+				</button>
 			)}
 		</div>
 	</div>
@@ -24,6 +33,7 @@ const InfoCard = ({ keys, value, icon }) => (
 
 export const UnStakeContent = () => {
 	let [isOpen, setIsOpen] = useState(false);
+	let [isShow, setIsShow] = useState(false);
 
 	function closeModal() {
 		setIsOpen(false);
@@ -32,8 +42,15 @@ export const UnStakeContent = () => {
 	function openModal() {
 		setIsOpen(true);
 	}
+
+	const showModal = () => {
+		setIsShow(true);
+	};
+	const closeShowModal = () => {
+		setIsShow(false);
+	};
 	return (
-		<div className='p-5 md:p-10 flex justify-center flex-col border-2 w-full border-theme-main rounded-[18px]'>
+		<div className='p-5 md:p-10 flex justify-center flex-col border-2 w-full bg-theme-card border-theme-main rounded-[10px]'>
 			<h5 className='font-orbitron text-left text-[25px] leading-[30px] text-white'>Unstake</h5>
 
 			<div className='w-full text-center mt-10 mx-auto'>
@@ -43,7 +60,7 @@ export const UnStakeContent = () => {
 			<InfoCard keys='Your Staked Amount' value='25,000 DFP' />
 			<InfoCard keys='Pending Withdrawal Amount' value='5,000 DFP' />
 			<div className='mt-6'>
-				<InfoCard keys='Balance' value='6,000 DFP' icon='ri-calculator-line' />
+				<InfoCard keys='Balance' value='6,000 DFP' icon='ri-calculator-line' onClick={openModal} />
 			</div>
 
 			<div className='flex items-start justify-start mt-2 mb-8'>
@@ -66,6 +83,9 @@ export const UnStakeContent = () => {
 				onClick={openModal}
 			/>
 			<UnStakingPageModal isOpen={isOpen} openModal={openModal} closeModal={closeModal} />
+			<Modal isOpen={isShow} openModal={showModal} closeModal={closeShowModal}>
+				<StakingCalculator />
+			</Modal>
 		</div>
 	);
 };

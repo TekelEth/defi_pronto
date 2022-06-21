@@ -1,59 +1,15 @@
-import Button from 'components/general/Button';
+import Button, { ButtonWithText } from 'components/general/Button';
 import CustomLink from 'components/general/CustomLink';
+import Icon from 'components/general/Icons';
 import InputField from 'components/general/InputField';
 import Modal from 'components/general/Modal';
 import { useState } from 'react';
 
-export const TermsAndConditions = ({ nextStep }) => {
-	return (
-		<div>
-			<h5 className='font-orbitron text-[20px] leading-[30px] text-white'>Staking Info</h5>
-			<div className='mt-2'>
-				<p className='text-theme-100 font-DMSans text-sm leading-[21px]'>
-					Staking your tokens will generate new tokens daily based on the APY percentage above. If you stake
-					in one of the tiers, it also makes you eligible for early contribution rounds to IDOs of projects
-					launched on Defipronto.
-				</p>
-				<p className='text-theme-100 font-DMSans text-sm leading-[21px]'>
-					Be aware of the unstaking fees, as outlined in the table. These fees are in place to prevent someone
-					from staking right before a tier snapshot, then unstaking immediately after. Unstaking fees are
-					burned and will no longer be in circulation, reducing the total supply of DFP tokens.
-				</p>
-				<p className='mt-8 text-white font-DMSans'>
-					<span className='text-theme-main'>Note:</span> Please stake a minimum of 100 DFP tokens, fewer will
-					not work.
-				</p>
-			</div>
-			<h5 className='font-orbitron text-[20px] leading-[30px] text-white mt-4'>Terms & Conditions</h5>
-			<p className='text-theme-100 font-DMSans text-sm leading-[21px] mt-2'>
-				By using this website to stake tokens on the Cardano blockchain, you accept that you are interacting
-				with a smart contract that this website has no control over. The operators of this website accept no
-				liability whatsoever in relation to your use of these smart contracts. By using this website to stake,
-				you also have read and agree to the{' '}
-				<CustomLink href={'/terms'} className='text-theme-main'>
-					Terms and Conditions
-				</CustomLink>
-				.
-			</p>
-			<div className='flex justify-center flex-col  w-full my-8'>
-				<Button
-					title={'Contuninue'}
-					variant={'contained'}
-					color='primary'
-					icon={'ri-arrow-right-up-line'}
-					onClick={nextStep}
-				/>
-			</div>
-		</div>
-	);
-};
-
 function modalHandler(step, nextStep) {
 	const handlers = {
-		0: <TermsAndConditions nextStep={nextStep} />,
-		1: <EnterAmount nextStep={nextStep} />,
-		2: <ConfirmAmount nextStep={nextStep} />,
-		3: <CompletedStake />,
+		0: <EnterAmount nextStep={nextStep} />,
+		1: <ConfirmAmount nextStep={nextStep} />,
+		2: <CompletedStake />,
 	};
 
 	return handlers[step];
@@ -89,22 +45,17 @@ function EnterAmount({ nextStep }) {
 			<div className='my-8'>
 				<InputField
 					name={'amount'}
+					type={'number'}
 					placeholder={'Enter amount'}
 					balance='6,000 DFP'
-					actionLink={
-						<span className='text-sm text-theme-100 font-DMSans leading-[18px]'>
-							Need more DFP,{' '}
-							<CustomLink href='/' className='text-theme-main underline'>
-								Buy more
-							</CustomLink>
-						</span>
-					}
+					actionLink={<ButtonWithText text='Need more DFP' link={'/'} linkTitle='Buy more' />}
 					subBalance={
-						<span className='text-sm text-theme-100 font-DMSans leading-[18px]'>Balance: 250,000 DFP</span>
+						<span className='text-[10px] leading-[13px] text-theme-100 font-DMSans text-sm md:leading-[18px]'>
+							Balance: 250,000 DFP
+						</span>
 					}
 				/>
 			</div>
-
 			<div className='flex justify-center flex-col  w-full my-8'>
 				<Button
 					title={'Proceed'}
@@ -130,20 +81,14 @@ function ConfirmAmount({ nextStep }) {
 					name={'amount'}
 					placeholder={'Enter amount'}
 					balance='6,000 DFP'
-					actionLink={
-						<span className='text-sm text-theme-100 font-DMSans leading-[18px]'>
-							Need more DFP,{' '}
-							<CustomLink href='/' className='text-theme-main underline'>
-								Buy more
-							</CustomLink>
-						</span>
-					}
+					actionLink={<ButtonWithText text='Need more DFP' link={'/'} linkTitle='Buy more' />}
 					subBalance={
-						<span className='text-sm text-theme-100 font-DMSans leading-[18px]'>Balance: 250,000 DFP</span>
+						<span className='text-[10px] leading-[13px] text-theme-100 font-DMSans text-sm md:leading-[18px]'>
+							Balance: 250,000 DFP
+						</span>
 					}
 				/>
 			</div>
-
 			<div className='flex justify-center flex-col  w-full my-8'>
 				<Button
 					title={'Confirm'}
@@ -169,11 +114,7 @@ function CompletedStake() {
 					name={'amount'}
 					placeholder={'0x7bfgh5236457tyu689573542tg4624347c677'}
 					icon={'ri-file-copy-line'}
-					actionLink={
-						<CustomLink href='/' className='text-sm font-DMSans leading-[18px] text-theme-main underline'>
-							View on Cardano Testnet Explorer
-						</CustomLink>
-					}
+					actionLink={<ButtonWithText link={'/'} linkTitle='View on Cardano Testnet Explorer' />}
 				/>
 			</div>
 

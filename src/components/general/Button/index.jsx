@@ -3,7 +3,7 @@ import CustomLink from '../CustomLink';
 
 export const ButtonWithText = ({ text, link, linkTitle }) => {
 	return (
-		<span className='text-[10px] leading-[13px] text-theme-100 font-DMSans md:text-sm md:leading-[18px]'>
+		<span className='text-[12px] text-theme-100 font-DMSans font-medium md:text-sm leading-[18px]'>
 			{text && link ? `${text}, ` : text}
 			{link && (
 				<CustomLink href={link} className='text-theme-main underline'>
@@ -48,9 +48,9 @@ export default function Button({ title, icon, variant, color, className, order, 
 					{...rest}
 					className={`${
 						contained || className
-					} w-full flex flex-row justify-center items-center py-[10px] px-[24px] lg:py-[15px] lg:px-[32px] gap-[8px] rounded-[5px]`}
+					} w-full text-[14px] md:text-base flex flex-row justify-center items-center py-[10px] px-[24px] lg:py-[15px] lg:px-[32px] gap-[8px] rounded-[5px]`}
 				>
-					<span className='text-[11px] md:text-base font-orbitron font-bold leading-[21px]'>{title}</span>
+					<span className='font-orbitron font-bold leading-[21px]'>{title}</span>
 					{icon && <Icon icon={icon} className='text-[25px] text-white' />}
 				</button>
 			)}
@@ -59,16 +59,10 @@ export default function Button({ title, icon, variant, color, className, order, 
 					{...rest}
 					className={`${
 						outlined || className
-					} w-full flex flex-row justify-center items-center py-[10px] px-[30px] lg:py-[15px] lg:px-[32px] gap-[8px] rounded-[5px]`}
+					} w-full text-[14px] md:text-base flex flex-row justify-center items-center py-[10px] px-[30px] lg:py-[15px] lg:px-[32px] gap-[8px] rounded-[5px]`}
 				>
-					<span
-						className={`text-[11px] md:text-base font-orbitron font-bold leading-[21px] ${
-							order && 'order-1'
-						}`}
-					>
-						{title}
-					</span>
-					{icon && <Icon icon={icon} className={`text-[25px] mr-1  ${order && '-ml-2'}`} />}
+					<span className={`font-orbitron font-bold leading-[21px] ${order && 'order-1'}`}>{title}</span>
+					{icon && <Icon icon={icon} className={`mr-1  ${order && '-ml-2'}`} />}
 				</button>
 			)}
 		</>

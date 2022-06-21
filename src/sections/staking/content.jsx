@@ -3,7 +3,7 @@ import Button from 'components/general/Button';
 import Modal from 'components/general/Modal';
 
 const TokenDetails = ({ title, amount }) => (
-	<div className='flex flex-col h-[176px] border-theme-border bg-theme-card border-2 py-4 md:py-2 items-center text-center justify-center rounded-[20px]'>
+	<div className='flex flex-col h-[176px] border-theme-border bg-theme-card border-2 py-4 md:py-2 items-center text-center cursor-default hover:shadow-shadow-main justify-center rounded-[20px]'>
 		<span className='text-theme-main font-orbitron font-[400] text-[12px] leading-[14.4px] text-center'>
 			{title}{' '}
 		</span>
@@ -16,7 +16,7 @@ const TokenDetails = ({ title, amount }) => (
 export default function Content() {
 	return (
 		<section>
-			<div className='w-full flex-col  flex md:flex-row items-center lg:space-x-52'>
+			<div className='w-full flex-col flex md:flex-row items-center lg:space-x-52'>
 				<div className='md:w-[30%] w-full flex flex-col col-span-2 justify-start py-10'>
 					<div className='w-full lg:w-[550px]'>
 						<h1 className='font-orbitron font-normal text-[31px] lg:text-6xl text-white leading-[37px] lg:leading-[73px] tracking-wide'>

@@ -103,3 +103,32 @@
 		max-height: 69rem;
 	}
 }
+
+@layer utilities {
+	input[type='number']::-webkit-inner-spin-button,
+	input[type='number']::-webkit-outer-spin-button {
+		-webkit-appearance: none;
+		margin: 0;
+	}
+
+	::-webkit-scrollbar {
+		width: 5px;
+		height: 20px;
+	}
+
+	::-webkit-scrollbar-track {
+		background: transparent;
+	}
+
+	::-webkit-scrollbar-thumb {
+		background: rgba(231, 65, 65, 0.6);
+		border-radius: 100vh;
+		border: 2px solid transparent;
+	}
+
+	::-webkit-scrollbar-thumb:hover {
+		background: #e74141;
+		transition-duration: 0.4s;
+		transition-delay: ease-in 0.4s;
+	}
+}
