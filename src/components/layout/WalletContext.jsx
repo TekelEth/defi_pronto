@@ -3,7 +3,7 @@ import {  createContext, useState } from 'react'
 export const WalletContext = createContext();
 
 function WalletProvider({ children }) {
-    [connected, setConnected] = useState('connected');
+    const [connected, setConnected] = useState('connected');
     return (
         <WalletContext.Provider
             value={{

@@ -14,11 +14,10 @@ const Wallet = ({ img, name, close }) => {
 }
 
 function WalletConnect({ close, showWallet }) {
-    const context = useContext(WalletContext);
-    console.log(context);
+    const { connected, setConnected} = useContext(WalletContext);
     return (
         <div className={`${showWallet ? "w-full  h-screen fixed  bg-[rgba(0,0,0,0.3)]" : "fixed"
-            } duration-500 md:block`} onClick={() => close()}>
+            } duration-500 md:block`}>
             <div className={` mt-12 flex flex-col -ml-6 md:-ml-0 items-center px-6 md:px-1 mx-auto justify-center duration-500  ${showWallet ? "translate-x-0 " : "-translate-x-[100%]"} transition-all`}>
                 <div className={`bg-[#241B23] rounded-[10px] shadow-lg z-50 md:w-[35%]  mx-auto   flex flex-col items-start justify-start py-8 duration-500 px-4 md:px-8 ${showWallet ? "block" : "hidden"}`}>
                     <div className="flex items-center w-full justify-between">

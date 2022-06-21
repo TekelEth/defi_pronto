@@ -6,7 +6,7 @@ import WalletProvider from "components/layout/WalletContext";
 
 function MyApp({ Component, pageProps }) {
   return (
-    <WalletProvider>
+    <WalletProvider >
       <PageLaout>
         <AuthProvider>
           <Component {...pageProps} />
