@@ -17,6 +17,7 @@ const SocialLink = ({ linkRef, socialIcon }) => (
 
 function Card({ id, image, heading, totalRaised, targetAmount, desc }) {
 	const router = useRouter();
+
 	const setProject = () => {
 		router.push(`/projects/${id}`);
 	};

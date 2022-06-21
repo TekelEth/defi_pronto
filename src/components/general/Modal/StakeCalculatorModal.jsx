@@ -2,12 +2,12 @@ import { Dialog, Transition } from '@headlessui/react';
 import Icon from 'components/general/Icons';
 import { Fragment } from 'react';
 
-export default function Modal({ isOpen, closeModal, step, prevStep, children }) {
+export default function StakeCalCulatorModal({ isOpen, closeModal, children }) {
 	return (
 		<Transition appear show={isOpen} as={Fragment}>
 			<Dialog
 				as='div'
-				className='overflow-y-auto overflow-x-hidden fixed top-0 right-0 left-0 z-50 w-full bg-theme-dark bg-opacity-70  md:inset-0 md:h-full md:max-h-fit flex justify-center items-center'
+				className='overflow-y-auto overflow-x-hidden fixed top-0 right-0 left-0 z-50 w-full md:inset-0 md:h-full md:max-h-fit flex justify-center items-center my-4'
 				onClose={closeModal}
 			>
 				<div className='relative p-4 w-full max-w-xl h-full'>
@@ -23,13 +23,7 @@ export default function Modal({ isOpen, closeModal, step, prevStep, children }) 
 						<Dialog.Panel className='relative transform bg-theme-card shadow-xl transition-all border-2 border-theme-main rounded-[10px] p-4'>
 							<div className='flex items-center justify-between p-1 md:p-2'>
 								{/* Start of action button */}
-								<div>
-									{step !== 0 && (
-										<button className='text-[20px] text-theme-main' onClick={prevStep}>
-											<Icon icon={'ri-arrow-left-line'} /> {/* back button */}
-										</button>
-									)}
-								</div>
+
 								<div>
 									<button
 										className='text-[20px] text-white hover:text-theme-100'

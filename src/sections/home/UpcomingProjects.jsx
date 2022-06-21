@@ -18,14 +18,15 @@ export default function UpcomingProject() {
 
 			<div className='relative grid grid-cols-1 lg:grid-cols-3 gap-x-4 gap-y-4 w-full'>
 				{projects.map((project) => (
-					<CustomLink key={project.id} href={`/projects/${project.id}`}>
+					<div key={project.id}>
 						<Card
+							id={project.id}
 							image={project.image}
 							heading={project.heading}
 							totalRaised={project.totalRaised}
 							desc={project.desc}
 						/>
-					</CustomLink>
+					</div>
 				))}
 			</div>
 		</section>

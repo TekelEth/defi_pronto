@@ -1,5 +1,5 @@
-import { WalletContext } from 'components/layout/WalletContext'
-import React, { useContext } from 'react'
+import { WalletContext } from 'components/layout/WalletContext';
+import React, { useContext } from 'react';
 
 const Wallet = ({ img, name, close }) => {
     const {  setConnected} = useContext(WalletContext);
@@ -43,4 +43,4 @@ function WalletConnect({ close, showWallet }) {
     )
 }
 
-export default WalletConnect
+export default WalletConnect;

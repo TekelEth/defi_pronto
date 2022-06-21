@@ -2,20 +2,16 @@
 const TierInfo = ({ heading, value }) => {
 	return (
 		<div className='flex flex-col items-center'>
-			<span className='text-[8px] md:text-[10px] font-orbitron leading-[10px]  md:leading-[12px] text-center text-theme-main mb-1'>
-				{heading}
-			</span>
-			<span className='text-sm md:text-lg leading-[19px] md:leading-[24px] text-center text-white font-orbitron'>
-				{value}
-			</span>
+			<span className='text-[10px] font-orbitron leading-[12px] text-center text-theme-main mb-1'>{heading}</span>
+			<span className='text-lg leading-[24px] text-center text-white font-orbitron'>{value}</span>
 		</div>
 	);
 };
 
 export const TierContent = () => {
 	return (
-		<div className='p-2 md:p-5 flex justify-center flex-col border-2 w-full border-theme-border rounded-[18px]'>
-			<div className='flex items-center flex-col md:flex-row justify-center gap-3'>
+		<div className='p-2 md:p-5 flex justify-center flex-col border-2 w-full bg-theme-card border-theme-border rounded-[10px]'>
+			<div className='flex items-center flex-col md:flex-row justify-center gap-3 my-2'>
 				<img src='/assets/tiers/tiers-1.svg' alt='tiers-1' className='w-[100px] h-[100px]' />
 				<div className='flex flex-row items-center justify-center gap-2 md:gap-4'>
 					<TierInfo heading='DFP Required' value='20,000' />
@@ -23,11 +19,9 @@ export const TierContent = () => {
 					<TierInfo heading='Time of Stake' value='7 Days' />
 				</div>
 			</div>
-			<div className='w-full text-center my-5 mx-auto'>
-				<hr className='w-full broder-2 border-[#606060]' />
-			</div>
+			<hr className='w-full broder-2 border-[#606060] my-5 mx-auto' />
 
-			<div className='flex items-center flex-col md:flex-row justify-center gap-3'>
+			<div className='flex items-center flex-col md:flex-row justify-center gap-3 my-2'>
 				<img src='/assets/tiers/tiers-2.svg' alt='tiers-2' className='w-[100px] h-[100px]' />
 				<div className='flex flex-row items-center justify-center gap-2 md:gap-4'>
 					<TierInfo heading='DFP Required' value='40,000' />
@@ -35,9 +29,7 @@ export const TierContent = () => {
 					<TierInfo heading='Time of Stake' value='30 Days' />
 				</div>
 			</div>
-			<div className='w-full text-center my-5 mx-auto'>
-				<hr className='w-full broder-2 border-[#606060]' />
-			</div>
+			<hr className='w-full broder-2 border-[#606060] my-5 mx-auto' />
 
 			<div className='flex items-center flex-col md:flex-row justify-center gap-3 my-5'>
 				<img src='/assets/tiers/tiers-3.svg' alt='tiers-3' className='w-[100px] h-[100px]' />

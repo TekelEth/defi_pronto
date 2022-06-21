@@ -8,7 +8,7 @@ const SocialLink = ({ linkRef, socialIcon }) => (
 		href={linkRef}
 		rel='noreferrer'
 		target='_blank'
-		className='text-white hover:text-theme-main text-[25px] lg:text-[32px] duration-300'
+		className='text-white hover:text-theme-main text-[35px] lg:text-[32px] duration-300'
 	>
 		<Icon icon={socialIcon} />
 	</CustomLink>
@@ -45,7 +45,7 @@ function Hero() {
 							Get early access to the most promising Cardano projects with Highly-vetted ideas and teams
 							you can trust.
 						</p>
-						<div className='mt-8 flex items-center space-x-10'>
+						<div className='my-2 md:my-4 flex items-center space-x-10'>
 							<CustomLink href={'/'}>
 								<Button
 									variant='outlined'
