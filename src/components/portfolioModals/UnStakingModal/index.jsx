@@ -39,21 +39,21 @@ function modalHandler(step, nextStep) {
 function TermsAndConditions({ nextStep }) {
 	return (
 		<div className='h-full px-1 pr-2 md:px-0 max-h-[550px] md:h-full md:max-h-[520px] overflow-y-scroll md:overflow-hidden'>
-			<h5 className='font-orbitron text-[20px] leading-[30px] text-white'>Staking Info</h5>
+			<h5 className='font-orbitron text-[20px] leading-[30px] text-white'>Warning!</h5>
 			<div className='mt-2'>
 				<p className='text-theme-100 font-DMSans text-sm leading-[21px]'>
-					Staking your tokens will generate new tokens daily based on the APY percentage above. If you stake
-					in one of the tiers, it also makes you eligible for early contribution rounds to IDOs of projects
-					launched on Defipronto.
+					You will get a refund of your tokens and won’t join the next IDO pool. The refund is calculated
+					based on the number of tokens left in the pool, which you are not eligible to claim, and the token’s
+					IDO price.
 				</p>
 				<p className='text-theme-100 font-DMSans text-sm leading-[21px]'>
-					Be aware of the unstaking fees, as outlined in the table. These fees are in place to prevent someone
-					from staking right before a tier snapshot, then unstaking immediately after. Unstaking fees are
-					burned and will no longer be in circulation, reducing the total supply of DFP tokens.
+					The forfeited token vestings will be redistributed to Defipronto development fund, further
+					developing the platform and ecosystem.
 				</p>
-				<p className='mt-8 text-white font-DMSans'>
-					<span className='text-theme-main'>Note:</span> Please stake a minimum of 100 DFP tokens, fewer will
-					not work.
+				<p className='mt-8 text-theme-100 font-DMSans'>
+					<span className='text-theme-main'>Note:</span> Early unstaking attracts a{' '}
+					<span className='text-white'>15% fee.</span> The unstaked amount will be airdropped into your wallet
+					within the stipulated time frame.
 				</p>
 			</div>
 			<h5 className='font-orbitron text-[20px] leading-[30px] text-white mt-4'>Terms & Conditions</h5>
@@ -116,7 +116,7 @@ function UnStake({ nextStep }) {
 	);
 	return (
 		<div className='h-full px-1 pr-2 md:px-0 max-h-[550px] md:h-full overflow-y-scroll md:overflow-hidden'>
-			<h5 className='font-orbitron text-[20px] leading-[30px] text-white'>Staking Info</h5>
+			<h5 className='font-orbitron text-[20px] leading-[30px] text-white'>Unstake</h5>
 			<hr className='w-full broder-2 border-[#606060] my-5 mx-auto' />
 
 			<InfoCard keys='Your Staked Amount' value='25,000 DFP' />

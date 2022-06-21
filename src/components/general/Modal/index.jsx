@@ -7,7 +7,7 @@ export default function Modal({ isOpen, closeModal, step, prevStep, children }) 
 		<Transition appear show={isOpen} as={Fragment}>
 			<Dialog
 				as='div'
-				className='overflow-y-auto overflow-x-hidden fixed top-0 right-0 left-0 z-50 w-full bg-theme-dark bg-opacity-70  md:inset-0 md:h-full md:max-h-fit flex justify-center items-center'
+				className='overflow-y-auto overflow-x-hidden fixed top-0 right-0 left-0 z-50 w-full bg-theme-dark bg-opacity-70  md:inset-0 h-full md:h-full md:max-h-fit flex justify-center items-center'
 				onClose={closeModal}
 			>
 				<div className='relative p-4 w-full max-w-xl h-full'>
