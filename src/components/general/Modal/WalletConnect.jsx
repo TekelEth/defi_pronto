@@ -2,19 +2,23 @@ import { WalletContext } from 'components/layout/WalletContext'
 import React, { useContext } from 'react'
 
 const Wallet = ({ img, name, close }) => {
+    const {  setConnected} = useContext(WalletContext);
+    const connectWallet = () => {
+        setConnected(true)
+        close()
+    }
     return (
         <div className='py-6 mb-4  px-6 md:px-8 hover:shadow-none cursor-pointer transition-all ease-in-out shadow-lg w-full flex bg-[#2F282E] rounded-[10px] justify-between items-center'>
             <div className="flex items-center">
                 <img src={img} alt="wallet logo" className="w-[20%] mr-2 md:mr-8 w-full" />
                 <span className="font-orbitron leading-[24px] text-[14px] md:text-[20px] text-white font-[400] capitalize">{name}</span>
             </div>
-            <input type="checkbox" className='accent-[#E74141] cursor-pointer' onClick={close} />
+            <input type="checkbox" className='accent-[#E74141] cursor-pointer' onClick={connectWallet} />
         </div>
     )
 }
 
 function WalletConnect({ close, showWallet }) {
-    const { connected, setConnected} = useContext(WalletContext);
     return (
         <div className={`${showWallet ? "w-full  h-screen fixed  bg-[rgba(0,0,0,0.3)]" : "fixed"
             } duration-500 md:block`}>
@@ -22,7 +26,7 @@ function WalletConnect({ close, showWallet }) {
                 <div className={`bg-[#241B23] rounded-[10px] shadow-lg z-50 md:w-[35%]  mx-auto   flex flex-col items-start justify-start py-8 duration-500 px-4 md:px-8 ${showWallet ? "block" : "hidden"}`}>
                     <div className="flex items-center w-full justify-between">
                         <h1 className="font-orbitron font-[400] text-[20px] md:text-[29.25px] leading-[37.5px] text-white">Connect Wallet</h1>
-                        <i className="ri-close-line text-3xl hover:bg-[#E74141]  p-1  cursor-pointer text-white rounded-[10px] hover:rounded-full hover:duration-500 transition-all ease-in-out  " onClick={() => close()}></i>
+                        <i className="ri-close-line text-3xl hover:bg-[#E74141]  p-1  cursor-pointer text-white rounded-[10px] hover:rounded-full hover:duration-500 transition-all ease-in-out  " onClick={()=>close()}></i>
                     </div>
                     <div className="my-6 flex items-center">
                         <input type="checkbox" className="mr-3 accent-[#E74141]" />

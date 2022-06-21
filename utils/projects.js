@@ -57,7 +57,7 @@ export const projects = [
 	},
 	{
 		id: 7,
-		image: 'assets/projects/project-3.png',
+		image: '/assets/projects/project-3.png',
 		heading: 'DefiPronto',
 		totalRaised: 0,
 		targetAmount: 1000,
@@ -66,7 +66,7 @@ export const projects = [
 	},
 	{
 		id: 8,
-		image: 'assets/projects/project-4.png',
+		image: '/assets/projects/project-4.png',
 		heading: 'Solar Nodes',
 		totalRaised: 0,
 		targetAmount: 1000,
@@ -75,7 +75,7 @@ export const projects = [
 	},
 	{
 		id: 9,
-		image: 'assets/projects/project-5.png',
+		image: '/assets/projects/project-5.png',
 		heading: 'Cryptogenie',
 		totalRaised: 0,
 		targetAmount: 1000,
