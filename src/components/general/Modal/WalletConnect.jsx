@@ -1,8 +1,9 @@
-import React from 'react';
+import { WalletContext } from 'components/layout/WalletContext';
+import React, { useContext } from 'react';
 
 const Wallet = ({ img, name, close }) => {
 	return (
-		<div className='py-6 mb-4 px-6 md:px-8 hover:shadow-none cursor-pointer transition-all ease-in-out shadow-lg w-full flex bg-[#2F282E] rounded-[10px] justify-between items-center'>
+		<div className='py-6 mb-4  px-6 md:px-8 hover:shadow-none cursor-pointer transition-all ease-in-out shadow-lg w-full flex bg-[#2F282E] rounded-[10px] justify-between items-center'>
 			<div className='flex items-center'>
 				<img src={img} alt='wallet logo' className='w-[20%] mr-2 md:mr-8 w-full' />
 				<span className='font-orbitron leading-[24px] text-[14px] md:text-[20px] text-white font-[400] capitalize'>
@@ -15,20 +16,18 @@ const Wallet = ({ img, name, close }) => {
 };
 
 function WalletConnect({ close, showWallet }) {
+	const { connected, setConnected } = useContext(WalletContext);
 	return (
 		<div
-			className={`${
-				showWallet ? 'w-full h-screen fixed -mt-10 bg-[rgba(0,0,0,0.3)]' : 'fixed'
-			} duration-500 md:block`}
-			onClick={() => close()}
+			className={`${showWallet ? 'w-full  h-screen fixed  bg-[rgba(0,0,0,0.3)]' : 'fixed'} duration-500 md:block`}
 		>
 			<div
-				className={` h-full flex flex-col items-center px-6 md:px-4 mx-auto justify-center duration-500  ${
+				className={` mt-12 flex flex-col -ml-6 md:-ml-0 items-center px-6 md:px-1 mx-auto justify-center duration-500  ${
 					showWallet ? 'translate-x-0 ' : '-translate-x-[100%]'
 				} transition-all`}
 			>
 				<div
-					className={`bg-[#241B23] rounded-[10px] shadow-lg z-50 md:w-[35%]  mx-auto   flex flex-col items-start justify-start py-8 duration-500 px-4 md:px-12 ${
+					className={`bg-[#241B23] rounded-[10px] shadow-lg z-50 md:w-[35%]  mx-auto   flex flex-col items-start justify-start py-8 duration-500 px-4 md:px-8 ${
 						showWallet ? 'block' : 'hidden'
 					}`}
 				>

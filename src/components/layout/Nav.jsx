@@ -8,14 +8,15 @@ import WalletConnect from 'components/general/Modal/WalletConnect';
 const MobileNav = ({ isMenuOpen, setIsMenuOpen, walletDisplay }) => {
 	const router = useRouter();
 	const path_name = router.pathname;
-	// const position = path_name === '/' ? '' : 'sticky bg-[#241B23] h-screen';
 	const walletDisplays = () => {
 		setIsMenuOpen(false);
 		walletDisplay();
 	};
 	return (
 		<div
-			className={`lg:hidden  bg-[#241B23]  duration-300 py-6 px-6 my-4 flex flex-col items-start gap-y-7`}
+			className={`lg:hidden ${
+				isMenuOpen ? 'block' : 'hidden'
+			} bg-[#241B23] h-screen  duration-300 py-6 my-4 flex flex-col items-start gap-y-7`}
 		>
 			<div className='flex flex-col items-start py-2 px-2 gap-8'>
 				<CustomLink
@@ -23,7 +24,7 @@ const MobileNav = ({ isMenuOpen, setIsMenuOpen, walletDisplay }) => {
 					href={'/about'}
 					className={`${
 						path_name === '/about' ? 'text-theme-main' : 'text-white'
-					} w-auto h-[21px] font-orbitron font-bold text-base leading-[21px] hover:text-theme-main order-1`}
+					} w-auto h-[21px] font-orbitron font-bold text-lg leading-[21px] hover:text-theme-main order-1`}
 				>
 					About
 				</CustomLink>
@@ -32,7 +33,7 @@ const MobileNav = ({ isMenuOpen, setIsMenuOpen, walletDisplay }) => {
 					href={'/#features'}
 					className={`${
 						path_name === '/features' ? 'text-theme-main' : 'text-white'
-					} w-auto h-[21px] font-orbitron font-bold text-base leading-[21px] hover:text-theme-main order-2`}
+					} w-auto h-[21px] font-orbitron font-bold text-lg leading-[21px] hover:text-theme-main order-2`}
 				>
 					Features
 				</CustomLink>
@@ -41,7 +42,7 @@ const MobileNav = ({ isMenuOpen, setIsMenuOpen, walletDisplay }) => {
 					href={'/#howitworks'}
 					className={`${
 						path_name === '/howitworks' ? 'text-theme-main' : 'text-white'
-					} w-auto h-[21px] font-orbitron font-bold text-base leading-[21px] hover:text-theme-main order-3`}
+					} w-auto h-[21px] font-orbitron font-bold text-lg leading-[21px] hover:text-theme-main order-3`}
 				>
 					How it works
 				</CustomLink>
@@ -51,7 +52,7 @@ const MobileNav = ({ isMenuOpen, setIsMenuOpen, walletDisplay }) => {
 					href={'/projects'}
 					className={`${
 						path_name === '/projects' ? 'text-theme-main' : 'text-white'
-					} w-auto h-[21px] font-orbitron font-bold text-base leading-[21px] hover:text-theme-main order-4`}
+					} w-auto h-[21px] font-orbitron font-bold text-lg leading-[21px] hover:text-theme-main order-4`}
 				>
 					Projects
 				</CustomLink>
@@ -60,7 +61,7 @@ const MobileNav = ({ isMenuOpen, setIsMenuOpen, walletDisplay }) => {
 					href={'/staking'}
 					className={`${
 						path_name === '/staking' ? 'text-theme-main' : 'text-white'
-					} w-auto h-[21px] font-orbitron font-bold text-base leading-[21px] hover:text-theme-main order-5`}
+					} w-auto h-[21px] font-orbitron font-bold text-lg leading-[21px] hover:text-theme-main order-5`}
 				>
 					Staking
 				</CustomLink>
@@ -158,15 +159,13 @@ export default function Nav() {
 					</button>
 				</div>
 			</div>
-			{isMenuOpen && (
-				<div className={`${isMenuOpen ? 'translate-x-0' : '-translate-x-[100%]'} transition-all duration-300`}>
-					<MobileNav
-						isMenuOpen={isMenuOpen}
-						setIsMenuOpen={setIsMenuOpen}
-						walletDisplay={() => setShowWallet(true)}
-					/>
-				</div>
-			)}
+			<div className={`${isMenuOpen ? 'translate-y-0' : '-translate-y-[100%]'} transition-all duration-500`}>
+				<MobileNav
+					isMenuOpen={isMenuOpen}
+					setIsMenuOpen={setIsMenuOpen}
+					walletDisplay={() => setShowWallet(true)}
+				/>
+			</div>
 
 			<WalletConnect close={closeWallet} showWallet={showWallet} />
 		</div>
