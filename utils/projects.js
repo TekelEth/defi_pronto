@@ -3,7 +3,7 @@ import Home from 'pages';
 export const projects = [
 	{
 		id: 1,
-		image: 'assets/projects/project-1.png',
+		image: '/assets/projects/project-1.png',
 		heading: 'Hyper Drive Metaverse',
 		totalRaised: 1000,
 		targetAmount: 1000,
@@ -12,7 +12,7 @@ export const projects = [
 	},
 	{
 		id: 2,
-		image: 'assets/projects/project-2.png',
+		image: '/assets/projects/project-2.png',
 		heading: 'Hyper Drive Metaverse',
 		totalRaised: 1000,
 		targetAmount: 1000,
@@ -21,7 +21,7 @@ export const projects = [
 	},
 	{
 		id: 3,
-		image: 'assets/projects/project-6.png',
+		image: '/assets/projects/project-6.png',
 		heading: 'Hyper Drive Metaverse',
 		totalRaised: 1000,
 		targetAmount: 1000,
@@ -30,7 +30,7 @@ export const projects = [
 	},
 	{
 		id: 4,
-		image: 'assets/projects/project-7.png',
+		image: '/assets/projects/project-7.png',
 		heading: 'Hyper Drive Metaverse',
 		totalRaised: 500,
 		targetAmount: 1000,
@@ -39,7 +39,7 @@ export const projects = [
 	},
 	{
 		id: 5,
-		image: 'assets/projects/project-8.png',
+		image: '/assets/projects/project-8.png',
 		heading: 'Hyper Drive Metaverse',
 		totalRaised: 700,
 		targetAmount: 1000,
@@ -48,7 +48,7 @@ export const projects = [
 	},
 	{
 		id: 6,
-		image: 'assets/projects/project-6.png',
+		image: '/assets/projects/project-6.png',
 		heading: 'Hyper Drive Metaverse',
 		totalRaised: 800,
 		targetAmount: 1000,
@@ -84,7 +84,7 @@ export const projects = [
 	},
 	// {
 	// 	id: 10,
-	// 	image: '/assets/projects/project1.png',
+	// 	image: '//assets/projects/project1.png',
 	// 	heading: 'Hyper Drive Metaverse',
 	// 	totalRaised: 0,
 	// 	targetAmount: 1000,
@@ -93,7 +93,7 @@ export const projects = [
 	// },
 	// {
 	// 	id: 11,
-	// 	image: '/assets/projects/project1.png',
+	// 	image: '//assets/projects/project1.png',
 	// 	heading: 'Hyper Drive Metaverse',
 	// 	totalRaised: 0,
 	// 	targetAmount: 1000,
