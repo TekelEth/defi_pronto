@@ -1,8 +1,10 @@
 import CustomLink from 'components/general/CustomLink';
 import Button from 'components/general/Button';
 import Icon from 'components/general/Icons';
+import { useRouter } from 'next/router';
 
 export default function Footer() {
+	const router = useRouter();
 	const FooterLink = ({ path, title, ...rest }) => (
 		<CustomLink
 			href={path}
@@ -14,7 +16,8 @@ export default function Footer() {
 	);
 	return (
 		<div className='w-full h-full'>
-			<div className='relative w-full h-[314px] bg-theme-main'>
+			{
+				!router.pathname.startsWith('/presale') && <div className='relative w-full h-[314px] bg-theme-main'>
 				<div className='absolute top-[95px] left-[10px] right-[10px] lg:left-[118px] lg:top-[75px] lg:right-[118px]'>
 					{/* eslint-disable-next-line @next/next/no-img-element */}
 					<img
@@ -36,6 +39,7 @@ export default function Footer() {
 					</div>
 				</div>
 			</div>
+			}	
 
 			<footer className='w-full container pt-20 px-4 mx-auto'>
 				<div className='md:flex items-center lg:flex-row md:justify-between'>

@@ -24,17 +24,7 @@ function Hero() {
 				className='hidden lg:block absolute -top-[100px] left-0 right-0 w-full h-[calc(100% + 100px)] max-h-[69rem] my-0 mx-auto bg-no-repeat bg-cover bg-center '
 				alt='hero-section'
 			/>
-			{/* before */}
-			{/* <img
-				src='/assets/backgrounds/bg.png'
-				className='hidden lg:block absolute w-full h-screen bg-cover bg-no-repeat bg-center'
-				alt='home'
-			/> */}
-			{/* <img
-				src='/assets/backgrounds/home-bg-mobile.png'
-				className='lg:hidden absolute w-full h-full bg-cover bg-no-repeat bg-bottom'
-				alt='home'
-			/> */}
+		 
 			<div className='relative container px-4 pt-40 mx-auto'>
 				<div className='items-center lg:flex'>
 					<div className='w-full h-full lg:w-3/5'>
@@ -46,7 +36,7 @@ function Hero() {
 							you can trust.
 						</p>
 						<div className='my-2 md:my-4 flex items-center space-x-10'>
-							<CustomLink href={'/'}>
+							<CustomLink href={'/presale'}>
 								<Button
 									variant='outlined'
 									color='primary'

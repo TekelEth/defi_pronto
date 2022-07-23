@@ -6,6 +6,9 @@ module.exports = {
 				DMSans: ['DM Sans', 'sans-serif'],
 				orbitron: ['Orbitron', 'sans-serif'],
 			},
+			backgroundImage: {
+				'presale': "url('/assets/backgrounds/presale.svg')"
+			},
 			colors: {
 				theme: {
 					100: '#A4A4A4',
