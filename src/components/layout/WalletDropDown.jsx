@@ -17,7 +17,7 @@ function WalletDropDown({ setWalletDropdown, setIsMenuOpen = () => { } }) {
         setIsMenuOpen(false)
     }
 
-    const { connected, setConnected } = useContext(WalletContext);
+    const { setConnected } = useContext(WalletContext);
     return (
         <div className='bg-[#2F282E] absolute mt-2 w-full items-center rounded-[10px] shadow-xl p-3 flex flex-col'>
             <CustomLink href={'/auth/portfolio/'}>

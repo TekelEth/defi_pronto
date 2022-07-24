@@ -5,13 +5,12 @@ import WalletVerification from './WalletVerification';
 
 
 function Register() {
-    const [click, setClick] = useState(false);
-    const [step, setStep] = useState(1);
-    const [verify, setVerify] = useState(false);
+    const [clickDiscord, setClickDiscord] = useState(false);
+    const BALANCE = 3000;
     return (
         <div className='w-full flex-col flex md:flex-row justify-between items-center lg:space-x-36'>
-            <RegisterContent click={click} setClick={() => setClick(!click)} step={step} setStep={setStep} />
-            {verify ? <RegisterAction click={click} step={step} /> : <WalletVerification verify={verify} setVerify={() => setVerify(true)} />}
+            <RegisterContent click={clickDiscord} setClick={() => setClickDiscord(true)} balance={BALANCE} />
+            <RegisterAction balance={BALANCE} click={clickDiscord} />
         </div>
 
     )

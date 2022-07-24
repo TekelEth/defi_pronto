@@ -2,7 +2,7 @@ import { WalletContext } from 'components/layout/WalletContext';
 import React, { useContext } from 'react';
 
 const Wallet = ({ img, name, close }) => {
-    const {  setConnected} = useContext(WalletContext);
+    const { setConnected } = useContext(WalletContext);
     const connectWallet = () => {
         setConnected(true)
         close()
@@ -18,7 +18,7 @@ const Wallet = ({ img, name, close }) => {
     )
 }
 
-function WalletConnect({ close, showWallet }) {
+function WalletConnect({ close = () => { }, showWallet = () => { }, cancelWallet = () => { } }) {
     return (
         <div className={`${showWallet ? "w-full  h-screen fixed  bg-[rgba(0,0,0,0.3)]" : "fixed"
             } duration-500 md:block`}>
@@ -26,7 +26,7 @@ function WalletConnect({ close, showWallet }) {
                 <div className={`bg-[#241B23] rounded-[10px] shadow-lg z-50 md:w-[35%]  mx-auto   flex flex-col items-start justify-start py-8 duration-500 px-4 md:px-8 ${showWallet ? "block" : "hidden"}`}>
                     <div className="flex items-center w-full justify-between">
                         <h1 className="font-orbitron font-[400] text-[20px] md:text-[29.25px] leading-[37.5px] text-white">Connect Wallet</h1>
-                        <i className="ri-close-line text-3xl hover:bg-[#E74141]  p-1  cursor-pointer text-white rounded-[10px] hover:rounded-full hover:duration-500 transition-all ease-in-out  " onClick={()=>close()}></i>
+                        <i className="ri-close-line text-3xl hover:bg-[#E74141]  p-1  cursor-pointer text-white rounded-[10px] hover:rounded-full hover:duration-500 transition-all ease-in-out  " onClick={() => cancelWallet()}></i>
                     </div>
                     <div className="my-6 flex items-center">
                         <input type="checkbox" className="mr-3 accent-[#E74141]" />

@@ -4,11 +4,14 @@ export const WalletContext = createContext();
 
 function WalletProvider({ children }) {
     const [connected, setConnected] = useState(false);
+    const [showWallet, setShowWallet] = useState(false);
     return (
         <WalletContext.Provider
             value={{
                 connected,
-                setConnected
+                setConnected,
+                showWallet,
+                setShowWallet
             }}
         >
             {children}

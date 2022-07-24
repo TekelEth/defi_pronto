@@ -11,7 +11,7 @@ import WalletDropDown from './WalletDropDown';
 
 const MobileNav = ({ isMenuOpen, setIsMenuOpen, walletDisplay }) => {
 	const router = useRouter();
-	const { connected, setConnected } = useContext(WalletContext);
+	const { connected } = useContext(WalletContext);
 	const [walletDropdown, setWalletDropdown] = useState(false);
 	const path_name = router.pathname;
 	const walletDisplays = () => {
@@ -72,12 +72,12 @@ const MobileNav = ({ isMenuOpen, setIsMenuOpen, walletDisplay }) => {
 						className='flex flex-row justify-center items-center py-[15px] px-[32px] gap-2 text-white bg-theme-main rounded-[5px]'
 						onClick={walletDisplays}
 					>
-						<span className='text-base font-orbitron font-bold leading-[21px]'>Connect Wallet</span>
+						<span className='text-base font-orbitron font-bold leading-[21px]'>Join Us</span>
 						<Icon icon={'ri-arrow-right-up-line'} className='w-[24px] h-[24px] text-white' />
 					</button>
 				}
 				{
-					walletDropdown && <WalletDropDown setWalletDropdown={setWalletDropdown} setIsMenuOpen = {setIsMenuOpen} />
+					walletDropdown && <WalletDropDown setWalletDropdown={setWalletDropdown} setIsMenuOpen={setIsMenuOpen} />
 				}
 			</div>
 		</div>
@@ -85,7 +85,7 @@ const MobileNav = ({ isMenuOpen, setIsMenuOpen, walletDisplay }) => {
 };
 
 export default function Nav() {
-	const [showWallet, setShowWallet] = useState(false);
+	const { connected, showWallet, setShowWallet } = useContext(WalletContext);
 	const [walletDropdown, setWalletDropdown] = useState(false);
 	const router = useRouter();
 	const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -96,12 +96,17 @@ export default function Nav() {
 		setIsMenuOpen(false);
 		router.push('/presale/register')
 	}
-	const { connected, setConnected } = useContext(WalletContext);
-	console.log(connected, "connected")
+
+	const cancelWallet = () => {
+		setShowWallet(false);
+		setIsMenuOpen(false);
+		router.push('/')
+	}
+
 	return (
 		<div className={`${position} inset-x-0 z-30 top-0 px-4 md:px-12 py-6 w-full max-w-full mx-auto`}>
 			<div className='flex items-center mx-auto justify-between'>
-				<CustomLink href={connected ? '/auth/portfolio/' : '/'} className='flex items-center'>
+				<CustomLink href={connected ? '/presale' : '/'} className='flex items-center'>
 					<img src='/assets/logo.svg' alt='Defi Pronto Logo' className=' w-14' />
 				</CustomLink>
 				<div className='hidden lg:flex items-center gap-7'>
@@ -153,7 +158,7 @@ export default function Nav() {
 								className='flex flex-row justify-center items-center py-[15px] px-[32px] gap-2 text-white bg-theme-main rounded-[5px]'
 								onClick={() => setShowWallet(true)}
 							>
-								<span className='text-base font-orbitron font-bold leading-[21px]'>Connect Wallet</span>
+								<span className='text-base font-orbitron font-bold leading-[21px]'>Join Us</span>
 								<Icon icon={'ri-arrow-right-up-line'} className='w-[24px] h-[24px] text-white' />
 							</button>
 						}
@@ -178,7 +183,7 @@ export default function Nav() {
 				<MobileNav isMenuOpen={isMenuOpen} setIsMenuOpen={setIsMenuOpen} walletDisplay={() => setShowWallet(true)} />
 			</div>
 
-			<WalletConnect close={closeWallet} showWallet={showWallet} />
+			<WalletConnect close={closeWallet} cancelWallet = {cancelWallet} showWallet={showWallet} />
 		</div>
 	);
 }
