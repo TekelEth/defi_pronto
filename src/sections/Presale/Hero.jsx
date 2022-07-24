@@ -29,7 +29,7 @@ function Hero() {
 
 				</div>
 			</div>
-			<div className='md:w-1/2 h-[500px] h-ful w-full mt-2 md:mt-0 bg-presale bg-right md:bg-center bg-cover'></div>
+			<div className='md:w-1/2 h-[500px] h-ful w-full mt-2 md:mt-0 bg-presale bg-center bg-cover'></div>
 		</div>
 	);
 }
